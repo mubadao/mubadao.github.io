@@ -1063,3 +1063,8 @@ h6 {
 @media only screen and (max-width: 750px) {
   .back-to-top {
     display: none !important; } }
+
+#vcomments {
+  margin: 0 auto;
+  width: 90%;
+  max-width: 1000px; }
