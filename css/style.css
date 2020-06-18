@@ -544,6 +544,11 @@ h6 {
     display: block;
     font-size: 14px;
     margin-bottom: 10px; }
+    .post .post-time .readicon {
+      width: 20px;
+      height: 20px;
+      margin-bottom: 4px;
+      margin-left: 10px; }
   .post .post-excerpt p {
     margin: 0 0 16px; }
   .post .post-content {
