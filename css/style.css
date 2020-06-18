@@ -490,6 +490,8 @@ h6 {
   max-width: 1000px;
   margin: 0 auto;
   width: 90%; }
+  .site-header-inner a {
+    color: rgba(0, 0, 0, 0.5); }
 
 .site-title {
   text-align: left;
