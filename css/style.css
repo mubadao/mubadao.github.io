@@ -169,11 +169,11 @@ figure {
  * Address differences between Firefox and other browsers.
  */
 hr {
+  margin-top: 52px;
+  margin-bottom: 42px;
   display: block;
-  text-align: center;
-  size: 30px;
-  border: none;
-  border-top: 1px solid #000000; }
+  border: 0;
+  text-align: center; }
 
 /**
  * Contain overflow in all browsers.
