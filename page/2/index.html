@@ -30,13 +30,13 @@
 
 
 
-<link rel="canonical" href="mubadao.github.io/tags/随感/"/>
+<link rel="canonical" href="mubadao.github.io/page/2/"/>
 
 
 <meta name="description" content="目八刀的博客">
 <meta property="og:type" content="website">
 <meta property="og:title" content="目八刀">
-<meta property="og:url" content="mubadao.github.io/tags/%E9%9A%8F%E6%84%9F/index.html">
+<meta property="og:url" content="mubadao.github.io/page/2/index.html">
 <meta property="og:site_name" content="目八刀">
 <meta property="og:description" content="目八刀的博客">
 <meta property="og:locale" content="en_US">
@@ -68,11 +68,7 @@
 
 <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
 
-    <title>
-  
-    随感 - 目八刀
-  
-</title>
+    <title> 目八刀 - 目八刀的博客</title>
     
 
 
@@ -127,68 +123,97 @@
 <div id="primary">
   <section id="archive" class="archive">
     
+
+    
       
-        <div class="archive-title tag">
-          <h2 class="archive-name">随感</h2>
+      
+      
+        
+        <div class="collection-title">
+          <h2 class="archive-year">2018</h2>
         </div>
       
-    
-
-    
-      
 
       <div class="archive-post">
-        <span class="archive-post-time">
-          
-            2020-06-19
-          
+        <span class="archive-post-time" data-time=1529061559000 >
+           
+           
+           
+           
+           
+              06月15日
+           
         </span>
         <span class="archive-post-title">
-          <a href="/2020/06/19/20200619163633/" class="archive-post-link">
-            曾经拥有的东西被夺走，并不代表就会回到原来没有那种东西的时候。如果还能够再次拥有，那么性质已经变了。
-          </a>
-        </span>
-      </div>
-    
-      
-
-      <div class="archive-post">
-        <span class="archive-post-time">
-          
-            2020-06-17
-          
-        </span>
-        <span class="archive-post-title">
-          <a href="/2020/06/17/20200616001951/" class="archive-post-link">
-            这是一个复制的世界，从产品到建筑，从思想到文化，只要有一个模子就能复制出许多来。创造者负责制作模子，其他人负责模仿。
-          </a>
-        </span>
-      </div>
-    
-      
-
-      <div class="archive-post">
-        <span class="archive-post-time">
-          
-            2020-06-15
-          
-        </span>
-        <span class="archive-post-title">
-          <a href="/2020/06/15/20200617105652/" class="archive-post-link">
-            开博啦！！！
+          <a href="/2018/06/15/%E5%9B%BE%E7%89%87%E6%B5%8B%E8%AF%95/" class="archive-post-link">
+            图片测试
           </a>
         </span>
       </div>
     
   </section>
  </div>
+ <script>
+    Date.prototype.format = function(format){
+    var o = {
+    "M+" : this.getMonth()+1, //month
+    "d+" : this.getDate(), //day
+    "h+" : this.getHours(), //hour
+    "m+" : this.getMinutes(), //minute
+    "s+" : this.getSeconds(), //second
+    "q+" : Math.floor((this.getMonth()+3)/3), //quarter
+    "S" : this.getMilliseconds() //millisecond
+    }
+     
+    if(/(y+)/.test(format)) {
+    format = format.replace(RegExp.$1, (this.getFullYear()+"").substr(4 - RegExp.$1.length));
+    }
+     
+    for(var k in o) {
+    if(new RegExp("("+ k +")").test(format)) {
+    format = format.replace(RegExp.$1, RegExp.$1.length==1 ? o[k] : ("00"+ o[k]).substr((""+ o[k]).length));
+    }
+    }
+    return format;
+    }
+    $(".archive-post-time").each(function(index, hr){
+        var t2 = parseInt(hr.getAttribute("data-time"));
+        var t1 = Date.now() - t2
+        var day = t1 / 86400000
+        var hour = t1 / 3600000
+        var min = t1 / 60000
+         if (day >= 2) {
+            hr.innerText = (new Date(t2)).format("MM月dd日");
+         }else if (day >= 1) {
+            hr.innerText = "1天前";
+         }else if (hour >= 1) {
+             hr.innerText = parseInt(hour)+"小时前";
+         }else {
+             hr.innerText = Math.max(1, parseInt(min))+"分钟前";
+         }
+    })
+</script>
 
   
   <nav class="pagination">
     
+      <a class="prev" href="/">
+        <i class="iconfont icon-left"></i>
+        <span class="prev-text">Prev</span>
+      </a>
+    
     
   </nav>
 
+
+  <div id="secondary">
+    
+
+    
+
+    
+
+</div>
 
 
       </div>
