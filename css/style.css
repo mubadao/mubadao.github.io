@@ -443,6 +443,17 @@ h6 {
   border: 1px solid rgba(0, 0, 0, 0.75);
   text-decoration: none; }
 
+audio {
+  width: 220px;
+  height: 26px;
+  outline: none; }
+
+audio::-webkit-media-controls-enclosure {
+  border-radius: 0px; }
+
+audio::-webkit-media-controls-play-button {
+  margin-left: -10px; }
+
 #content {
   margin: 0 auto;
   width: 90%;
