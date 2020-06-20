@@ -43,7 +43,7 @@
 <meta property="og:description" content="简介最近想在博客中加入音乐播放功能，找了一圈，最后锁定两个方案，一个html5自带的audio，另一个是APlayer播放器。audio的风格比较接近博客的主题，所以首页用的是audio标签。文章页用的是APlayer，因为APlayer支持Hexo，它有个支持Markdown的版本叫hexo-tag-aplayer，可以方便的在Markdown中插入音乐。hexo-tag-aplayer还支持M">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-06-20T08:37:15.000Z">
-<meta property="article:modified_time" content="2020-06-20T09:22:12.653Z">
+<meta property="article:modified_time" content="2020-06-20T09:28:17.630Z">
 <meta property="article:author" content="目八刀">
 <meta property="article:tag" content="HTML">
 <meta name="twitter:card" content="summary">
@@ -164,6 +164,9 @@
 <h3 id="使用audio标签"><a href="#使用audio标签" class="headerlink" title="使用audio标签"></a>使用audio标签</h3><p>audio标签默认改了一些样式，首先默认audio播放器背景是圆角的，我改成了方角：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">audio::-webkit-media-controls-enclosure &#123;</span><br><span class="line">  border-radius: 0px;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
+<p>然后在css中调整了播放按钮位置：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">audio::-webkit-media-controls-play-button &#123;</span><br><span class="line">    margin-left:-10px;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <p>因为篇幅问题，我隐藏掉了下载按钮，下载按钮的隐藏需要在标签中假如controlsList=”nodownload”</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;audio controlsList&#x3D;&quot;nodownload&quot; controls&#x3D;&quot;controls&quot; &#x2F;&gt;</span><br></pre></td></tr></table></figure>
 
@@ -192,6 +195,12 @@
         
         
   <nav class="post-nav">
+    
+      <a class="prev" href="/2020/06/20/20200620172425/">
+        <i class="iconfont icon-left"></i>
+        <span class="prev-text nav-default">文章内播放音乐测试</span>
+        <span class="prev-text nav-mobile">Prev</span>
+      </a>
     
     
       <a class="next" href="/2020/06/19/20200619224135/">
