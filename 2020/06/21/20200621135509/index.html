@@ -42,11 +42,13 @@
 <meta property="og:site_name" content="目八刀">
 <meta property="og:description" content="如果要在JavaScript的世界里找一门应用最广泛的库，那么非jQuery莫属。也不知道哪来的统计，估计是忽悠的，说是全世界排名前100万的网站，有46%使用jQuery库，且不说这个数据准不准确，但就jQuery语法之简洁，接口之灵活，功能之强大，说它是应用最广泛的库一点也不为过。jQuery诞生于2006年1月，这么流行的一个库，竟然是一个年仅22岁的美国男孩在十多年前开发的。可能这家伙在当">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://www.seoxiehui.cn/data/attachment/portal/201805/30/132252x1q5fjm3s3nn3j4u.jpg">
 <meta property="article:published_time" content="2020-06-21T05:55:12.000Z">
-<meta property="article:modified_time" content="2020-06-21T07:27:27.310Z">
+<meta property="article:modified_time" content="2020-06-21T07:49:30.874Z">
 <meta property="article:author" content="目八刀">
 <meta property="article:tag" content="jQuery">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://www.seoxiehui.cn/data/attachment/portal/201805/30/132252x1q5fjm3s3nn3j4u.jpg">
 
 
 <link rel="stylesheet" type="text/css" href="/css/style.css?v=1.1" />
@@ -149,7 +151,7 @@
 
     
             <div class="post-content">
-            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#选择器"><span class="toc-text">选择器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#改变结果集"><span class="toc-text">改变结果集</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#元素的链式操作"><span class="toc-text">元素的链式操作</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#元素的取值和赋值"><span class="toc-text">元素的取值和赋值</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#元素的复制、删除、创建"><span class="toc-text">元素的复制、删除、创建</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#工具集"><span class="toc-text">工具集</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#事件"><span class="toc-text">事件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#特殊效果"><span class="toc-text">特殊效果</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#入口函数"><span class="toc-text">入口函数</span></a></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#选择器"><span class="toc-text">选择器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#改变结果集"><span class="toc-text">改变结果集</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#元素的链式操作"><span class="toc-text">元素的链式操作</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#元素的取值和赋值"><span class="toc-text">元素的取值和赋值</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#元素的复制、删除、创建"><span class="toc-text">元素的复制、删除、创建</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#工具集"><span class="toc-text">工具集</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#事件"><span class="toc-text">事件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#特殊效果"><span class="toc-text">特殊效果</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#jQuery和Dom对象之间的相互转换"><span class="toc-text">jQuery和Dom对象之间的相互转换</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#入口函数"><span class="toc-text">入口函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#参考文章"><span class="toc-text">参考文章</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#jQuery作者"><span class="toc-text">jQuery作者</span></a></li></ol>
 	    <blockquote><p>如果要在JavaScript的世界里找一门应用最广泛的库，那么非jQuery莫属。也不知道哪来的统计，估计是忽悠的，说是全世界排名前100万的网站，有46%使用jQuery库，且不说这个数据准不准确，但就jQuery语法之简洁，接口之灵活，功能之强大，说它是应用最广泛的库一点也不为过。jQuery诞生于2006年1月，这么流行的一个库，竟然是一个年仅22岁的美国男孩在十多年前开发的。可能这家伙在当时也只是为了图一己之便搞了一个这么个东西出来，没成想以后会在JavaScript的世界红的发紫。其实我们每个人在有意无意间都有可能改变世界，但首先要有一颗创造的心，而不是拿来主义。</p>
 </blockquote>
 
@@ -240,12 +242,33 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">$(&#39;div&#39;).animate(  </span><br><span class="line">&#123;  </span><br><span class="line">  left : &quot;+&#x3D;50&quot;，&#x2F;&#x2F;不断右移  </span><br><span class="line">  opacity : 0.2&#x2F;&#x2F;指定透明度  </span><br><span class="line">&#125;,</span><br><span class="line">300,&#x2F;&#x2F; 持续时间  </span><br><span class="line">function()&#123; alert(&#39;done!&#39;); &#125;&#x2F;&#x2F;回调函数  </span><br><span class="line">);</span><br></pre></td></tr></table></figure>
 
 <p>.stop()和.delay()用来停止或延缓特效的执行。<br>$.fx.off如果设置为true，则关闭所有网页特效。</p>
+<h2 id="jQuery和Dom对象之间的相互转换"><a href="#jQuery和Dom对象之间的相互转换" class="headerlink" title="jQuery和Dom对象之间的相互转换"></a>jQuery和Dom对象之间的相互转换</h2><p>jquery对象和dom对象是不一样的，什么是jquery对象？什么是dom对象？我们举个例子：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$(&quot;#aijquery&quot;): &#x2F;&#x2F;这种方式获取得到的就是jquery对象</span><br><span class="line">document.getElementById(&quot;aijquery&quot;):&#x2F;&#x2F;这种方法获取到的就是dom对象</span><br></pre></td></tr></table></figure>
+
+<p>jquery对象和dom对象是不一样的，对象的一些方法也是不一样的，比如我们要获取一个标签的html内容：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">document.getElementById(&quot;aijquery&quot;).innerHTML;&#x2F;&#x2F;这是dom对象的方法</span><br><span class="line">$(&quot;#aijquery&quot;).html();&#x2F;&#x2F;这是jquery对象的方法</span><br></pre></td></tr></table></figure>
+
+<p>有时我们在特定的情况下，我们需要在两种对象之间互相转换，一般情况下，dom对象直接用$()就可以转换成jquery对象，如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(document.getElementById(&quot;aijquery&quot;))</span><br></pre></td></tr></table></figure>
+
+<p>jquery对象转换成dom对象，有两种方法，一种是用jquery的内置函数get，来获取dom对象，另一种方法更简单，因为jquery对象的属性是一个集合，所以我们可以像数组那样，取出其中一项就行：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$(&quot;#aijquery&quot;)[0];</span><br><span class="line">$(&quot;div&quot;)[5];</span><br><span class="line">&#x2F;&#x2F;上面这两种返回的都是dom对象,可以直接使用js里的方法</span><br></pre></td></tr></table></figure>
+
+<p>jquery对象和dom对象之间的互相转换就是上面这几种方法，总结一下我们经常会用到的一些写法，下面的这些写法都是正确的：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$(&quot;#aijquery&quot;).html(); </span><br><span class="line">$(&quot;#aijquery&quot;)[0].innerHTML; </span><br><span class="line">$(&quot;#aijquery&quot;).eq(0)[0].innerHTML; </span><br><span class="line">$(&quot;#aijquery&quot;).get(0).innerHTML;</span><br><span class="line">$(&quot;#aijquery&quot;).eq(2).html();</span><br><span class="line">$(&quot;#aijquery&quot;).get(2).innerHTML;</span><br></pre></td></tr></table></figure>
+
+
+
 <h2 id="入口函数"><a href="#入口函数" class="headerlink" title="入口函数"></a>入口函数</h2><p>jQuery 的入口函数是在 html 所有标签(DOM)都加载之后，会去执行，函数形式如下：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$(document).ready(function()&#123;</span><br><span class="line">    &#x2F;&#x2F; 执行代码</span><br><span class="line">&#125;);</span><br><span class="line">或者</span><br><span class="line">$(function()&#123;</span><br><span class="line">    &#x2F;&#x2F; 执行代码</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
 
 <p>注意jQuery入口函数和JavaScript入口函数是有区别的，JavaScript入口函数是等到所有内容，包括外部图片之类的文件加载完后，才会执行，其形式如下：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">window.onload &#x3D; function () &#123;</span><br><span class="line">    &#x2F;&#x2F; 执行代码</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
+<h2 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h2><p><a href="https://blog.csdn.net/hemeinvyiqiluoben/article/details/58597175" target="_blank" rel="noopener">https://blog.csdn.net/hemeinvyiqiluoben/article/details/58597175</a></p>
+<p><a href="http://www.aijquery.cn/Html/jqueryjiqiao/11.html" target="_blank" rel="noopener">http://www.aijquery.cn/Html/jqueryjiqiao/11.html</a></p>
+<h2 id="jQuery作者"><a href="#jQuery作者" class="headerlink" title="jQuery作者"></a>jQuery作者</h2><p>最后，奉上jQuery之父John Resig的靓照。</p>
+<p><img src="https://www.seoxiehui.cn/data/attachment/portal/201805/30/132252x1q5fjm3s3nn3j4u.jpg" alt=""></p>
 
             </div>
           
