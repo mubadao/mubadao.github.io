@@ -138,27 +138,111 @@
       
 
       <div class="archive-post">
+        <span class="archive-post-time" data-time=1592706549000 >
+           
+           
+           
+           
+           
+               4分钟前
+           
+        </span>
+        <span class="archive-post-title">
+          
+              
+              
+              
+              <div class='btnaudio' id=btn1592706549000>
+                <audio id=audio1592706549000 src=http://lc-kdm34f1w.cn-n1.lcfile.com/f56bfacf8f4ed2258e15/Cassandra%20-%20Doobi%20Doobi%20Doo%20%28Don%27t%20Be%20Shy%29.mp3>
+                  你的浏览器不支持播放音乐
+                </audio>
+              </div>
+              <a class=title1592706549000 class="archive-post-link">
+                   &nbsp; Doobi Doobi Doo --Cassandra
+              </a>
+              <script type="text/javascript">
+                $(function(){
+                    $('#audio1592706549000').on('ended', function() {
+                        $('#btn1592706549000').css({'background':'url(images/voice_stop.png) no-repeat center bottom','background-size':'cover'});
+                    })
+                    //播放器控制
+                    
+                    $('#btn1592706549000,.title1592706549000').click(function(p1,p2) {
+                        event.stopPropagation();//防止冒泡
+                        var curaudio = document.getElementById('audio1592706549000');
+                        if(curaudio.paused){ //如果当前是暂停状态
+                            $('audio').each( function(index, audio) {
+                              audio.pause();
+                            })
+                            $('.btnaudio').css({'background':'url(images/voice_start.png) no-repeat center bottom','background-size':'cover'});
+
+                            $('#btn1592706549000').css({'background':'url(images/voice_stop.png) no-repeat center bottom','background-size':'cover'});
+                            curaudio.play(); //播放
+                            return;
+                        }else{//当前是播放状态
+                            $('#btn1592706549000').css({'background':'url(images/voice_start.png) no-repeat center bottom','background-size':'cover'});
+                            curaudio.pause(); //暂停
+                        }
+                    });
+                })
+              </script>
+          
+        </span>
+      </div>
+    
+      
+      
+      
+
+      <div class="archive-post">
         <span class="archive-post-time" data-time=1592648269000 >
            
            
            
            
            
-               11分钟前
+               16小时前
            
         </span>
         <span class="archive-post-title">
-
           
-              <div>
-                <a href="/2020/06/20/20200620181749/" class="archive-post-link">
-                   首页播放音乐测试
-                </a>
-                <br>
-                <audio controlsList="nodownload" controls="controls" src=http://lc-kdm34f1w.cn-n1.lcfile.com/da3fa27058969d18546b/%E9%87%91%E9%9B%AF%E6%98%95%20-%20%E6%98%8E%E5%A4%A9%E4%BD%A0%E5%A5%BD.mp3>
+              
+              
+              
+              <div class='btnaudio' id=btn1592648269000>
+                <audio id=audio1592648269000 src=http://lc-kdm34f1w.cn-n1.lcfile.com/da3fa27058969d18546b/%E9%87%91%E9%9B%AF%E6%98%95%20-%20%E6%98%8E%E5%A4%A9%E4%BD%A0%E5%A5%BD.mp3>
                   你的浏览器不支持播放音乐
                 </audio>
               </div>
+              <a class=title1592648269000 class="archive-post-link">
+                   &nbsp; 首页播放音乐测试
+              </a>
+              <script type="text/javascript">
+                $(function(){
+                    $('#audio1592648269000').on('ended', function() {
+                        $('#btn1592648269000').css({'background':'url(images/voice_stop.png) no-repeat center bottom','background-size':'cover'});
+                    })
+                    //播放器控制
+                    
+                    $('#btn1592648269000,.title1592648269000').click(function(p1,p2) {
+                        event.stopPropagation();//防止冒泡
+                        var curaudio = document.getElementById('audio1592648269000');
+                        if(curaudio.paused){ //如果当前是暂停状态
+                            $('audio').each( function(index, audio) {
+                              audio.pause();
+                            })
+                            $('.btnaudio').css({'background':'url(images/voice_start.png) no-repeat center bottom','background-size':'cover'});
+
+                            $('#btn1592648269000').css({'background':'url(images/voice_stop.png) no-repeat center bottom','background-size':'cover'});
+                            curaudio.play(); //播放
+                            return;
+                        }else{//当前是播放状态
+                            $('#btn1592648269000').css({'background':'url(images/voice_start.png) no-repeat center bottom','background-size':'cover'});
+                            curaudio.pause(); //暂停
+                        }
+                    });
+                })
+              </script>
           
         </span>
       </div>
@@ -174,11 +258,10 @@
            
            
            
-               1小时前
+               17小时前
            
         </span>
         <span class="archive-post-title">
-
           
             <a href="/2020/06/20/20200620172425/" class="archive-post-link">
               文章内播放音乐测试
@@ -198,11 +281,10 @@
            
            
            
-               1小时前
+               17小时前
            
         </span>
         <span class="archive-post-title">
-
           
             <a href="/2020/06/20/20200620163713/" class="archive-post-link">
               加入音乐播放功能
@@ -222,11 +304,10 @@
            
            
            
-               19小时前
+              1天前
            
         </span>
         <span class="archive-post-title">
-
           
             <a href="/2020/06/19/20200619224135/" class="archive-post-link">
               晚安，又是一个漫长的夜，每个人在睡着时才能寻回那个触不可及的梦！
@@ -250,7 +331,6 @@
            
         </span>
         <span class="archive-post-title">
-
           
             <a href="/2020/06/19/20200619163633/" class="archive-post-link">
               曾经拥有的东西被夺走，并不代表就会回到原来没有那种东西的时候。如果还能够再次拥有，那么性质已经变了。
@@ -274,7 +354,6 @@
            
         </span>
         <span class="archive-post-title">
-
           
             <a href="/2020/06/19/20200619160613/" class="archive-post-link">
               终于理解了Hexo为什么叫静态博客网站生成器
@@ -298,7 +377,6 @@
            
         </span>
         <span class="archive-post-title">
-
           
             <a href="/2020/06/19/20200619111442/" class="archive-post-link">
               关于Web字体的知识 [二]
@@ -322,7 +400,6 @@
            
         </span>
         <span class="archive-post-title">
-
           
             <a href="/2020/06/19/20200619105944/" class="archive-post-link">
               关于Web字体的知识 [一]
@@ -342,11 +419,10 @@
            
            
            
-              1天前
+              06月19日
            
         </span>
         <span class="archive-post-title">
-
           
             <a href="/2020/06/19/20200619103259/" class="archive-post-link">
               CSS3新特性
@@ -366,11 +442,10 @@
            
            
            
-              1天前
+              06月19日
            
         </span>
         <span class="archive-post-title">
-
           
             <a href="/2020/06/19/20200619093230/" class="archive-post-link">
               CSS基础
@@ -390,11 +465,10 @@
            
            
            
-              1天前
+              06月18日
            
         </span>
         <span class="archive-post-title">
-
           
             <a href="/2020/06/18/20200618223904/" class="archive-post-link">
               确认过眼神！！！
@@ -414,11 +488,10 @@
            
            
            
-              1天前
+              06月18日
            
         </span>
         <span class="archive-post-title">
-
           
             <a href="/2020/06/18/20200618221635/" class="archive-post-link">
               一切美好的事物都是曲折地接近自己的目标，一切笔直都是骗人的，所有真理都是弯曲的，时间本身就是一个圆圈。--《查拉图斯特拉如是说》
@@ -442,7 +515,6 @@
            
         </span>
         <span class="archive-post-title">
-
           
             <a href="/2020/06/18/20200618141324/" class="archive-post-link">
               Sass简明教程
@@ -466,7 +538,6 @@
            
         </span>
         <span class="archive-post-title">
-
           
             <a href="/2020/06/18/20200618092933/" class="archive-post-link">
               使用不蒜子增加访问量
@@ -490,7 +561,6 @@
            
         </span>
         <span class="archive-post-title">
-
           
             <a href="/2020/06/17/20200617213015/" class="archive-post-link">
               和光头小子的傍晚
@@ -514,7 +584,6 @@
            
         </span>
         <span class="archive-post-title">
-
           
             <a href="/2020/06/17/20200617163704/" class="archive-post-link">
               Swig简明教程
@@ -538,7 +607,6 @@
            
         </span>
         <span class="archive-post-title">
-
           
             <a href="/2020/06/17/20200616001951/" class="archive-post-link">
               这是一个复制的世界，从产品到建筑，从思想到文化，只要有一个模子就能复制出许多来。创造者负责制作模子，其他人负责模仿。
@@ -562,7 +630,6 @@
            
         </span>
         <span class="archive-post-title">
-
           
             <a href="/2020/06/17/20200616162412/" class="archive-post-link">
               Hexo中分类和标签页面不显示解决办法
@@ -586,34 +653,9 @@
            
         </span>
         <span class="archive-post-title">
-
           
             <a href="/2020/06/16/20200616170613/" class="archive-post-link">
               使用Hexo搭建自己的博客
-            </a>
-          
-        </span>
-      </div>
-    
-      
-      
-      
-
-      <div class="archive-post">
-        <span class="archive-post-time" data-time=1592276213000 >
-           
-           
-           
-           
-           
-              06月16日
-           
-        </span>
-        <span class="archive-post-title">
-
-          
-            <a href="/2020/06/16/%E8%99%9A%E6%8B%9F%E5%8C%96%E6%A6%82%E8%AE%BA/" class="archive-post-link">
-              虚拟化概论
             </a>
           
         </span>
