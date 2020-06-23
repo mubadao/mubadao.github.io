@@ -35,16 +35,16 @@
 <link rel="canonical" href="mubadao.github.io/2020/06/21/20200621135509/"/>
 
 
-<meta name="description" content="如果要在JavaScript的世界里找一门应用最广泛的库，那么非jQuery莫属。也不知道哪来的统计，估计是忽悠的，说是全世界排名前100万的网站，有46%使用jQuery库，且不说这个数据准不准确，但就jQuery语法之简洁，接口之灵活，功能之强大，说它是应用最广泛的库一点也不为过。jQuery诞生于2006年1月，这么流行的一个库，竟然是一个年仅22岁的美国男孩在十多年前开发的。可能这家伙在当">
+<meta name="description" content="如果要在JavaScript的世界里找一门应用最广泛的库，那么非jQuery莫属。也不知道哪来的统计，估计是忽悠的，说是全世界排名前100万的网站，有46%使用jQuery库，且不说这个数据准不准确，但就jQuery语法之简洁，接口之灵活，功能之强大，说它是应用最广泛的库一点也不为过。jQuery诞生于2006年1月，这么流行的一个库，竟然是一个年仅22岁的美国男孩在十多年前开发的。可能这家伙在">
 <meta property="og:type" content="article">
 <meta property="og:title" content="jQuery基础">
 <meta property="og:url" content="mubadao.github.io/2020/06/21/20200621135509/index.html">
 <meta property="og:site_name" content="目八刀">
-<meta property="og:description" content="如果要在JavaScript的世界里找一门应用最广泛的库，那么非jQuery莫属。也不知道哪来的统计，估计是忽悠的，说是全世界排名前100万的网站，有46%使用jQuery库，且不说这个数据准不准确，但就jQuery语法之简洁，接口之灵活，功能之强大，说它是应用最广泛的库一点也不为过。jQuery诞生于2006年1月，这么流行的一个库，竟然是一个年仅22岁的美国男孩在十多年前开发的。可能这家伙在当">
+<meta property="og:description" content="如果要在JavaScript的世界里找一门应用最广泛的库，那么非jQuery莫属。也不知道哪来的统计，估计是忽悠的，说是全世界排名前100万的网站，有46%使用jQuery库，且不说这个数据准不准确，但就jQuery语法之简洁，接口之灵活，功能之强大，说它是应用最广泛的库一点也不为过。jQuery诞生于2006年1月，这么流行的一个库，竟然是一个年仅22岁的美国男孩在十多年前开发的。可能这家伙在">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://www.seoxiehui.cn/data/attachment/portal/201805/30/132252x1q5fjm3s3nn3j4u.jpg">
 <meta property="article:published_time" content="2020-06-21T05:55:12.000Z">
-<meta property="article:modified_time" content="2020-06-22T14:54:26.060Z">
+<meta property="article:modified_time" content="2020-06-23T02:14:14.610Z">
 <meta property="article:author" content="目八刀">
 <meta property="article:tag" content="Web开发">
 <meta property="article:tag" content="第三方库">
@@ -154,9 +154,9 @@
     
             <div class="post-content">
             <ul class="toc"><li class="toc-item toc-level-2" style="list-style-type:none;"><a class="toc-link" href="#选择器"><span class="toc-text">选择器</span></a></li><li class="toc-item toc-level-2" style="list-style-type:none;"><a class="toc-link" href="#改变结果集"><span class="toc-text">改变结果集</span></a></li><li class="toc-item toc-level-2" style="list-style-type:none;"><a class="toc-link" href="#元素的链式操作"><span class="toc-text">元素的链式操作</span></a></li><li class="toc-item toc-level-2" style="list-style-type:none;"><a class="toc-link" href="#元素的取值和赋值"><span class="toc-text">元素的取值和赋值</span></a></li><li class="toc-item toc-level-2" style="list-style-type:none;"><a class="toc-link" href="#元素的移动"><span class="toc-text">元素的移动</span></a></li><li class="toc-item toc-level-2" style="list-style-type:none;"><a class="toc-link" href="#元素的复制、删除、创建"><span class="toc-text">元素的复制、删除、创建</span></a></li><li class="toc-item toc-level-2" style="list-style-type:none;"><a class="toc-link" href="#工具集"><span class="toc-text">工具集</span></a></li><li class="toc-item toc-level-2" style="list-style-type:none;"><a class="toc-link" href="#事件"><span class="toc-text">事件</span></a></li><li class="toc-item toc-level-2" style="list-style-type:none;"><a class="toc-link" href="#特殊效果"><span class="toc-text">特殊效果</span></a></li><li class="toc-item toc-level-2" style="list-style-type:none;"><a class="toc-link" href="#jQuery和Dom对象之间的相互转换"><span class="toc-text">jQuery和Dom对象之间的相互转换</span></a></li><li class="toc-item toc-level-2" style="list-style-type:none;"><a class="toc-link" href="#入口函数"><span class="toc-text">入口函数</span></a></li><li class="toc-item toc-level-2" style="list-style-type:none;"><a class="toc-link" href="#参考文章"><span class="toc-text">参考文章</span></a></li><li class="toc-item toc-level-2" style="list-style-type:none;"><a class="toc-link" href="#jQuery作者"><span class="toc-text">jQuery作者</span></a></li></ul>
-	    <blockquote><p>如果要在JavaScript的世界里找一门应用最广泛的库，那么非jQuery莫属。也不知道哪来的统计，估计是忽悠的，说是全世界排名前100万的网站，有46%使用jQuery库，且不说这个数据准不准确，但就jQuery语法之简洁，接口之灵活，功能之强大，说它是应用最广泛的库一点也不为过。jQuery诞生于2006年1月，这么流行的一个库，竟然是一个年仅22岁的美国男孩在十多年前开发的。可能这家伙在当时也只是为了图一己之便搞了一个这么个东西出来，没成想以后会在JavaScript的世界红的发紫。其实我们每个人在有意无意间都有可能改变世界，但首先要有一颗创造的心，而不是拿来主义。</p>
+	    <blockquote>
+<p>如果要在JavaScript的世界里找一门应用最广泛的库，那么非jQuery莫属。也不知道哪来的统计，估计是忽悠的，说是全世界排名前100万的网站，有46%使用jQuery库，且不说这个数据准不准确，但就jQuery语法之简洁，接口之灵活，功能之强大，说它是应用最广泛的库一点也不为过。jQuery诞生于2006年1月，这么流行的一个库，竟然是一个年仅22岁的美国男孩在十多年前开发的。可能这家伙在当时也只是为了图一己之便搞了一个这么个东西出来，没成想以后会在JavaScript的世界红的发紫。其实我们每个人在有意无意间都有可能改变世界，但首先要有一颗创造的心，而不是拿来主义。</p>
 </blockquote>
-
 <h2 id="选择器"><a href="#选择器" class="headerlink" title="选择器"></a>选择器</h2><p>jQuery的基本设计和主要用法，就是”选择某个网页元素，然后对其进行某种操作”。这是它区别于其他函数库的根本特点。</p>
 <p>选择器的概念其实就是查找一个元素，jQuery可以通过元素的 id、类、类型、属性、属性值等查找到HTML 元素，jQuery的选择器和CSS中的选择器师出同门，用法基本一致。</p>
 <p>jQuery 中所有选择器都以美元符号开头：$()。</p>

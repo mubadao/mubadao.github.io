@@ -35,12 +35,12 @@
 <link rel="canonical" href="mubadao.github.io/2020/06/22/20200622123254/"/>
 
 
-<meta name="description" content="在写文档的过程中，经常需要进行画图。虽然说现在有很多类似viso之类的可视化画图工具，但是还是要花费大量时间在拖拉组件上，效率十分低下。最近在网上找到了一款还算不错的绘图工具– Plantuml, 它本质上是也算一门可以快速画图的设计语言，学习起来也很方便。可以在http:&#x2F;&#x2F;plantuml.com&#x2F;网站上体验一下。 在vscode, webstorm都有相关的插件可以使用。 时序图时序图相对来">
+<meta name="description" content="在写文档的过程中，经常需要进行画图。虽然说现在有很多类似viso之类的可视化画图工具，但是还是要花费大量时间在拖拉组件上，效率十分低下。最近在网上找到了一款还算不错的绘图工具– Plantuml, 它本质上是也算一门可以快速画图的设计语言，学习起来也很方便。可以在http:&#x2F;&#x2F;plantuml.com&#x2F;网站上体验一下。 在vscode, webstorm都有相关的插件可以使用。  时序图时序图相">
 <meta property="og:type" content="article">
 <meta property="og:title" content="绘图工具-Plantuml">
 <meta property="og:url" content="mubadao.github.io/2020/06/22/20200622123254/index.html">
 <meta property="og:site_name" content="目八刀">
-<meta property="og:description" content="在写文档的过程中，经常需要进行画图。虽然说现在有很多类似viso之类的可视化画图工具，但是还是要花费大量时间在拖拉组件上，效率十分低下。最近在网上找到了一款还算不错的绘图工具– Plantuml, 它本质上是也算一门可以快速画图的设计语言，学习起来也很方便。可以在http:&#x2F;&#x2F;plantuml.com&#x2F;网站上体验一下。 在vscode, webstorm都有相关的插件可以使用。 时序图时序图相对来">
+<meta property="og:description" content="在写文档的过程中，经常需要进行画图。虽然说现在有很多类似viso之类的可视化画图工具，但是还是要花费大量时间在拖拉组件上，效率十分低下。最近在网上找到了一款还算不错的绘图工具– Plantuml, 它本质上是也算一门可以快速画图的设计语言，学习起来也很方便。可以在http:&#x2F;&#x2F;plantuml.com&#x2F;网站上体验一下。 在vscode, webstorm都有相关的插件可以使用。  时序图时序图相">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/112263-454b0519a685e7d3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/143/format/webp">
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/112263-adf81a1ddfaff6d7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/365/format/webp">
@@ -51,7 +51,7 @@
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/112263-bcf655490e617e8d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/263/format/webp">
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/112263-8e43d01e616e0c20.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/484/format/webp">
 <meta property="article:published_time" content="2020-06-22T04:32:54.000Z">
-<meta property="article:modified_time" content="2020-06-22T14:32:37.988Z">
+<meta property="article:modified_time" content="2020-06-23T02:14:28.372Z">
 <meta property="article:author" content="目八刀">
 <meta property="article:tag" content="工具">
 <meta name="twitter:card" content="summary">
@@ -159,7 +159,9 @@
     
             <div class="post-content">
             <ul class="toc"><li class="toc-item toc-level-1" style="list-style-type:none;"><a class="toc-link" href="#时序图"><span class="toc-text">时序图</span></a><ul class="toc-child"><li class="toc-item toc-level-2" style="list-style-type:none;"><a class="toc-link" href="#基本用法"><span class="toc-text">基本用法</span></a></li><li class="toc-item toc-level-2" style="list-style-type:none;"><a class="toc-link" href="#设置不同的角色"><span class="toc-text">设置不同的角色</span></a></li><li class="toc-item toc-level-2" style="list-style-type:none;"><a class="toc-link" href="#不用的箭头样式"><span class="toc-text">不用的箭头样式</span></a></li><li class="toc-item toc-level-2" style="list-style-type:none;"><a class="toc-link" href="#分页"><span class="toc-text">分页</span></a></li><li class="toc-item toc-level-2" style="list-style-type:none;"><a class="toc-link" href="#分段"><span class="toc-text">分段</span></a></li><li class="toc-item toc-level-2" style="list-style-type:none;"><a class="toc-link" href="#生命线"><span class="toc-text">生命线</span></a></li><li class="toc-item toc-level-2" style="list-style-type:none;"><a class="toc-link" href="#图例注脚等"><span class="toc-text">图例注脚等</span></a></li></ul></li><li class="toc-item toc-level-1" style="list-style-type:none;"><a class="toc-link" href="#C4架构图"><span class="toc-text">C4架构图</span></a></li></ul>
-	    <p>在写文档的过程中，经常需要进行画图。虽然说现在有很多类似viso之类的可视化画图工具，但是还是要花费大量时间在拖拉组件上，效率十分低下。最近在网上找到了一款还算不错的绘图工具– Plantuml, 它本质上是也算一门可以快速画图的设计语言，学习起来也很方便。可以在<a href="http://plantuml.com/网站上体验一下。" target="_blank" rel="noopener">http://plantuml.com/网站上体验一下。</a><br> 在vscode, webstorm都有相关的插件可以使用。</p>
+	    <blockquote>
+<p>在写文档的过程中，经常需要进行画图。虽然说现在有很多类似viso之类的可视化画图工具，但是还是要花费大量时间在拖拉组件上，效率十分低下。最近在网上找到了一款还算不错的绘图工具– Plantuml, 它本质上是也算一门可以快速画图的设计语言，学习起来也很方便。可以在<a href="http://plantuml.com/网站上体验一下。" target="_blank" rel="noopener">http://plantuml.com/网站上体验一下。</a><br> 在vscode, webstorm都有相关的插件可以使用。</p>
+</blockquote>
 <h1 id="时序图"><a href="#时序图" class="headerlink" title="时序图"></a>时序图</h1><p>时序图相对来说是平常比较经常画的一种设计图稿，在这里记录一下plantuml中相关的语法。</p>
 <h2 id="基本用法"><a href="#基本用法" class="headerlink" title="基本用法"></a>基本用法</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">@startuml</span><br><span class="line">A -&gt; B: do something</span><br><span class="line">B -&gt; A: do something</span><br><span class="line">@enduml</span><br></pre></td></tr></table></figure>
 
