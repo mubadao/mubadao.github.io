@@ -43,7 +43,7 @@
 <meta property="og:description" content="在Hexo中使用在Hexo使用PlantUML要安装hexo-tag-plantuml插件 1npm install hexo-tag-plantuml --save 在vscode中使用在vscode中使用，在插件库中搜索plantuml，直接安装。vscode中的使用和Hexo的语法不一样 12345678910111213141516&#x2F;&#x2F;Hexo的写法：&amp;#123;% p">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-06-24T07:47:49.000Z">
-<meta property="article:modified_time" content="2020-06-24T10:02:00.242Z">
+<meta property="article:modified_time" content="2020-06-24T10:02:33.423Z">
 <meta property="article:author" content="目八刀">
 <meta property="article:tag" content="Markdown">
 <meta name="twitter:card" content="summary">
@@ -168,8 +168,6 @@
 <h2 id="思维导图"><a href="#思维导图" class="headerlink" title="思维导图"></a>思维导图</h2><img  src=http://www.plantuml.com/plantuml/svg/JOzD3e8m44Rtd6BMtNW192IM5I29HEDsAbKdeLD2MvNRIsjCMCsRlFd9LpgFipV4Wy4f4o2r8kHC23Yhm3wi9A0X3XzeYNrgwx1H6wvb1KTjqtRJoYhMtexBSAqJUescwoEUq4tn3xp9Fm7XfUS5HiiFO3Gw7SjT4QUCkkKxLy2-WAvl3rkrtEclBdOCXcnMwZN7ByiN>
 <h2 id="组织结构图"><a href="#组织结构图" class="headerlink" title="组织结构图"></a>组织结构图</h2><img  src=http://www.plantuml.com/plantuml/svg/ZP2nRiCm34HtVmLdR-aNf6aN0osQDWKoCn9jiP4fGwIJvkyhsK2wPkA1UE3TyJkmWjx4y1UASccSqFWK2Qvi0Jxoy9uyDLirp7OzQTF2RbOMKeLzJgxEIiJ8Ci1nTsZQ5jvm5XV00i6KqmyvAziMNihnI4PmC3nJID5JXYzImkp2GdJ2nXYXg-189PLn4jX7b7htbPG7WIcWqi8lpf1wUDRkdeVqxkGhzG2sUP1xMbq9TSwqKXFbFkKHnH6CP9cThbLyYS_z3JvdTcSuijJz_mzO95smYBNDbiINz_u1>
 <h2 id="Salt"><a href="#Salt" class="headerlink" title="Salt"></a>Salt</h2><img  src=http://www.plantuml.com/plantuml/svg/DOwz2W8n48JxFCNs5lOYSdYWbLYa4OuxY6Qz199TIQ87Hj_TzQ-RvPkPdIONaqeseQWwKtKEo-DgYuJ917Z0vXf2FYL4acEDpjmy9v5Q18tmL5LLs5y4-sX614yBeOEEqWaxjZY8fplqe2DpSLzNXib9uiuSqNveotJsAVvAB0Oidabr84774pXlxVz7LjBO1ixOYsgGx7ly2m00>
-
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">@startuml</span><br><span class="line">skinparam monochrome true</span><br><span class="line">actor User</span><br><span class="line">participant &quot;First Class&quot; as A</span><br><span class="line">participant &quot;Second Class&quot; as B</span><br><span class="line">participant &quot;Last Class&quot; as C</span><br><span class="line">User -&gt; A: DoWork</span><br><span class="line">activate A</span><br><span class="line">A -&gt; B: Create Request</span><br><span class="line">activate B</span><br><span class="line">B -&gt; C: DoWork</span><br><span class="line">activate C</span><br><span class="line">C --&gt; B: WorkDone</span><br><span class="line">destroy C</span><br><span class="line">B --&gt; A: Request Created</span><br><span class="line">deactivate B</span><br><span class="line">A --&gt; User: Done</span><br><span class="line">deactivate A</span><br><span class="line">@enduml</span><br></pre></td></tr></table></figure>
             </div>
           
 
