@@ -12,10 +12,12 @@
 
 
 
-  <meta name="description" content="20200624154746"/>
+  <meta name="description" content="在Markdown中使用PlantUML"/>
 
 
 
+
+  <meta name="keywords" content="Markdown," />
 
 
 
@@ -33,16 +35,17 @@
 <link rel="canonical" href="mubadao.github.io/2020/06/24/20200624154746/"/>
 
 
-<meta name="description" content="20200624154746.md    &#x2F;* https:&#x2F;&#x2F;github.com&#x2F;microsoft&#x2F;vscode&#x2F;blob&#x2F;master&#x2F;extensions&#x2F;markdown-language-features&#x2F;media&#x2F;markdown.css *&#x2F; &#x2F;*---------------------------------------------------------------">
+<meta name="description" content="安装在Hexo使用PlantUML要安装hexo-tag-plantuml插件 1npm install hexo-tag-plantuml --save 黑白模式  时序图 用例图 类图 活动图 组件图 状态图 对象图 Gantt Diagram 思维导图 组织结构图 Salt">
 <meta property="og:type" content="article">
-<meta property="og:title" content="20200624154746">
+<meta property="og:title" content="在Markdown中使用PlantUML">
 <meta property="og:url" content="mubadao.github.io/2020/06/24/20200624154746/index.html">
 <meta property="og:site_name" content="目八刀">
-<meta property="og:description" content="20200624154746.md    &#x2F;* https:&#x2F;&#x2F;github.com&#x2F;microsoft&#x2F;vscode&#x2F;blob&#x2F;master&#x2F;extensions&#x2F;markdown-language-features&#x2F;media&#x2F;markdown.css *&#x2F; &#x2F;*---------------------------------------------------------------">
+<meta property="og:description" content="安装在Hexo使用PlantUML要安装hexo-tag-plantuml插件 1npm install hexo-tag-plantuml --save 黑白模式  时序图 用例图 类图 活动图 组件图 状态图 对象图 Gantt Diagram 思维导图 组织结构图 Salt">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-06-24T07:55:50.388Z">
-<meta property="article:modified_time" content="2020-06-24T07:55:57.454Z">
+<meta property="article:published_time" content="2020-06-24T07:47:49.000Z">
+<meta property="article:modified_time" content="2020-06-24T08:26:30.196Z">
 <meta property="article:author" content="目八刀">
+<meta property="article:tag" content="Markdown">
 <meta name="twitter:card" content="summary">
 
 
@@ -71,7 +74,7 @@
 <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
 
 
-    <title> 20200624154746 - 目八刀 </title>
+    <title> 在Markdown中使用PlantUML - 目八刀 </title>
     
 
 
@@ -83,7 +86,7 @@
 
   
 
-  </head>
+  <meta name="generator" content="Hexo 4.2.1"></head>
 
   <body>
     <div id="page">
@@ -128,7 +131,7 @@
     <header class="post-header">
       <h1 class="post-title">
         
-          20200624154746
+          在Markdown中使用PlantUML
         
       </h1>
 
@@ -146,404 +149,33 @@
 
     
             <div class="post-content">
-            <ul class="toc"><li class="toc-item toc-level-2" style="list-style-type:none;"><a class="toc-link" href="#%E9%BB%91%E7%99%BD%E6%A8%A1%E5%BC%8F"><span class="toc-text">黑白模式</span></a></li></ul>
-	    <!DOCTYPE html>
-<html>
-<head>
-<title>20200624154746.md</title>
-<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
-
-<style>
-/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
-/*---------------------------------------------------------------------------------------------
- *  Copyright (c) Microsoft Corporation. All rights reserved.
- *  Licensed under the MIT License. See License.txt in the project root for license information.
- *--------------------------------------------------------------------------------------------*/
-
-body {
-	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
-	font-size: var(--vscode-markdown-font-size, 14px);
-	padding: 0 26px;
-	line-height: var(--vscode-markdown-line-height, 22px);
-	word-wrap: break-word;
-}
-
-#code-csp-warning {
-	position: fixed;
-	top: 0;
-	right: 0;
-	color: white;
-	margin: 16px;
-	text-align: center;
-	font-size: 12px;
-	font-family: sans-serif;
-	background-color:#444444;
-	cursor: pointer;
-	padding: 6px;
-	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
-}
-
-#code-csp-warning:hover {
-	text-decoration: none;
-	background-color:#007acc;
-	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
-}
-
-body.scrollBeyondLastLine {
-	margin-bottom: calc(100vh - 22px);
-}
-
-body.showEditorSelection .code-line {
-	position: relative;
-}
-
-body.showEditorSelection .code-active-line:before,
-body.showEditorSelection .code-line:hover:before {
-	content: "";
-	display: block;
-	position: absolute;
-	top: 0;
-	left: -12px;
-	height: 100%;
-}
-
-body.showEditorSelection li.code-active-line:before,
-body.showEditorSelection li.code-line:hover:before {
-	left: -30px;
-}
-
-.vscode-light.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(0, 0, 0, 0.15);
-}
-
-.vscode-light.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(0, 0, 0, 0.40);
-}
-
-.vscode-light.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-.vscode-dark.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(255, 255, 255, 0.4);
-}
-
-.vscode-dark.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(255, 255, 255, 0.60);
-}
-
-.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-.vscode-high-contrast.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(255, 160, 0, 0.7);
-}
-
-.vscode-high-contrast.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(255, 160, 0, 1);
-}
-
-.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-img {
-	max-width: 100%;
-	max-height: 100%;
-}
-
-a {
-	text-decoration: none;
-}
-
-a:hover {
-	text-decoration: underline;
-}
-
-a:focus,
-input:focus,
-select:focus,
-textarea:focus {
-	outline: 1px solid -webkit-focus-ring-color;
-	outline-offset: -1px;
-}
-
-hr {
-	border: 0;
-	height: 2px;
-	border-bottom: 2px solid;
-}
-
-h1 {
-	padding-bottom: 0.3em;
-	line-height: 1.2;
-	border-bottom-width: 1px;
-	border-bottom-style: solid;
-}
-
-h1, h2, h3 {
-	font-weight: normal;
-}
-
-table {
-	border-collapse: collapse;
-}
-
-table > thead > tr > th {
-	text-align: left;
-	border-bottom: 1px solid;
-}
-
-table > thead > tr > th,
-table > thead > tr > td,
-table > tbody > tr > th,
-table > tbody > tr > td {
-	padding: 5px 10px;
-}
-
-table > tbody > tr + tr > td {
-	border-top: 1px solid;
-}
-
-blockquote {
-	margin: 0 7px 0 5px;
-	padding: 0 16px 0 10px;
-	border-left-width: 5px;
-	border-left-style: solid;
-}
-
-code {
-	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
-	font-size: 1em;
-	line-height: 1.357em;
-}
-
-body.wordWrap pre {
-	white-space: pre-wrap;
-}
-
-pre:not(.hljs),
-pre.hljs code > div {
-	padding: 16px;
-	border-radius: 3px;
-	overflow: auto;
-}
-
-pre code {
-	color: var(--vscode-editor-foreground);
-	tab-size: 4;
-}
-
-/** Theming */
-
-.vscode-light pre {
-	background-color: rgba(220, 220, 220, 0.4);
-}
-
-.vscode-dark pre {
-	background-color: rgba(10, 10, 10, 0.4);
-}
-
-.vscode-high-contrast pre {
-	background-color: rgb(0, 0, 0);
-}
-
-.vscode-high-contrast h1 {
-	border-color: rgb(0, 0, 0);
-}
-
-.vscode-light table > thead > tr > th {
-	border-color: rgba(0, 0, 0, 0.69);
-}
-
-.vscode-dark table > thead > tr > th {
-	border-color: rgba(255, 255, 255, 0.69);
-}
-
-.vscode-light h1,
-.vscode-light hr,
-.vscode-light table > tbody > tr + tr > td {
-	border-color: rgba(0, 0, 0, 0.18);
-}
-
-.vscode-dark h1,
-.vscode-dark hr,
-.vscode-dark table > tbody > tr + tr > td {
-	border-color: rgba(255, 255, 255, 0.18);
-}
-
-</style>
-
-<style>
-/* Tomorrow Theme */
-/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
-/* Original theme - https://github.com/chriskempson/tomorrow-theme */
-
-/* Tomorrow Comment */
-.hljs-comment,
-.hljs-quote {
-	color: #8e908c;
-}
-
-/* Tomorrow Red */
-.hljs-variable,
-.hljs-template-variable,
-.hljs-tag,
-.hljs-name,
-.hljs-selector-id,
-.hljs-selector-class,
-.hljs-regexp,
-.hljs-deletion {
-	color: #c82829;
-}
-
-/* Tomorrow Orange */
-.hljs-number,
-.hljs-built_in,
-.hljs-builtin-name,
-.hljs-literal,
-.hljs-type,
-.hljs-params,
-.hljs-meta,
-.hljs-link {
-	color: #f5871f;
-}
-
-/* Tomorrow Yellow */
-.hljs-attribute {
-	color: #eab700;
-}
-
-/* Tomorrow Green */
-.hljs-string,
-.hljs-symbol,
-.hljs-bullet,
-.hljs-addition {
-	color: #718c00;
-}
-
-/* Tomorrow Blue */
-.hljs-title,
-.hljs-section {
-	color: #4271ae;
-}
-
-/* Tomorrow Purple */
-.hljs-keyword,
-.hljs-selector-tag {
-	color: #8959a8;
-}
-
-.hljs {
-	display: block;
-	overflow-x: auto;
-	color: #4d4d4c;
-	padding: 0.5em;
-}
-
-.hljs-emphasis {
-	font-style: italic;
-}
-
-.hljs-strong {
-	font-weight: bold;
-}
-</style>
-
-<style>
-/*
- * Markdown PDF CSS
- */
-
- body {
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
-	padding: 0 12px;
-}
-
-pre {
-	background-color: #f8f8f8;
-	border: 1px solid #cccccc;
-	border-radius: 3px;
-	overflow-x: auto;
-	white-space: pre-wrap;
-	overflow-wrap: break-word;
-}
-
-pre:not(.hljs) {
-	padding: 23px;
-	line-height: 19px;
-}
-
-blockquote {
-	background: rgba(127, 127, 127, 0.1);
-	border-color: rgba(0, 122, 204, 0.5);
-}
-
-.emoji {
-	height: 1.4em;
-}
-
-code {
-	font-size: 14px;
-	line-height: 19px;
-}
-
-/* for inline code */
-:not(pre):not(.hljs) > code {
-	color: #C9AE75; /* Change the old color so it seems less like an error */
-	font-size: inherit;
-}
-
-/* Page Break : use <div class="page"/> to insert page break
--------------------------------------------------------- */
-.page {
-	page-break-after: always;
-}
-
-</style>
-
-<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
-<meta name="generator" content="Hexo 4.2.1"></head>
-<body>
-  <script>
-    mermaid.initialize({
-      startOnLoad: true,
-      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
-          ? 'dark'
-          : 'default'
-    });
-  </script>
-<h2 id="%E9%BB%91%E7%99%BD%E6%A8%A1%E5%BC%8F">黑白模式</h2>
-<pre class="hljs"><code><div>@startuml
-skinparam monochrome true
-actor User
-participant &quot;First Class&quot; as A
-participant &quot;Second Class&quot; as B
-participant &quot;Last Class&quot; as C
-User -&gt; A: DoWork
-activate A
-A -&gt; B: Create Request
-activate B
-B -&gt; C: DoWork
-activate C
-C --&gt; B: WorkDone
-destroy C
-B --&gt; A: Request Created
-deactivate B
-A --&gt; User: Done
-deactivate A
-@enduml
-</div></code></pre>
-
-</body>
-</html>
-
+            <ul class="toc"><li class="toc-item toc-level-2" style="list-style-type:none;"><a class="toc-link" href="#安装"><span class="toc-text">安装</span></a></li><li class="toc-item toc-level-2" style="list-style-type:none;"><a class="toc-link" href="#黑白模式"><span class="toc-text">黑白模式</span></a></li><li class="toc-item toc-level-2" style="list-style-type:none;"><a class="toc-link" href="#时序图"><span class="toc-text">时序图</span></a></li><li class="toc-item toc-level-2" style="list-style-type:none;"><a class="toc-link" href="#用例图"><span class="toc-text">用例图</span></a></li><li class="toc-item toc-level-2" style="list-style-type:none;"><a class="toc-link" href="#类图"><span class="toc-text">类图</span></a></li><li class="toc-item toc-level-2" style="list-style-type:none;"><a class="toc-link" href="#活动图"><span class="toc-text">活动图</span></a></li><li class="toc-item toc-level-2" style="list-style-type:none;"><a class="toc-link" href="#组件图"><span class="toc-text">组件图</span></a></li><li class="toc-item toc-level-2" style="list-style-type:none;"><a class="toc-link" href="#状态图"><span class="toc-text">状态图</span></a></li><li class="toc-item toc-level-2" style="list-style-type:none;"><a class="toc-link" href="#对象图"><span class="toc-text">对象图</span></a></li><li class="toc-item toc-level-2" style="list-style-type:none;"><a class="toc-link" href="#Gantt-Diagram"><span class="toc-text">Gantt Diagram</span></a></li><li class="toc-item toc-level-2" style="list-style-type:none;"><a class="toc-link" href="#思维导图"><span class="toc-text">思维导图</span></a></li><li class="toc-item toc-level-2" style="list-style-type:none;"><a class="toc-link" href="#组织结构图"><span class="toc-text">组织结构图</span></a></li><li class="toc-item toc-level-2" style="list-style-type:none;"><a class="toc-link" href="#Salt"><span class="toc-text">Salt</span></a></li></ul>
+	    <h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>在Hexo使用PlantUML要安装hexo-tag-plantuml插件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-tag-plantuml --save</span><br></pre></td></tr></table></figure>
+<h2 id="黑白模式"><a href="#黑白模式" class="headerlink" title="黑白模式"></a>黑白模式</h2><img  src=http://www.plantuml.com/plantuml/svg/PP113e8m44NtFSN4FHTWOQ0bhbnfZEi9J683T70wc7XxMoGHuhRl_VydhQAYw3mE9lO-J2WumiY1suVmIA0oay5MMU0MIKmIrBT-mg1mE7c92cx060-04UezlbBBeTjmk-TdtAMToGjG7A4keU4xIv-N_GkLKdMTYIt12UM72prdYlephB7PSFzPPnmKtt063GSoNSeAlnEp2qkJQ-Cwq2LbqrqlLZumzoy5czig2btwmWy0>
+
+<h2 id="时序图"><a href="#时序图" class="headerlink" title="时序图"></a>时序图</h2><img  src=http://www.plantuml.com/plantuml/svg/JOyz3iCm24PtJi45EZH_GuSgKqxG2n3RGoGN99iClNr374SUFnvw7ynPAUd-ZK1E9U4YyeHLTlQKVfOwSCAQ95he8R1kUe81F2cjb8EbyLYBCJZTXBCD9Z0LFjwd15_u4QpU5lK5NIKj6GefZIqO2wZrBPggxRu5vi3--EyF>
+<h2 id="用例图"><a href="#用例图" class="headerlink" title="用例图"></a>用例图</h2><img  src=http://www.plantuml.com/plantuml/svg/LOzD2eCm44RtESMtj0jx01V5E_G4Gvngo2_912gbTsz4LBfylCV7p5Y4ibJlbEENG2AocHV1P39hCJ6eOar8bCaZaROqyrDMnzWqXTcn8YqnGzSYqNC-q76sweoW5zOsLi57uMpHz-WESslY0jmVw1AjdaE30IPeLoVUceLTslrL3-2tS9ZA_qZRtm_vOcoslVa3>
+<h2 id="类图"><a href="#类图" class="headerlink" title="类图"></a>类图</h2><img  src=http://www.plantuml.com/plantuml/svg/SoWkIImgAStDuNBEIImkDZ1KK39KKj3IrLLGoatCgrHIW0WRALWf9EVdbIHcvXL3LHehv0DLGTWcGEd4zFIYrFJ4aipyFAWAKmLTNJkmUH2-6PT3QbuAq2u0>
+<h2 id="活动图"><a href="#活动图" class="headerlink" title="活动图"></a>活动图</h2><img  src=http://www.plantuml.com/plantuml/svg/JOwn3i8m34HtVuML2P3w2rKxC333LdM8YjDOIXEKk4ZmzJXg1YPRzyvtXg68pR9l0KwNCtPTZ-OMMTW6_bhX50smGtDF6-63YXWKJn6mMYV9EyqDZelmc-LZ3ePcZ4cj6Uq_oBnwKQfbGA5GrVh9MLrRa7YEArRMagPhV5RfbTD2fSp7hMeE1Xtw-Wy0>
+<h2 id="组件图"><a href="#组件图" class="headerlink" title="组件图"></a>组件图</h2><img  src=http://www.plantuml.com/plantuml/svg/PO_12i8m44Jl-OgXT_i17gJ18Xu52nx4mpPkDP0cajqM_7jZnLDlm-CDmpIYb7KQW_5HEG_a65LBIh3EiKW54hJMj1ORN0y-YsAVnbUA7FLcLWHrlSEnwqxOOX8sCIaZyA18mvzVkCUPy-pBLehX_PEoVpmNQxq2M2oEemWAaWhflrq8pvmf8FZ8OZZU5yyq9PLF7m00>
+<h2 id="状态图"><a href="#状态图" class="headerlink" title="状态图"></a>状态图</h2><img  src=http://www.plantuml.com/plantuml/svg/SoWkIImgAStDuOhMYbNGrRLJ22v9B4arv89GO16W38nhfL2IaLci04I92iKbHPbvwLXayl9BCbABqEHX9Xj118pW9ZkavgK0xGS0>
+<h2 id="对象图"><a href="#对象图" class="headerlink" title="对象图"></a>对象图</h2><img  src=http://www.plantuml.com/plantuml/svg/SoWkIImgAStDuSfFoafDBb7m1rC6XcXy8pI-CHhV18rlYiOtG-ERe_4jk60MAzZKwEeYh8NPfw2543M1YPegv0D5bKoK4DR0p5VGquERhM2bK9oVcwgGavYKcbFCvP2QbmBqCG00>
+<h2 id="Gantt-Diagram"><a href="#Gantt-Diagram" class="headerlink" title="Gantt Diagram"></a>Gantt Diagram</h2><img  src=http://www.plantuml.com/plantuml/svg/SoWkIImgIK_CAodXYWueoY_9BwaiI5L8IItEJC-BLSX9B2ufLZ0qLKX9h2pcYWv9BIvHA82fWaiRu906crsia5YYW6cqUh52QbuAbmEG0DiE0000>
+<h2 id="思维导图"><a href="#思维导图" class="headerlink" title="思维导图"></a>思维导图</h2><img  src=http://www.plantuml.com/plantuml/svg/JOzD3e8m44Rtd6BMtNW192IM5I29HEDsAbKdeLD2MvNRIsjCMCsRlFd9LpgFipV4Wy4f4o2r8kHC23Yhm3wi9A0X3XzeYNrgwx1H6wvb1KTjqtRJoYhMtexBSAqJUescwoEUq4tn3xp9Fm7XfUS5HiiFO3Gw7SjT4QUCkkKxLy2-WAvl3rkrtEclBdOCXcnMwZN7ByiN>
+<h2 id="组织结构图"><a href="#组织结构图" class="headerlink" title="组织结构图"></a>组织结构图</h2><img  src=http://www.plantuml.com/plantuml/svg/ZP2nRiCm34HtVmLdR-aNf6aN0osQDWKoCn9jiP4fGwIJvkyhsK2wPkA1UE3TyJkmWjx4y1UASccSqFWK2Qvi0Jxoy9uyDLirp7OzQTF2RbOMKeLzJgxEIiJ8Ci1nTsZQ5jvm5XV00i6KqmyvAziMNihnI4PmC3nJID5JXYzImkp2GdJ2nXYXg-189PLn4jX7b7htbPG7WIcWqi8lpf1wUDRkdeVqxkGhzG2sUP1xMbq9TSwqKXFbFkKHnH6CP9cThbLyYS_z3JvdTcSuijJz_mzO95smYBNDbiINz_u1>
+<h2 id="Salt"><a href="#Salt" class="headerlink" title="Salt"></a>Salt</h2><img  src=http://www.plantuml.com/plantuml/svg/DOwz2W8n48JxFCNs5lOYSdYWbLYa4OuxY6Qz199TIQ87Hj_TzQ-RvPkPdIONaqeseQWwKtKEo-DgYuJ917Z0vXf2FYL4acEDpjmy9v5Q18tmL5LLs5y4-sX614yBeOEEqWaxjZY8fplqe2DpSLzNXib9uiuSqNveotJsAVvAB0Oidabr84774pXlxVz7LjBO1ixOYsgGx7ly2m00>
             </div>
           
 
     
       <footer class="post-footer">
+		
+		<div class="post-tags">
+		  
+			<a href="/tags/Markdown/">Markdown</a>
+		  
+		</div>
 		
 
         
@@ -552,7 +184,7 @@ deactivate A
     
       <a class="prev" href="/2020/06/24/20200624154746/">
         <i class="iconfont icon-left"></i>
-        <span class="prev-text nav-default">在Markdown中使用PlantUML</span>
+        <span class="prev-text nav-default">20200624154746</span>
         <span class="prev-text nav-mobile">Prev</span>
       </a>
     
