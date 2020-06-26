@@ -12,7 +12,7 @@
 
 
 
-  <meta name="description" content="标签云"/>
+  <meta name="description" content="目八刀的博客"/>
 
 
 
@@ -30,16 +30,16 @@
 
 
 
-<link rel="canonical" href="mubadao.github.io/tags/"/>
+<link rel="canonical" href="mubadao.github.io/page/3/"/>
 
 
+<meta name="description" content="目八刀的博客">
 <meta property="og:type" content="website">
-<meta property="og:title" content="标签云">
-<meta property="og:url" content="mubadao.github.io/tags/index.html">
+<meta property="og:title" content="目八刀">
+<meta property="og:url" content="mubadao.github.io/page/3/index.html">
 <meta property="og:site_name" content="目八刀">
+<meta property="og:description" content="目八刀的博客">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-06-15T08:09:26.000Z">
-<meta property="article:modified_time" content="2020-06-15T08:29:19.338Z">
 <meta property="article:author" content="目八刀">
 <meta name="twitter:card" content="summary">
 
@@ -72,7 +72,7 @@
 <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
 
 
-    <title> Categories - 目八刀 </title>
+    <title> 目八刀 - 目八刀的博客</title>
     
 
 
@@ -123,14 +123,104 @@
       </header>
       <div id="content">
         
-  <div class="tag-cloud">
-    <div class="tag-cloud-title">
-      19 Categories In Total
-    </div>
-    <div class="tag-cloud-tags">
-      <a class="tag-link" href="/tags/CCS/" rel="tag">CCS<span class="tag-count">2</span></a>    <a class="tag-link" href="/tags/HTML/" rel="tag">HTML<span class="tag-count">5</span></a>    <a class="tag-link" href="/tags/Hexo/" rel="tag">Hexo<span class="tag-count">4</span></a>    <a class="tag-link" href="/tags/JavaScript/" rel="tag">JavaScript<span class="tag-count">1</span></a>    <a class="tag-link" href="/tags/Markdown/" rel="tag">Markdown<span class="tag-count">1</span></a>    <a class="tag-link" href="/tags/Sass/" rel="tag">Sass<span class="tag-count">1</span></a>    <a class="tag-link" href="/tags/Swig/" rel="tag">Swig<span class="tag-count">1</span></a>    <a class="tag-link" href="/tags/Web%E5%BC%80%E5%8F%91/" rel="tag">Web开发<span class="tag-count">18</span></a>    <a class="tag-link" href="/tags/jQuery/" rel="tag">jQuery<span class="tag-count">1</span></a>    <a class="tag-link" href="/tags/%E5%AE%B6%E5%B8%B8/" rel="tag">家常<span class="tag-count">2</span></a>    <a class="tag-link" href="/tags/%E5%B7%A5%E5%85%B7/" rel="tag">工具<span class="tag-count">1</span></a>    <a class="tag-link" href="/tags/%E6%97%85%E6%B8%B8/" rel="tag">旅游<span class="tag-count">1</span></a>    <a class="tag-link" href="/tags/%E6%B5%8B%E8%AF%95/" rel="tag">测试<span class="tag-count">3</span></a>    <a class="tag-link" href="/tags/%E7%AC%AC%E4%B8%89%E6%96%B9%E5%BA%93/" rel="tag">第三方库<span class="tag-count">2</span></a>    <a class="tag-link" href="/tags/%E8%AF%BB%E4%B9%A6/" rel="tag">读书<span class="tag-count">2</span></a>    <a class="tag-link" href="/tags/%E8%BF%90%E7%BB%B4%E5%BC%80%E5%8F%91/" rel="tag">运维开发<span class="tag-count">1</span></a>    <a class="tag-link" href="/tags/%E9%97%AE%E9%A2%98/" rel="tag">问题<span class="tag-count">1</span></a>    <a class="tag-link" href="/tags/%E9%9A%8F%E6%84%9F/" rel="tag">随感<span class="tag-count">6</span></a>    <a class="tag-link" href="/tags/%E9%9F%B3%E4%B9%90/" rel="tag">音乐<span class="tag-count">4</span></a>
-    </div>
-  </div>
+  
+<div id="primary">
+  <section id="archive" class="archive">
+    
+
+    
+      
+      
+      
+        
+        <div class="collection-title">
+          <h2 class="archive-year">2018</h2>
+        </div>
+      
+
+      <div class="archive-post">
+        <span class="archive-post-time" data-time=1529061559000 >
+           
+           
+           
+           
+           
+              06月15日
+           
+        </span>
+        <span class="archive-post-title">
+          
+            <a href="/2018/06/15/%E5%9B%BE%E7%89%87%E6%B5%8B%E8%AF%95/" class="archive-post-link" >
+              图片测试
+            </a>
+          
+        </span>
+      </div>
+    
+  </section>
+ </div>
+ <script>
+    Date.prototype.format = function(format){
+    var o = {
+    "M+" : this.getMonth()+1, //month
+    "d+" : this.getDate(), //day
+    "h+" : this.getHours(), //hour
+    "m+" : this.getMinutes(), //minute
+    "s+" : this.getSeconds(), //second
+    "q+" : Math.floor((this.getMonth()+3)/3), //quarter
+    "S" : this.getMilliseconds() //millisecond
+    }
+     
+    if(/(y+)/.test(format)) {
+    format = format.replace(RegExp.$1, (this.getFullYear()+"").substr(4 - RegExp.$1.length));
+    }
+     
+    for(var k in o) {
+    if(new RegExp("("+ k +")").test(format)) {
+    format = format.replace(RegExp.$1, RegExp.$1.length==1 ? o[k] : ("00"+ o[k]).substr((""+ o[k]).length));
+    }
+    }
+    return format;
+    }
+    $(".archive-post-time").each(function(index, hr){
+        var t2 = parseInt(hr.getAttribute("data-time"));
+        var t1 = Date.now() - t2
+        var day = t1 / 86400000
+        var hour = t1 / 3600000
+        var min = t1 / 60000
+         if (day >= 2) {
+            hr.innerText = (new Date(t2)).format("MM月dd日");
+         }else if (day >= 1) {
+            hr.innerText = "1天前";
+         }else if (hour >= 1) {
+             hr.innerText = parseInt(hour)+"小时前";
+         }else {
+             hr.innerText = Math.max(1, parseInt(min))+"分钟前";
+         }
+    })
+</script>
+
+  
+  <nav class="pagination">
+    
+      <a class="prev" href="/page/2/">
+        <i class="iconfont icon-left"></i>
+        <span class="prev-text">Prev</span>
+      </a>
+    
+    
+  </nav>
+
+
+  <div id="secondary">
+    
+
+    
+
+    
+
+</div>
+
 
       </div>
 

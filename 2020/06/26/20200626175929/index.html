@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,minimum-scale=1,maximum-scale=1">
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+  <meta name="description" content="换gitalk评论"/>
+
+
+
+
+  <meta name="keywords" content="Web开发," />
+
+
+
+
+
+  <link rel="alternate" href="/default" title="目八刀">
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=1.1" />
+
+
+
+<link rel="canonical" href="mubadao.github.io/2020/06/26/20200626175929/"/>
+
+
+<meta name="description" content="gitalk的评论存储在github的仓库中，具体使用如下：  安装1npm i --save gitalk  去Github注册一个应用点击进行注册 ，如下  注册完后，可得到 Client ID 和 Client Secret 创建评论的仓库仓库名为xxx.github.io，xxx随便起 添加代码123456789101112&lt;link rel&#x3D;&quot;styleshe">
+<meta property="og:type" content="article">
+<meta property="og:title" content="换gitalk评论">
+<meta property="og:url" content="mubadao.github.io/2020/06/26/20200626175929/index.html">
+<meta property="og:site_name" content="目八刀">
+<meta property="og:description" content="gitalk的评论存储在github的仓库中，具体使用如下：  安装1npm i --save gitalk  去Github注册一个应用点击进行注册 ，如下  注册完后，可得到 Client ID 和 Client Secret 创建评论的仓库仓库名为xxx.github.io，xxx随便起 添加代码123456789101112&lt;link rel&#x3D;&quot;styleshe">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://i.loli.net/2020/05/23/6BmnUbX5gzPHqk1.png">
+<meta property="article:published_time" content="2020-06-26T10:08:03.000Z">
+<meta property="article:modified_time" content="2020-06-26T10:08:42.981Z">
+<meta property="article:author" content="目八刀">
+<meta property="article:tag" content="Web开发">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://i.loli.net/2020/05/23/6BmnUbX5gzPHqk1.png">
+
+
+<link rel="stylesheet" type="text/css" href="/css/style.css?v=1.1" />
+<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet'>
+
+
+
+
+
+<script type="text/javascript">
+  var themeConfig = {
+    fancybox: {
+      enable: false
+    },
+  };
+</script>
+
+
+
+
+  
+
+
+
+<script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+
+<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+
+    <title> 换gitalk评论 - 目八刀 </title>
+    
+
+
+
+
+  
+    <script type="text/javascript" src="/lib/jquery/jquery-3.1.1.min.js"></script>
+  
+
+  
+
+  <meta name="generator" content="Hexo 4.2.1"></head>
+
+  <body>
+    <div id="page">
+      <header id="masthead"><div class="site-header-inner">
+    <h1 class="site-title">
+        <a href="/." class="logo">目八刀</a>
+    </h1>
+
+    <nav id="nav-top">
+        
+            <ul id="menu-top" class="nav-top-items">
+                
+                    <li class="menu-item">
+                        <a href="/tags">
+                            
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li class="menu-item">
+                        <a href="/about">
+                            
+                            
+                                About
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        
+  </nav>
+</div>
+
+      </header>
+      <div id="content">
+        
+    <div id="primary">
+        
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
+          换gitalk评论
+        
+      </h1>
+
+      <time class="post-time">
+        
+        2020年06月26日 18:06
+        <img class="readicon" src="/images/icon_read.png"></img>
+        <span id="busuanzi_container_page_pv">
+          <span id="busuanzi_value_page_pv"></span>人阅读
+        </span>
+      </time>
+    </header>
+
+
+
+    
+            <div class="post-content">
+            <ul class="toc"><li class="toc-item toc-level-2" style="list-style-type:none;"><a class="toc-link" href="#"><span class="toc-text">安装</span></a></li><li class="toc-item toc-level-2" style="list-style-type:none;"><a class="toc-link" href="#"><span class="toc-text">去Github注册一个应用</span></a></li><li class="toc-item toc-level-2" style="list-style-type:none;"><a class="toc-link" href="#"><span class="toc-text">创建评论的仓库</span></a></li><li class="toc-item toc-level-2" style="list-style-type:none;"><a class="toc-link" href="#"><span class="toc-text">添加代码</span></a></li></ul>
+	    <blockquote>
+<p>gitalk的评论存储在github的仓库中，具体使用如下：</p>
+</blockquote>
+<h2><span id="an-zhuang">安装</span><a href="#an-zhuang" class="header-anchor"></a></h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i --save gitalk</span><br></pre></td></tr></table></figure>
+
+<h2><span id="qu-github-zhu-ce-yi-ge-ying-yong">去Github注册一个应用</span><a href="#qu-github-zhu-ce-yi-ge-ying-yong" class="header-anchor"></a></h2><p><a href="https://github.com/settings/applications/new" target="_blank" rel="noopener">点击进行注册</a> ，如下</p>
+<p><img src="https://i.loli.net/2020/05/23/6BmnUbX5gzPHqk1.png" alt="注册应用"></p>
+<p>注册完后，可得到 <code>Client ID</code> 和 <code>Client Secret</code></p>
+<h2><span id="chuang-jian-ping-lun-de-cang-ku">创建评论的仓库</span><a href="#chuang-jian-ping-lun-de-cang-ku" class="header-anchor"></a></h2><p>仓库名为xxx.github.io，xxx随便起</p>
+<h2><span id="tian-jia-dai-ma">添加代码</span><a href="#tian-jia-dai-ma" class="header-anchor"></a></h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&lt;link rel&#x3D;&quot;stylesheet&quot; href&#x3D;&quot;https:&#x2F;&#x2F;unpkg.com&#x2F;gitalk&#x2F;dist&#x2F;gitalk.css&quot;&gt;</span><br><span class="line">&lt;script src&#x3D;&quot;https:&#x2F;&#x2F;unpkg.com&#x2F;gitalk&#x2F;dist&#x2F;gitalk.min.js&quot;&gt;&lt;&#x2F;script&gt;</span><br><span class="line">const gitalk &#x3D; new Gitalk(&#123;</span><br><span class="line">  clientID: &#39;GitHub Application Client ID&#39;,</span><br><span class="line">  clientSecret: &#39;GitHub Application Client Secret&#39;,</span><br><span class="line">  repo: &#39;xxx.github.io,      &#x2F;&#x2F; The repository of store comments,</span><br><span class="line">  owner: &#39;GitHub repo owner&#39;,</span><br><span class="line">  admin: [&#39;GitHub repo owner and collaborators, only these guys can initialize github issues&#39;],</span><br><span class="line">  id: location.pathname,      &#x2F;&#x2F; Ensure uniqueness and length less than 50</span><br><span class="line">  distractionFreeMode: false  &#x2F;&#x2F; Facebook-like distraction free mode</span><br><span class="line">&#125;)</span><br><span class="line">gitalk.render(&#39;gitalk-container&#39;)</span><br></pre></td></tr></table></figure>
+            </div>
+          
+
+    
+      <footer class="post-footer">
+		
+		<div class="post-tags">
+		  
+			<a href="/tags/Web%E5%BC%80%E5%8F%91/">Web开发</a>
+		  
+		</div>
+		
+
+        
+        
+  <nav class="post-nav">
+    
+    
+      <a class="next" href="/2020/06/26/20200626073854/">
+        <span class="next-text nav-default">JavaScript速查</span>
+        <span class="prev-text nav-mobile">Next</span>
+        <i class="iconfont icon-right"></i>
+      </a>
+    
+  </nav>
+
+        
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+      </footer>
+    
+  </article>
+
+    </div>
+
+      </div>
+
+      
+
+      <footer id="colophon"><span class="copyright-year">
+    
+        &copy;
+    
+        2014 -
+    
+    2020
+    <span class="footer-author">目八刀.</span>
+    <span class="power-by">
+        Powered by <a class="hexo-link" href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> and <a class="theme-link" href="https://github.com/frostfan/hexo-theme-polarbear" target="_blank" rel="noopener">Polar Bear</a>
+    </span>
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span id="busuanzi_container_site_pv">总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+    <span class="post-meta-divider">|</span>
+    <span id="busuanzi_container_site_uv">访客数83人</span>
+</span>
+
+      </footer>
+
+      <div class="back-to-top" id="back-to-top">
+        <i class="iconfont icon-up"></i>
+      </div>
+    </div>
+    <script type="text/javascript" src="/js/src/theme.js?v=1.1"></script>
+<script type="text/javascript" src="/js/src/bootstrap.js?v=1.1"></script>
+
+  </body>
+</html>
