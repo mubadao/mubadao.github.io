@@ -70,6 +70,9 @@
 
 <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
 
+<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
 
     <title>  - 目八刀 </title>
     
@@ -130,17 +133,17 @@
                 </h1>
             </header>
             <div class="post-content">
-                <h1 id="本人"><a href="#本人" class="headerlink" title="本人"></a>本人</h1><p>软件、游戏开发多年，现居陕西，以前一直在北京</p>
-<h1 id="领域"><a href="#领域" class="headerlink" title="领域"></a>领域</h1><ul>
+                <h1><span id="ben-ren">本人</span><a href="#ben-ren" class="header-anchor"></a></h1><p>软件、游戏开发多年，现居陕西，以前一直在北京</p>
+<h1><span id="ling-yu">领域</span><a href="#ling-yu" class="header-anchor"></a></h1><ul>
 <li>Web：React.js，Vue.js，Angular</li>
 <li>游戏：Unity，Cocos，Unreal，OpenGL</li>
 </ul>
-<h1 id="联系方式"><a href="#联系方式" class="headerlink" title="联系方式"></a>联系方式</h1><ul>
+<h1><span id="lian-xi-fang-shi">联系方式</span><a href="#lian-xi-fang-shi" class="header-anchor"></a></h1><ul>
 <li>微信：mubadaoyaya</li>
 <li>QQ：1908514760</li>
 <li>邮箱：<a href="mailto:atomut@163.com">atomut@163.com</a></li>
 </ul>
-<h1 id="留言"><a href="#留言" class="headerlink" title="留言"></a>留言</h1>
+<h1><span id="liu-yan">留言</span><a href="#liu-yan" class="header-anchor"></a></h1>
             </div>
         </article>
     </div>
@@ -148,18 +151,19 @@
       </div>
 
       
-
-
-
-  <div id="vcomments"></div>
+  <div id="gitalk-container"></div>
   <script>
-      new Valine({
-          el: '#vcomments',
-          appId: 'kdm34f1wYGiv7fpBxunGFmHd-gzGzoHsz',
-          appKey: '8tgITTuqvhCeAqpLbsh6tcBc',
-          visitor: 'true'
-      })
-      console.log("init finidh")
+      const gitalk = new Gitalk({
+      clientID: '138f1d88521facdb7a8f',
+      clientSecret: '54b4af2668ebc4f00cc829b3a1f5bfa170be5b9b',
+      repo: 'https://mubadao.github.io',      // The repository of store comments,
+      owner: 'mubadao',
+      admin: ['mubadao'],
+      id: location.pathname,      // Ensure uniqueness and length less than 50
+      distractionFreeMode: true  // Facebook-like distraction free mode
+    })
+
+    gitalk.render('gitalk-container')
   </script>
 
 

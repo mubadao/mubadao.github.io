@@ -74,6 +74,9 @@
 
 <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
 
+<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
 
     <title> 加入音乐播放功能 - 目八刀 </title>
     
@@ -150,9 +153,9 @@
 
     
             <div class="post-content">
-            <ul class="toc"><li class="toc-item toc-level-3" style="list-style-type:none;"><a class="toc-link" href="#简介"><span class="toc-text">简介</span></a></li><li class="toc-item toc-level-3" style="list-style-type:none;"><a class="toc-link" href="#使用hexo-tag-aplayer"><span class="toc-text">使用hexo-tag-aplayer</span></a></li><li class="toc-item toc-level-3" style="list-style-type:none;"><a class="toc-link" href="#使用audio标签"><span class="toc-text">使用audio标签</span></a></li><li class="toc-item toc-level-3" style="list-style-type:none;"><a class="toc-link" href="#目前的不足之处"><span class="toc-text">目前的不足之处</span></a></li></ul>
-	    <h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><p>最近想在博客中加入音乐播放功能，找了一圈，最后锁定两个方案，一个html5自带的audio，另一个是APlayer播放器。audio的风格比较接近博客的主题，所以首页用的是audio标签。文章页用的是APlayer，因为APlayer支持Hexo，它有个支持Markdown的版本叫hexo-tag-aplayer，可以方便的在Markdown中插入音乐。hexo-tag-aplayer还支持MetingJS，所以可以播放网易云音乐，QQ音乐。</p>
-<h3 id="使用hexo-tag-aplayer"><a href="#使用hexo-tag-aplayer" class="headerlink" title="使用hexo-tag-aplayer"></a>使用hexo-tag-aplayer</h3><p>安装hexo-tag-aplayer</p>
+            <ul class="toc"><li class="toc-item toc-level-3" style="list-style-type:none;"><a class="toc-link" href="#"><span class="toc-text">简介</span></a></li><li class="toc-item toc-level-3" style="list-style-type:none;"><a class="toc-link" href="#"><span class="toc-text">使用hexo-tag-aplayer</span></a></li><li class="toc-item toc-level-3" style="list-style-type:none;"><a class="toc-link" href="#"><span class="toc-text">使用audio标签</span></a></li><li class="toc-item toc-level-3" style="list-style-type:none;"><a class="toc-link" href="#"><span class="toc-text">目前的不足之处</span></a></li></ul>
+	    <h3><span id="jian-jie">简介</span><a href="#jian-jie" class="header-anchor"></a></h3><p>最近想在博客中加入音乐播放功能，找了一圈，最后锁定两个方案，一个html5自带的audio，另一个是APlayer播放器。audio的风格比较接近博客的主题，所以首页用的是audio标签。文章页用的是APlayer，因为APlayer支持Hexo，它有个支持Markdown的版本叫hexo-tag-aplayer，可以方便的在Markdown中插入音乐。hexo-tag-aplayer还支持MetingJS，所以可以播放网易云音乐，QQ音乐。</p>
+<h3><span id="shi-yong-hexo-tag-aplayer">使用hexo-tag-aplayer</span><a href="#shi-yong-hexo-tag-aplayer" class="header-anchor"></a></h3><p>安装hexo-tag-aplayer</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install --save hexo-tag-aplayer</span><br></pre></td></tr></table></figure>
 
 <p>在_config.yml中开启meting模式：</p>
@@ -162,7 +165,7 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% meting &quot;523845661&quot; &quot;netease&quot; &quot;playlist&quot; &quot;theme:#FF4081&quot; &quot;mode:circulation&quot; &quot;mutex:true&quot; &quot;listmaxheight:340px&quot; &quot;preload:auto&quot; %&#125;</span><br></pre></td></tr></table></figure>
 
 <p>刷新网页看看是不是有列表了，使用就这么简单。</p>
-<h3 id="使用audio标签"><a href="#使用audio标签" class="headerlink" title="使用audio标签"></a>使用audio标签</h3><p>audio标签默认改了一些样式，首先默认audio播放器背景是圆角的，我改成了方角：</p>
+<h3><span id="shi-yong-audio-biao-qian">使用audio标签</span><a href="#shi-yong-audio-biao-qian" class="header-anchor"></a></h3><p>audio标签默认改了一些样式，首先默认audio播放器背景是圆角的，我改成了方角：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">audio::-webkit-media-controls-enclosure &#123;</span><br><span class="line">  border-radius: 0px;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>然后在css中调整了播放按钮位置：</p>
@@ -177,7 +180,7 @@
 <p>比如现在我们要隐藏播放按钮，那么就在css中加入如下内容：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">audio::-webkit-media-controls-play-button &#123;</span><br><span class="line">    display:none</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<h3 id="目前的不足之处"><a href="#目前的不足之处" class="headerlink" title="目前的不足之处"></a>目前的不足之处</h3><p><del>还没解决首页多个音乐同时播放互斥的问题</del></p>
+<h3><span id="mu-qian-de-bu-zu-zhi-chu">目前的不足之处</span><a href="#mu-qian-de-bu-zu-zhi-chu" class="header-anchor"></a></h3><p><del>还没解决首页多个音乐同时播放互斥的问题</del></p>
 <p>因为首页用的是audio标签，所以音乐需要找个服务器存起来，我目前是托管在LeanCloud上，每次都要上传音乐，略显麻烦</p>
 
             </div>
@@ -229,9 +232,6 @@
       </div>
 
       
-
-
-
 
       <footer id="colophon"><span class="copyright-year">
     

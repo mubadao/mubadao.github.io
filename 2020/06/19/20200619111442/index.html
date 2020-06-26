@@ -78,6 +78,9 @@
 
 <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
 
+<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
 
     <title> 关于Web字体的知识 [二] - 目八刀 </title>
     
@@ -154,16 +157,16 @@
 
     
             <div class="post-content">
-            <ul class="toc"><li class="toc-item toc-level-2" style="list-style-type:none;"><a class="toc-link" href="#各大网站最新-font-family"><span class="toc-text">各大网站最新 font-family</span></a></li><li class="toc-item toc-level-2" style="list-style-type:none;"><a class="toc-link" href="#字体基础知识"><span class="toc-text">字体基础知识</span></a><ul class="toc-child"><li class="toc-item toc-level-3" style="list-style-type:none;"><a class="toc-link" href="#衬线字体与无衬线字体"><span class="toc-text">衬线字体与无衬线字体</span></a></li><li class="toc-item toc-level-3" style="list-style-type:none;"><a class="toc-link" href="#font-family-关键字"><span class="toc-text">font-family 关键字</span></a></li></ul></li><li class="toc-item toc-level-2" style="list-style-type:none;"><a class="toc-link" href="#新增通用字体族关键字"><span class="toc-text">新增通用字体族关键字</span></a><ul class="toc-child"><li class="toc-item toc-level-3" style="list-style-type:none;"><a class="toc-link" href="#system-ui"><span class="toc-text">system-ui</span></a></li></ul></li><li class="toc-item toc-level-2" style="list-style-type:none;"><a class="toc-link" href="#San-Francisco-Fonts"><span class="toc-text">San Francisco Fonts</span></a></li><li class="toc-item toc-level-2" style="list-style-type:none;"><a class="toc-link" href="#apple-system-BlinkMacSystemFont"><span class="toc-text">-apple-system&#x2F;BlinkMacSystemFont</span></a></li><li class="toc-item toc-level-2" style="list-style-type:none;"><a class="toc-link" href="#Segoe-UI"><span class="toc-text">Segoe UI</span></a></li><li class="toc-item toc-level-2" style="list-style-type:none;"><a class="toc-link" href="#Roboto"><span class="toc-text">Roboto</span></a></li><li class="toc-item toc-level-2" style="list-style-type:none;"><a class="toc-link" href="#总结一下"><span class="toc-text">总结一下</span></a></li><li class="toc-item toc-level-2" style="list-style-type:none;"><a class="toc-link" href="#引自"><span class="toc-text">引自</span></a></li></ul>
-	    <h2 id="各大网站最新-font-family"><a href="#各大网站最新-font-family" class="headerlink" title="各大网站最新 font-family"></a>各大网站最新 font-family</h2><p>作为前端的一个习惯，浏览各个网站的时候总是喜欢打开开发者工具时不时审查元素一下。看了一下一些比较出名的网站移动端的 <code>font-family</code>：</p>
+            <ul class="toc"><li class="toc-item toc-level-2" style="list-style-type:none;"><a class="toc-link" href="#"><span class="toc-text">各大网站最新 font-family</span></a></li><li class="toc-item toc-level-2" style="list-style-type:none;"><a class="toc-link" href="#"><span class="toc-text">字体基础知识</span></a><ul class="toc-child"><li class="toc-item toc-level-3" style="list-style-type:none;"><a class="toc-link" href="#"><span class="toc-text">衬线字体与无衬线字体</span></a></li><li class="toc-item toc-level-3" style="list-style-type:none;"><a class="toc-link" href="#"><span class="toc-text">font-family 关键字</span></a></li></ul></li><li class="toc-item toc-level-2" style="list-style-type:none;"><a class="toc-link" href="#"><span class="toc-text">新增通用字体族关键字</span></a><ul class="toc-child"><li class="toc-item toc-level-3" style="list-style-type:none;"><a class="toc-link" href="#"><span class="toc-text">system-ui</span></a></li></ul></li><li class="toc-item toc-level-2" style="list-style-type:none;"><a class="toc-link" href="#"><span class="toc-text">San Francisco Fonts</span></a></li><li class="toc-item toc-level-2" style="list-style-type:none;"><a class="toc-link" href="#"><span class="toc-text">-apple-system&#x2F;BlinkMacSystemFont</span></a></li><li class="toc-item toc-level-2" style="list-style-type:none;"><a class="toc-link" href="#"><span class="toc-text">Segoe UI</span></a></li><li class="toc-item toc-level-2" style="list-style-type:none;"><a class="toc-link" href="#"><span class="toc-text">Roboto</span></a></li><li class="toc-item toc-level-2" style="list-style-type:none;"><a class="toc-link" href="#"><span class="toc-text">总结一下</span></a></li><li class="toc-item toc-level-2" style="list-style-type:none;"><a class="toc-link" href="#"><span class="toc-text">引自</span></a></li></ul>
+	    <h2><span id="ge-da-wang-zhan-zui-xin-font-family">各大网站最新 font-family</span><a href="#ge-da-wang-zhan-zui-xin-font-family" class="header-anchor"></a></h2><p>作为前端的一个习惯，浏览各个网站的时候总是喜欢打开开发者工具时不时审查元素一下。看了一下一些比较出名的网站移动端的 <code>font-family</code>：</p>
 <ul>
 <li><a href="https://www.tmall.com/" target="_blank" rel="noopener">天猫</a>：<code>font-family: &quot;PingFang SC&quot;,miui,system-ui,-apple-system,BlinkMacSystemFont,Helvetica Neue,Helvetica,sans-serif;</code></li>
 <li><a href="https://github.com/" target="_blank" rel="noopener">Github</a>：<code>font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;</code></li>
 <li><a href="https://css-tricks.com/" target="_blank" rel="noopener">CSS-Tricks</a>：<code>font-family: system-ui,-apple-system,BlinkMacSystemFont,segoe ui,Roboto,Helvetica,Arial,sans-serif,apple color emoji,segoe ui emoji,segoe ui symbol;</code></li>
 </ul>
 <p>很有意思的是，类似 <code>system-ui</code>，<code>-apple-system</code>，<code>BlinkMacSystemFont</code> 等等早几年在 <code>font-family</code> 中几乎见不到的字体定义如今已经很普遍了。它们是什么呢？是一种特定的字体吗？</p>
-<h2 id="字体基础知识"><a href="#字体基础知识" class="headerlink" title="字体基础知识"></a>字体基础知识</h2><p>在继续之前，我们先简单回顾关于字体的一些基础知识。</p>
-<h3 id="衬线字体与无衬线字体"><a href="#衬线字体与无衬线字体" class="headerlink" title="衬线字体与无衬线字体"></a>衬线字体与无衬线字体</h3><p>就 Web 常用的一些字体而言，其实大体上分为衬线字体和无衬线字体。</p>
+<h2><span id="zi-ti-ji-chu-zhi-shi">字体基础知识</span><a href="#zi-ti-ji-chu-zhi-shi" class="header-anchor"></a></h2><p>在继续之前，我们先简单回顾关于字体的一些基础知识。</p>
+<h3><span id="chen-xian-zi-ti-yu-wu-chen-xian-zi-ti">衬线字体与无衬线字体</span><a href="#chen-xian-zi-ti-yu-wu-chen-xian-zi-ti" class="header-anchor"></a></h3><p>就 Web 常用的一些字体而言，其实大体上分为衬线字体和无衬线字体。</p>
 <p>衬线字体 – 关键字为 serif，意为有衬线的字体，衬线的意思是在字符笔画末端有叫做衬线的小细节的额外装饰，而且笔画的粗细会有所不同，这些细节在大写字母中特别明显。</p>
 <p><img src="https://user-gold-cdn.xitu.io/2019/8/14/16c8e085911caf4a?w=1142&h=142&f=png&s=31567" alt="image"></p>
 <p>无衬线字体 – 关键字为 sans-serif，也就是无衬线的意思。专指西文中没有衬线的字体，与汉字字体中的黑体相对应。与衬线字体相反，该类字体通常是机械的和统一线条的，它们往往拥有相同的曲率，笔直的线条，锐利的转角。</p>
@@ -172,7 +175,7 @@
 <blockquote>
 <p>关于字体的基础知识，建议先看看这篇 <a href="https://github.com/chokcoco/iCSS/issues/6" target="_blank" rel="noopener">你该知道的字体 font-family</a></p>
 </blockquote>
-<h3 id="font-family-关键字"><a href="#font-family-关键字" class="headerlink" title="font-family 关键字"></a>font-family 关键字</h3><p>对于 CSS 中的 <code>font-family</code> 而言，它有两类取值。</p>
+<h3><span id="font-family-guan-jian-zi">font-family 关键字</span><a href="#font-family-guan-jian-zi" class="header-anchor"></a></h3><p>对于 CSS 中的 <code>font-family</code> 而言，它有两类取值。</p>
 <ol>
 <li>一类是类似这样的具体的字体族名定义：<code>font-family: Arial</code> 这里定义了一个具体的字体样式，字体族名为 <code>Arial</code>;</li>
 <li>一类是通用字体族名，它是一种备选机制，用于在指定的字体不可用时给出较好的字体，类似这样：<code>font-family: sans-serif</code> 。</li>
@@ -186,7 +189,7 @@
 <li>cursive 草书字体</li>
 <li>fantasy 主要是那些具有特殊艺术效果的字体</li>
 </ol>
-<h2 id="新增通用字体族关键字"><a href="#新增通用字体族关键字" class="headerlink" title="新增通用字体族关键字"></a>新增通用字体族关键字</h2><p>而在 <a href="https://www.w3.org/TR/css-fonts-4/#generic-font-families" target="_blank" rel="noopener">CSS Fonts Module Level 4 – Generic font families</a> 中，新增了几个关键字：</p>
+<h2><span id="xin-zeng-tong-yong-zi-ti-zu-guan-jian-zi">新增通用字体族关键字</span><a href="#xin-zeng-tong-yong-zi-ti-zu-guan-jian-zi" class="header-anchor"></a></h2><p>而在 <a href="https://www.w3.org/TR/css-fonts-4/#generic-font-families" target="_blank" rel="noopener">CSS Fonts Module Level 4 – Generic font families</a> 中，新增了几个关键字：</p>
 <ul>
 <li>system-ui 系统默认字体</li>
 <li>emoji 用于兼容 emoji 表情符号字符</li>
@@ -194,14 +197,14 @@
 <li>fangsong 此字体系列用于中文的（仿宋）字体。</li>
 </ul>
 <p>我们看看用的最多的 <code>system-ui</code>。</p>
-<h3 id="system-ui"><a href="#system-ui" class="headerlink" title="system-ui"></a>system-ui</h3><p>简单而言，<code>font-family: system-ui</code> 的目的就是在不同的操作系统的 Web 页面下，自动选择本操作系统下的默认系统字体。</p>
+<h3><span id="system-ui">system-ui</span><a href="#system-ui" class="header-anchor"></a></h3><p>简单而言，<code>font-family: system-ui</code> 的目的就是在不同的操作系统的 Web 页面下，自动选择本操作系统下的默认系统字体。</p>
 <p>默认使用特定操作系统的系统字体可以提高性能，因为浏览器或者 webview 不必去下载任何字体文件，而是使用已有的字体文件。 <code>font-family: system-ui</code> 字体设置的优势之处在于它与当前操作系统使用的字体相匹配，对于文本内容而言，它可以得到最恰当的展示。</p>
-<h2 id="San-Francisco-Fonts"><a href="#San-Francisco-Fonts" class="headerlink" title="San Francisco Fonts"></a>San Francisco Fonts</h2><p>OK，简单了解了 <code>system-ui</code> 字体族。但是像 <code>-apple-system</code>、<code>BlinkMacSystemFont</code> 没有在最新的标准里出现。它们又代表什么意思呢？</p>
+<h2><span id="san-francisco-fonts">San Francisco Fonts</span><a href="#san-francisco-fonts" class="header-anchor"></a></h2><p>OK，简单了解了 <code>system-ui</code> 字体族。但是像 <code>-apple-system</code>、<code>BlinkMacSystemFont</code> 没有在最新的标准里出现。它们又代表什么意思呢？</p>
 <p>在此之前，先了解下 <code>San Francisco Fonts</code> 。</p>
 <p><code>San Francisco Fonts</code> 又叫旧金山字体，是一款西文字体。随着 iOS 9 更新面世，在 WatchOS 中随 Apple Watch 一起悄然发售，并且还将在 Apple TV 上的新 tvOS 中使用。</p>
 <p><code>San Francisco Fonts</code> 在 iOS 系统上用于替代升级另外一款西文字体 <code>Helvetica Neue</code>。Apple 做了一些重要的改变，使其成为平台上更好的， 甚至是完美的西文字体。</p>
 <p><img src="https://user-gold-cdn.xitu.io/2019/8/14/16c8e08593562c84?w=858&h=166&f=png&s=31432" alt="image"></p>
-<h2 id="apple-system-BlinkMacSystemFont"><a href="#apple-system-BlinkMacSystemFont" class="headerlink" title="-apple-system/BlinkMacSystemFont"></a>-apple-system/BlinkMacSystemFont</h2><p>话说回来。正如每个前端开发人员都知道的那样，将一个功能纳入规范是一回事，将其纳入浏览器又是另一回事。</p>
+<h2><span id="apple-system-blinkmacsystemfont">-apple-system/BlinkMacSystemFont</span><a href="#apple-system-blinkmacsystemfont" class="header-anchor"></a></h2><p>话说回来。正如每个前端开发人员都知道的那样，将一个功能纳入规范是一回事，将其纳入浏览器又是另一回事。</p>
 <p>幸运的是，<code>system-ui</code> 的普及很快。 Chrome 和 Safari 都可以在各种平台上完全支持它。只有 Mozilla 和 Windows 相对落后。</p>
 <p>看看 <code>system-ui</code> 的兼容性，<a href="https://caniuse.com/#search=system" target="_blank" rel="noopener">Can i Use – system-ui</a>(图片截取日 2019-08-13)：</p>
 <p><img src="https://user-gold-cdn.xitu.io/2019/8/14/16c8e085938383af?w=1261&h=607&f=png&s=112080" alt="image"></p>
@@ -211,11 +214,11 @@
 <li>Supported as the BlinkMacSystemFont value (only on macOS)</li>
 </ul>
 <p>考虑到不同平台及向后兼容，在 macOS 和 iOS 上，我们需要使用 <code>-apple-system</code> 及 <code>BlinkMacSystemFont</code>来兼容适配 <code>system-ui</code> 标准。</p>
-<h2 id="Segoe-UI"><a href="#Segoe-UI" class="headerlink" title="Segoe UI"></a>Segoe UI</h2><p>Segoe UI 是 Windows 从 Vista 开始的默认西文字体族，只有西文，不支持汉字，属于无衬线体。</p>
+<h2><span id="segoe-ui">Segoe UI</span><a href="#segoe-ui" class="header-anchor"></a></h2><p>Segoe UI 是 Windows 从 Vista 开始的默认西文字体族，只有西文，不支持汉字，属于无衬线体。</p>
 <p>它也表示一个系列而不是某一款单一字体。使用 <code>font-family: Segoe UI</code> 可以在 Windows 平台及 Windows Phone 上选取最佳的西文字体展示。</p>
-<h2 id="Roboto"><a href="#Roboto" class="headerlink" title="Roboto"></a>Roboto</h2><p>Roboto 是为 Android 操作系统设计的一个无衬线字体家族。Google 描述该字体为“现代的、但平易近人”和“有感情”的。</p>
+<h2><span id="roboto">Roboto</span><a href="#roboto" class="header-anchor"></a></h2><p>Roboto 是为 Android 操作系统设计的一个无衬线字体家族。Google 描述该字体为“现代的、但平易近人”和“有感情”的。</p>
 <p>这个字体家族包含Thin、Light、Regular、Medium、Bold、Black六种粗细及相配的斜体。</p>
-<h2 id="总结一下"><a href="#总结一下" class="headerlink" title="总结一下"></a>总结一下</h2><p>到此，我们可以总结一下了。以 <a href="https://css-tricks.com/" target="_blank" rel="noopener">CSS-Tricks</a> 网站的 font-family 定义为例子：</p>
+<h2><span id="zong-jie-yi-xia">总结一下</span><a href="#zong-jie-yi-xia" class="header-anchor"></a></h2><p>到此，我们可以总结一下了。以 <a href="https://css-tricks.com/" target="_blank" rel="noopener">CSS-Tricks</a> 网站的 font-family 定义为例子：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;&#96;&#96; &#96;&#96;font-family&#96;&#96;:&#96;&#96;  &#96;&#96;system-ui,-apple-system,BlinkMacSystemFont,segoe ui,Roboto,&#96;&#96;  &#96;&#96;Helvetica&#96;&#96;,&#96;&#96;Arial&#96;&#96;,&#96;&#96;  &#96;&#96;sans-serif&#96;&#96;,apple color emoji,segoe ui emoji,segoe ui symbol;&#96;&#96;&#125;</span><br></pre></td></tr></table></figure>
 
 <ol>
@@ -232,7 +235,7 @@
 <p>使用系统默认字体的主要原因是性能。字体通常是网站上加载的最大/最重的资源之一。如果我们可以使用用户机器上已有的字体，我们就完全不需要再去获取字体资源，从而使加载时间明显加快。</p>
 <p>并且系统字体的优点在于它与当前操作系统使用的相匹配，因此它的文本展示必然也是一个让人舒适展示效果。</p>
 <p>当然，上述 <code>font-family</code> 的定义不一定是最佳的。譬如天猫在最前面添加了 <code>&quot;PingFang SC&quot;,miui,..</code>必定也有他们的业务上的考虑。但是一些 fallback 方案向后兼容的思想都是一致的，值得参考学习。</p>
-<h2 id="引自"><a href="#引自" class="headerlink" title="引自"></a>引自</h2><p><a href="https://www.cnblogs.com/coco1s/p/11350642.html" target="_blank" rel="noopener">https://www.cnblogs.com/coco1s/p/11350642.html</a></p>
+<h2><span id="yin-zi">引自</span><a href="#yin-zi" class="header-anchor"></a></h2><p><a href="https://www.cnblogs.com/coco1s/p/11350642.html" target="_blank" rel="noopener">https://www.cnblogs.com/coco1s/p/11350642.html</a></p>
 
             </div>
           
@@ -281,9 +284,6 @@
       </div>
 
       
-
-
-
 
       <footer id="colophon"><span class="copyright-year">
     

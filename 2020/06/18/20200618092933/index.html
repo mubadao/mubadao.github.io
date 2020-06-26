@@ -74,6 +74,9 @@
 
 <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
 
+<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
 
     <title> 使用不蒜子增加访问量 - 目八刀 </title>
     
@@ -150,13 +153,13 @@
 
     
             <div class="post-content">
-            <ul class="toc"><li class="toc-item toc-level-3" style="list-style-type:none;"><a class="toc-link" href="#添加站点访问量"><span class="toc-text">添加站点访问量</span></a></li><li class="toc-item toc-level-3" style="list-style-type:none;"><a class="toc-link" href="#添加文章访问量"><span class="toc-text">添加文章访问量</span></a></li></ul>
+            <ul class="toc"><li class="toc-item toc-level-3" style="list-style-type:none;"><a class="toc-link" href="#"><span class="toc-text">添加站点访问量</span></a></li><li class="toc-item toc-level-3" style="list-style-type:none;"><a class="toc-link" href="#"><span class="toc-text">添加文章访问量</span></a></li></ul>
 	    <blockquote>
 <p>不蒜子是用来统计网站访问量的一个JavaScript库</p>
 </blockquote>
-<h3 id="添加站点访问量"><a href="#添加站点访问量" class="headerlink" title="添加站点访问量"></a>添加站点访问量</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;script async src&#x3D;&quot;&#x2F;&#x2F;busuanzi.ibruce.info&#x2F;busuanzi&#x2F;2.3&#x2F;busuanzi.pure.mini.js&quot;&gt;&lt;&#x2F;script&gt;</span><br><span class="line">&lt;span id&#x3D;&quot;busuanzi_container_site_pv&quot;&gt;本站总访问量&lt;span id&#x3D;&quot;busuanzi_value_site_pv&quot;&gt;&lt;&#x2F;span&gt;次&lt;&#x2F;span&gt;</span><br><span class="line">&lt;span class&#x3D;&quot;post-meta-divider&quot;&gt;|&lt;&#x2F;span&gt;</span><br><span class="line">&lt;span id&#x3D;&quot;busuanzi_container_site_uv&quot;&gt;本站访客数&lt;span id&#x3D;&quot;busuanzi_value_site_uv&quot;&gt;&lt;&#x2F;span&gt;人&lt;&#x2F;span&gt;</span><br></pre></td></tr></table></figure>
+<h3><span id="tian-jia-zhan-dian-fang-wen-liang">添加站点访问量</span><a href="#tian-jia-zhan-dian-fang-wen-liang" class="header-anchor"></a></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;script async src&#x3D;&quot;&#x2F;&#x2F;busuanzi.ibruce.info&#x2F;busuanzi&#x2F;2.3&#x2F;busuanzi.pure.mini.js&quot;&gt;&lt;&#x2F;script&gt;</span><br><span class="line">&lt;span id&#x3D;&quot;busuanzi_container_site_pv&quot;&gt;本站总访问量&lt;span id&#x3D;&quot;busuanzi_value_site_pv&quot;&gt;&lt;&#x2F;span&gt;次&lt;&#x2F;span&gt;</span><br><span class="line">&lt;span class&#x3D;&quot;post-meta-divider&quot;&gt;|&lt;&#x2F;span&gt;</span><br><span class="line">&lt;span id&#x3D;&quot;busuanzi_container_site_uv&quot;&gt;本站访客数&lt;span id&#x3D;&quot;busuanzi_value_site_uv&quot;&gt;&lt;&#x2F;span&gt;人&lt;&#x2F;span&gt;</span><br></pre></td></tr></table></figure>
 
-<h3 id="添加文章访问量"><a href="#添加文章访问量" class="headerlink" title="添加文章访问量"></a>添加文章访问量</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;span id&#x3D;&quot;busuanzi_container_page_pv&quot; style&#x3D;&#39;display:none&#39; class&#x3D;&quot;&lt;%&#x3D; class_name %&gt;&quot;&gt;</span><br><span class="line">	&lt;i class&#x3D;&quot;icon-smile icon&quot;&gt;&lt;&#x2F;i&gt; 阅读数：&lt;span id&#x3D;&quot;busuanzi_value_page_pv&quot;&gt;&lt;&#x2F;span&gt;次</span><br><span class="line">&lt;&#x2F;span&gt;</span><br></pre></td></tr></table></figure>
+<h3><span id="tian-jia-wen-zhang-fang-wen-liang">添加文章访问量</span><a href="#tian-jia-wen-zhang-fang-wen-liang" class="header-anchor"></a></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;span id&#x3D;&quot;busuanzi_container_page_pv&quot; style&#x3D;&#39;display:none&#39; class&#x3D;&quot;&lt;%&#x3D; class_name %&gt;&quot;&gt;</span><br><span class="line">	&lt;i class&#x3D;&quot;icon-smile icon&quot;&gt;&lt;&#x2F;i&gt; 阅读数：&lt;span id&#x3D;&quot;busuanzi_value_page_pv&quot;&gt;&lt;&#x2F;span&gt;次</span><br><span class="line">&lt;&#x2F;span&gt;</span><br></pre></td></tr></table></figure>
 
 
             </div>
@@ -208,9 +211,6 @@
       </div>
 
       
-
-
-
 
       <footer id="colophon"><span class="copyright-year">
     

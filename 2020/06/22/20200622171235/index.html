@@ -73,6 +73,9 @@
 
 <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
 
+<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
 
     <title> DOCTYPE如何设置 - 目八刀 </title>
     
@@ -149,17 +152,17 @@
 
     
             <div class="post-content">
-            <ul class="toc"><li class="toc-item toc-level-2" style="list-style-type:none;"><a class="toc-link" href="#HTML5声明方式"><span class="toc-text">HTML5声明方式</span></a></li><li class="toc-item toc-level-2" style="list-style-type:none;"><a class="toc-link" href="#HTML-4-01声明方式"><span class="toc-text">HTML 4.01声明方式</span></a></li><li class="toc-item toc-level-2" style="list-style-type:none;"><a class="toc-link" href="#XHTML1-0-声明方式"><span class="toc-text">XHTML1.0 声明方式</span></a></li><li class="toc-item toc-level-2" style="list-style-type:none;"><a class="toc-link" href="#XHTML-1-1声明方式"><span class="toc-text">XHTML 1.1声明方式</span></a></li></ul>
+            <ul class="toc"><li class="toc-item toc-level-2" style="list-style-type:none;"><a class="toc-link" href="#"><span class="toc-text">HTML5声明方式</span></a></li><li class="toc-item toc-level-2" style="list-style-type:none;"><a class="toc-link" href="#"><span class="toc-text">HTML 4.01声明方式</span></a></li><li class="toc-item toc-level-2" style="list-style-type:none;"><a class="toc-link" href="#"><span class="toc-text">XHTML1.0 声明方式</span></a></li><li class="toc-item toc-level-2" style="list-style-type:none;"><a class="toc-link" href="#"><span class="toc-text">XHTML 1.1声明方式</span></a></li></ul>
 	    <blockquote>
 <p><code>&lt;!DOCTYPE&gt;</code> 声明位于文档中的最前面的位置，处于<code>&lt;html&gt;</code>标签之前，声明不区分大小写，用来告知 Web 浏览器页面使用了哪种 HTML 版本。</p>
 </blockquote>
-<h2 id="HTML5声明方式"><a href="#HTML5声明方式" class="headerlink" title="HTML5声明方式"></a>HTML5声明方式</h2><p>HTML5的声明使用<code>&lt;!DOCTYPE html&gt;</code>。</p>
-<h2 id="HTML-4-01声明方式"><a href="#HTML-4-01声明方式" class="headerlink" title="HTML 4.01声明方式"></a>HTML 4.01声明方式</h2><p>HTML 4.01 规定了三种不同的 &lt;!DOCTYPE&gt; 声明，分别是：Strict、Transitional 和 Frameset</p>
+<h2><span id="html5-sheng-ming-fang-shi">HTML5声明方式</span><a href="#html5-sheng-ming-fang-shi" class="header-anchor"></a></h2><p>HTML5的声明使用<code>&lt;!DOCTYPE html&gt;</code>。</p>
+<h2><span id="html-4-01-sheng-ming-fang-shi">HTML 4.01声明方式</span><a href="#html-4-01-sheng-ming-fang-shi" class="header-anchor"></a></h2><p>HTML 4.01 规定了三种不同的 &lt;!DOCTYPE&gt; 声明，分别是：Strict、Transitional 和 Frameset</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">HTML 4.01 Strict声明方式：</span><br><span class="line">&lt;!DOCTYPE HTML PUBLIC &quot;-&#x2F;&#x2F;W3C&#x2F;&#x2F;DTD HTML 4.01&#x2F;&#x2F;EN&quot; &quot;http:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;html4&#x2F;strict.dtd&quot;&gt;</span><br><span class="line">HTML 4.01 Transitional声明方式：</span><br><span class="line">&lt;!DOCTYPE HTML PUBLIC &quot;-&#x2F;&#x2F;W3C&#x2F;&#x2F;DTD HTML 4.01 Transitional&#x2F;&#x2F;EN&quot; &quot;http:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;html4&#x2F;loose.dtd&quot;&gt;</span><br><span class="line">HTML 4.01 Frameset声明方式：</span><br><span class="line">&lt;!DOCTYPE HTML PUBLIC &quot;-&#x2F;&#x2F;W3C&#x2F;&#x2F;DTD HTML 4.01 Frameset&#x2F;&#x2F;EN&quot; &quot;http:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;html4&#x2F;frameset.dtd&quot;&gt;</span><br></pre></td></tr></table></figure>
 
-<h2 id="XHTML1-0-声明方式"><a href="#XHTML1-0-声明方式" class="headerlink" title="XHTML1.0 声明方式"></a>XHTML1.0 声明方式</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;XHTML1.0 Strict声明方式</span><br><span class="line">&lt;!DOCTYPE HTML PUBLIC &quot;-&#x2F;&#x2F;W3C&#x2F;&#x2F;DTD XHTML 1.0 Strict&#x2F;&#x2F;EN&quot; &quot;http:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;xhtml1&#x2F;DTD&#x2F;xhtml1-strict.dtd&quot;&gt;</span><br><span class="line">&#x2F;&#x2F;XHTML1.0 Transitional声明方式</span><br><span class="line">&lt;!DOCTYPE HTML PUBLIC &quot;-&#x2F;&#x2F;W3C&#x2F;&#x2F;DTD XHTML 1.0 Transitional&#x2F;&#x2F;EN&quot; &quot;http:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;xhtml1&#x2F;DTD&#x2F;xhtml1-transitional.dtd&quot;&gt;</span><br><span class="line">&#x2F;&#x2F;XHTML 1.0 Frameset声明方式</span><br><span class="line">&lt;!DOCTYPE HTML PUBLIC &quot;-&#x2F;&#x2F;W3C&#x2F;&#x2F;DTD XHTML 1.0 Frameset&#x2F;&#x2F;EN&quot; &quot;http:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;xhtml1&#x2F;DTD&#x2F;xhtml1-frameset.dtd&quot;&gt;</span><br></pre></td></tr></table></figure>
+<h2><span id="xhtml1-0-sheng-ming-fang-shi">XHTML1.0 声明方式</span><a href="#xhtml1-0-sheng-ming-fang-shi" class="header-anchor"></a></h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;XHTML1.0 Strict声明方式</span><br><span class="line">&lt;!DOCTYPE HTML PUBLIC &quot;-&#x2F;&#x2F;W3C&#x2F;&#x2F;DTD XHTML 1.0 Strict&#x2F;&#x2F;EN&quot; &quot;http:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;xhtml1&#x2F;DTD&#x2F;xhtml1-strict.dtd&quot;&gt;</span><br><span class="line">&#x2F;&#x2F;XHTML1.0 Transitional声明方式</span><br><span class="line">&lt;!DOCTYPE HTML PUBLIC &quot;-&#x2F;&#x2F;W3C&#x2F;&#x2F;DTD XHTML 1.0 Transitional&#x2F;&#x2F;EN&quot; &quot;http:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;xhtml1&#x2F;DTD&#x2F;xhtml1-transitional.dtd&quot;&gt;</span><br><span class="line">&#x2F;&#x2F;XHTML 1.0 Frameset声明方式</span><br><span class="line">&lt;!DOCTYPE HTML PUBLIC &quot;-&#x2F;&#x2F;W3C&#x2F;&#x2F;DTD XHTML 1.0 Frameset&#x2F;&#x2F;EN&quot; &quot;http:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;xhtml1&#x2F;DTD&#x2F;xhtml1-frameset.dtd&quot;&gt;</span><br></pre></td></tr></table></figure>
 
-<h2 id="XHTML-1-1声明方式"><a href="#XHTML-1-1声明方式" class="headerlink" title="XHTML 1.1声明方式"></a>XHTML 1.1声明方式</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE HTML PUBLIC &quot;-&#x2F;&#x2F;W3C&#x2F;&#x2F;DTD XHTML 1.1&#x2F;&#x2F;EN&quot; &quot;http:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;xhtml11&#x2F;DTD&#x2F;xhtml11.dtd&quot;&gt;</span><br></pre></td></tr></table></figure>
+<h2><span id="xhtml-1-1-sheng-ming-fang-shi">XHTML 1.1声明方式</span><a href="#xhtml-1-1-sheng-ming-fang-shi" class="header-anchor"></a></h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE HTML PUBLIC &quot;-&#x2F;&#x2F;W3C&#x2F;&#x2F;DTD XHTML 1.1&#x2F;&#x2F;EN&quot; &quot;http:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;xhtml11&#x2F;DTD&#x2F;xhtml11.dtd&quot;&gt;</span><br></pre></td></tr></table></figure>
             </div>
           
 
@@ -207,9 +210,6 @@
       </div>
 
       
-
-
-
 
       <footer id="colophon"><span class="copyright-year">
     

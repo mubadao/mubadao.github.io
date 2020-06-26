@@ -77,6 +77,9 @@
 
 <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
 
+<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
 
     <title> 虚拟化概论 - 目八刀 </title>
     
@@ -153,25 +156,25 @@
 
     
             <div class="post-content">
-            <ul class="toc"><li class="toc-item toc-level-3" style="list-style-type:none;"><a class="toc-link" href="#引言"><span class="toc-text">引言</span></a></li><li class="toc-item toc-level-3" style="list-style-type:none;"><a class="toc-link" href="#虚拟化分类"><span class="toc-text">虚拟化分类</span></a></li><li class="toc-item toc-level-3" style="list-style-type:none;"><a class="toc-link" href="#虚拟化技术"><span class="toc-text">虚拟化技术</span></a></li><li class="toc-item toc-level-3" style="list-style-type:none;"><a class="toc-link" href="#Hypervisor技术"><span class="toc-text">Hypervisor技术</span></a></li><li class="toc-item toc-level-3" style="list-style-type:none;"><a class="toc-link" href="#容器技术"><span class="toc-text">容器技术</span></a></li><li class="toc-item toc-level-3" style="list-style-type:none;"><a class="toc-link" href="#Docker"><span class="toc-text">Docker</span></a></li><li class="toc-item toc-level-3" style="list-style-type:none;"><a class="toc-link" href="#微服务"><span class="toc-text">微服务</span></a></li></ul>
-	    <h3 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h3><blockquote><p>世界上大部分计算机处于资源浪费状态，这里的资源指的是组成计算机的各种硬件设备，比如cpu，内存，硬盘等。试想我们每天使用电脑的场景，只是简单地上上网，聊聊天，处理一些office文档，用ps画个图，用ide写个代码，而这些简单的工作远远没有发挥出一台计算机该有的性能。如果有一种技术，能够对我们的硬件资源充分地利用，本来需要两台计算机完成的工作由一台计算机来完成，并且能够节约成本，那将是一件多么美妙的一件事，于是虚拟化技术产生了。</p>
+            <ul class="toc"><li class="toc-item toc-level-3" style="list-style-type:none;"><a class="toc-link" href="#"><span class="toc-text">引言</span></a></li><li class="toc-item toc-level-3" style="list-style-type:none;"><a class="toc-link" href="#"><span class="toc-text">虚拟化分类</span></a></li><li class="toc-item toc-level-3" style="list-style-type:none;"><a class="toc-link" href="#"><span class="toc-text">虚拟化技术</span></a></li><li class="toc-item toc-level-3" style="list-style-type:none;"><a class="toc-link" href="#"><span class="toc-text">Hypervisor技术</span></a></li><li class="toc-item toc-level-3" style="list-style-type:none;"><a class="toc-link" href="#"><span class="toc-text">容器技术</span></a></li><li class="toc-item toc-level-3" style="list-style-type:none;"><a class="toc-link" href="#"><span class="toc-text">Docker</span></a></li><li class="toc-item toc-level-3" style="list-style-type:none;"><a class="toc-link" href="#"><span class="toc-text">微服务</span></a></li></ul>
+	    <h3><span id="yin-yan">引言</span><a href="#yin-yan" class="header-anchor"></a></h3><blockquote><p>世界上大部分计算机处于资源浪费状态，这里的资源指的是组成计算机的各种硬件设备，比如cpu，内存，硬盘等。试想我们每天使用电脑的场景，只是简单地上上网，聊聊天，处理一些office文档，用ps画个图，用ide写个代码，而这些简单的工作远远没有发挥出一台计算机该有的性能。如果有一种技术，能够对我们的硬件资源充分地利用，本来需要两台计算机完成的工作由一台计算机来完成，并且能够节约成本，那将是一件多么美妙的一件事，于是虚拟化技术产生了。</p>
 </blockquote>
 
 <p>记的最早接触虚拟化技术是很多年前，当时在一家公司做移动端开发，每个前端的开发机是一台windows电脑，后来因为业务的需要，需要在苹果生态下调试应用，我们知道苹果生态的应用只能在mac环境下开发，理论上公司应该再给开发人员配一台mac电脑，但公司为了节约成本，想出了一个很挫的办法，要求每个前端人员在自己的windows电脑上安装黑苹果，装完之后搞得每个人的机器都很卡，但至少解决了问题。当年折腾黑苹果的经历直到现在我还记忆犹新，先是下载VMware和mac系统镜像，然后在VMware中配置cpu用几核，用多大的内存和硬盘，然后安装mac镜像和硬件驱动，后来虽然跑起来，但机器卡的要死。当时并没有对虚拟机做进一步的探究。直到多年后的今天在研究这门技术的时候才意外地发现，当时使用的虚拟机就是一种虚拟化技术。</p>
 <p>再比如我们的产品上线，免不了会遇到从第三方租用服务器的情况，虽然我们可能对服务器的配置要求是双核cpu/2G内存/20G硬盘，但提供商不可能去给我们攒一台一模一样的机器出来，而是将现有的比如8核cpu/16G内存/100G硬盘的计算机，通过虚拟化技术，虚拟出我们需要的资源，剩下的资源提供给其它客户使用，也就是一台服务器有可能服务于多个客户。</p>
 <p>通过上面的两个例子可以看到虚拟化解决的是硬件资源冗余问题，也就是怎么能提高硬件资源的利用率。</p>
-<h3 id="虚拟化分类"><a href="#虚拟化分类" class="headerlink" title="虚拟化分类"></a>虚拟化分类</h3><p>虚拟化的过程不仅要对硬件虚拟化，也要对软件进行虚拟化。</p>
+<h3><span id="xu-ni-hua-fen-lei">虚拟化分类</span><a href="#xu-ni-hua-fen-lei" class="header-anchor"></a></h3><p>虚拟化的过程不仅要对硬件虚拟化，也要对软件进行虚拟化。</p>
 <ul>
 <li>平台虚拟化（Platform Virtualization）：针对计算机和操作系统的虚拟化。</li>
 <li>资源虚拟化（Resource Virtualization）：针对特定的系统资源的虚拟化，如内存、存储、网络资源等。</li>
 <li>应用程序虚拟化（Application Virtualization）：包括仿真、模拟、解释技术等，如 Java 虚拟机（JVM）。</li>
 </ul>
-<h3 id="虚拟化技术"><a href="#虚拟化技术" class="headerlink" title="虚拟化技术"></a>虚拟化技术</h3><p>目前市面上主流的虚拟化技术有两个，一个是Hypervisor或称为 VMM（Virtual Machine Monitor），另一个是容器技术。在讲这两个概念之前，我们先来看两张图，这两张图让人感到震惊的地方是，平台虚拟化的两种雏形竟然在1974年就被提出来了，它们一个用在虚拟机上，一个用在容器技术上，而且一直沿用至今。</p>
+<h3><span id="xu-ni-hua-ji-zhu">虚拟化技术</span><a href="#xu-ni-hua-ji-zhu" class="header-anchor"></a></h3><p>目前市面上主流的虚拟化技术有两个，一个是Hypervisor或称为 VMM（Virtual Machine Monitor），另一个是容器技术。在讲这两个概念之前，我们先来看两张图，这两张图让人感到震惊的地方是，平台虚拟化的两种雏形竟然在1974年就被提出来了，它们一个用在虚拟机上，一个用在容器技术上，而且一直沿用至今。</p>
 <p><img src="https://img-blog.csdnimg.cn/20200612170924744.png" alt="图一"> <img src="https://img-blog.csdnimg.cn/20200612170233205.jpeg" alt="图二"></p>
 <p>这两种技术最大的区别是，在Hypervisor虚拟化环境当中每台虚拟机都需要使用独立的操作系统，而容器只需要依赖宿主操作系统，也就是所有容器共享宿主操作系统。Hypervisor代表虚拟机，虚拟机是一个机器，但容器是一个进程。每一个虚拟机里面都有一套完整的操作系统，而容器层安装在操作系统之上，它直接利用了宿主机的内核，更加轻量化，启动速度极快。通常，我们在会每个容器里面跑单个的应用，而在虚拟机里会跑很多应用。</p>
-<h3 id="Hypervisor技术"><a href="#Hypervisor技术" class="headerlink" title="Hypervisor技术"></a>Hypervisor技术</h3><p>提起虚拟化技术，不得不先从Hypervisor讲起，Hypervisor或称为 VMM（Virtual Machine Monitor），中文翻译过来叫虚拟机监视器。在Hypervisor技术中，每台虚拟机都需要安装独立的操作系统，其实现架构如下图所示有三种：<br><img src="https://img-blog.csdnimg.cn/20200612170637934.jpeg" alt="在这里插入图片描述"><br>先看类型1，被称为裸机型，VMM直接运行在宿主机的硬件上来控制硬件和管理客户机操作系统，前提是需要硬件支持，最底层是硬件层，往上是VMM，这里的VMM既是一个操作系统，也是一个虚拟机管理程序，也就是在这种架构中操作系统和虚拟机监视器合二为一。容器化思想就采用了这种方式，像我们后面要讲的CentOS系统，就是系统原生就已经集成了虚拟化技术。</p>
+<h3><span id="hypervisor-ji-zhu">Hypervisor技术</span><a href="#hypervisor-ji-zhu" class="header-anchor"></a></h3><p>提起虚拟化技术，不得不先从Hypervisor讲起，Hypervisor或称为 VMM（Virtual Machine Monitor），中文翻译过来叫虚拟机监视器。在Hypervisor技术中，每台虚拟机都需要安装独立的操作系统，其实现架构如下图所示有三种：<br><img src="https://img-blog.csdnimg.cn/20200612170637934.jpeg" alt="在这里插入图片描述"><br>先看类型1，被称为裸机型，VMM直接运行在宿主机的硬件上来控制硬件和管理客户机操作系统，前提是需要硬件支持，最底层是硬件层，往上是VMM，这里的VMM既是一个操作系统，也是一个虚拟机管理程序，也就是在这种架构中操作系统和虚拟机监视器合二为一。容器化思想就采用了这种方式，像我们后面要讲的CentOS系统，就是系统原生就已经集成了虚拟化技术。</p>
 <p>再看类型2，被称为宿主型，最底层是硬件层，往上是宿主操作系统，在宿主操作系统上运行WMM，再在VMM上运行客户端操作系统，由架构我们可以看出，VMM 作为应用程序运行在主操作系统环境内，运行时VM内核-&gt;Hypervisor-&gt;主机内核，正因为如此运行效率十分地低下，这也解决了多年前的疑虑，为什么当时装完黑苹果系统会变得那么慢。</p>
-<h3 id="容器技术"><a href="#容器技术" class="headerlink" title="容器技术"></a>容器技术</h3><p>容器其实就是一种沙盒技术，可以将应用运行在其中，与外界隔离，这个沙盒环境可以被方便地移植到其它地方。相比于Hypervisor虚拟机技术来讲有以下几个特点：</p>
+<h3><span id="rong-qi-ji-zhu">容器技术</span><a href="#rong-qi-ji-zhu" class="header-anchor"></a></h3><p>容器其实就是一种沙盒技术，可以将应用运行在其中，与外界隔离，这个沙盒环境可以被方便地移植到其它地方。相比于Hypervisor虚拟机技术来讲有以下几个特点：</p>
 <ul>
 <li>容器技术更加轻量级，因为它不需要安装运行容器所依赖的操作系统，启动速度更快。</li>
 <li>容器之间相互隔离，互不影响。</li>
@@ -179,7 +182,7 @@
 <li>部署效率高，花费时间短，在毫秒与秒之间。</li>
 </ul>
 <p>简单来讲，一个容器包含了完整的运行时环境：除了应用程序本身之外，这个应用所需的全部依赖、类库、其他二进制文件、配置文件等，都统一被打入了一个称为容器镜像的包中。通过将应用程序本身，和其依赖容器化，操作系统发行版本和其他基础环境造成的差异，都被抽象掉了。这样的好处是，我们可以很容易地将镜像包在不同人员之间传递，从一个环境移植到另一个环境也显得很灵活。</p>
-<h3 id="Docker"><a href="#Docker" class="headerlink" title="Docker"></a>Docker</h3><p>Docker 是一个开源的应用容器引擎，那么虚拟化技术又跟Docker有什么关系呢？其实就一句话，Docker是容器的一种技术实现，请记住是一种实现，那么是不是还有其他实现，答案是肯定的，比如Rocket。但就Docker目前的风行程度来讲，Docker几乎成为容器技术的代名词。</p>
+<h3><span id="docker">Docker</span><a href="#docker" class="header-anchor"></a></h3><p>Docker 是一个开源的应用容器引擎，那么虚拟化技术又跟Docker有什么关系呢？其实就一句话，Docker是容器的一种技术实现，请记住是一种实现，那么是不是还有其他实现，答案是肯定的，比如Rocket。但就Docker目前的风行程度来讲，Docker几乎成为容器技术的代名词。</p>
 <p>正是因为Docker的出现，才把容器变得标准化了。要理解Docker，你需要明白三个最主要的概念：容器、镜像、仓库。</p>
 <ul>
 <li>容器是运行在虚拟机上的进程。</li>
@@ -190,7 +193,7 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">##列出本地images</span><br><span class="line">docker images</span><br><span class="line">##搜索仓库MySQL镜像</span><br><span class="line">docker search mysql</span><br><span class="line">##下载Redis官方最新镜像</span><br><span class="line">docker pull redis</span><br><span class="line">##单个镜像删除，相当于</span><br><span class="line">docker rmi redis</span><br><span class="line">##构建docker镜像</span><br><span class="line">docker build -f &#x2F;docker&#x2F;dockerfile&#x2F;mycentos -t mycentos:1.1</span><br><span class="line">##新建并启动容器</span><br><span class="line">docker run -i -t --name mycentos</span><br><span class="line">##列出redis容器中运行进程</span><br><span class="line">docker top redis</span><br><span class="line">##查看redis容器日志，默认参数</span><br><span class="line">docker logs rabbitmq</span><br><span class="line">##使用run方式在创建时进入</span><br><span class="line">docker run -it centos &#x2F;bin&#x2F;bash</span><br><span class="line">##将rabbitmq容器中的文件copy至本地路径</span><br><span class="line">docker cp rabbitmq:&#x2F;[container_path] [local_path]</span><br></pre></td></tr></table></figure>
 
 <p>从上面的几个命令我们可以发现，Docker用来负责虚拟硬件资源，管理镜像和容器，并负责与宿主计算机通讯。</p>
-<h3 id="微服务"><a href="#微服务" class="headerlink" title="微服务"></a>微服务</h3><p>什么是微服务呢，简单来说就是把系统拆的更小，粒度更细，只要该系统依赖的资源与其他系统都没有关系，那么就可以拆分为一个微服务。比如我们以前总是把用户信息和用户资产存到以数据库中，如果使用微服务的概念，就应该把这两块内容拆分成不同的模块，并且两个模块之间没有任何的依赖，谁离了谁都能够独立存在。如果需要用户信息直接去用户信息服务拉取，而需要用户资产信息就去资产服务拉取，我认为微服务首先要满足以下两个要求：</p>
+<h3><span id="wei-fu-wu">微服务</span><a href="#wei-fu-wu" class="header-anchor"></a></h3><p>什么是微服务呢，简单来说就是把系统拆的更小，粒度更细，只要该系统依赖的资源与其他系统都没有关系，那么就可以拆分为一个微服务。比如我们以前总是把用户信息和用户资产存到以数据库中，如果使用微服务的概念，就应该把这两块内容拆分成不同的模块，并且两个模块之间没有任何的依赖，谁离了谁都能够独立存在。如果需要用户信息直接去用户信息服务拉取，而需要用户资产信息就去资产服务拉取，我认为微服务首先要满足以下两个要求：</p>
 <ul>
 <li>一个微服务应该都是单一职责的，一个微服务解决一个业务问题。</li>
 <li>将自己的业务能力封装并对外提供服务。</li>
@@ -243,9 +246,6 @@
       </div>
 
       
-
-
-
 
       <footer id="colophon"><span class="copyright-year">
     
