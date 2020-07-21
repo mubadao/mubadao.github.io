@@ -136,31 +136,15 @@
     <div id="primary">
         
   <article class="post">
-    <header class="post-header">
-      <h1 class="post-title">
-        
-          关于Web字体的知识 [二]
-        
-      </h1>
-
-      <time class="post-time">
-        
-        2020年06月19日 11:06
-        <img class="readicon" src="/images/icon_read.png"></img>
-        <span id="busuanzi_container_page_pv">
-          <span id="busuanzi_value_page_pv"></span>人阅读
-        </span>
-      </time>
-    </header>
-
+    
 
 
     
             <div class="post-content">
-            
-              <ul class="toc"><li class="toc-item toc-level-2" style="list-style-type:none;"><a class="toc-link" href="#"><span class="toc-text">各大网站最新 font-family</span></a></li><li class="toc-item toc-level-2" style="list-style-type:none;"><a class="toc-link" href="#"><span class="toc-text">字体基础知识</span></a><ul class="toc-child"><li class="toc-item toc-level-3" style="list-style-type:none;"><a class="toc-link" href="#"><span class="toc-text">衬线字体与无衬线字体</span></a></li><li class="toc-item toc-level-3" style="list-style-type:none;"><a class="toc-link" href="#"><span class="toc-text">font-family 关键字</span></a></li></ul></li><li class="toc-item toc-level-2" style="list-style-type:none;"><a class="toc-link" href="#"><span class="toc-text">新增通用字体族关键字</span></a><ul class="toc-child"><li class="toc-item toc-level-3" style="list-style-type:none;"><a class="toc-link" href="#"><span class="toc-text">system-ui</span></a></li></ul></li><li class="toc-item toc-level-2" style="list-style-type:none;"><a class="toc-link" href="#"><span class="toc-text">San Francisco Fonts</span></a></li><li class="toc-item toc-level-2" style="list-style-type:none;"><a class="toc-link" href="#"><span class="toc-text">-apple-system&#x2F;BlinkMacSystemFont</span></a></li><li class="toc-item toc-level-2" style="list-style-type:none;"><a class="toc-link" href="#"><span class="toc-text">Segoe UI</span></a></li><li class="toc-item toc-level-2" style="list-style-type:none;"><a class="toc-link" href="#"><span class="toc-text">Roboto</span></a></li><li class="toc-item toc-level-2" style="list-style-type:none;"><a class="toc-link" href="#"><span class="toc-text">总结一下</span></a></li><li class="toc-item toc-level-2" style="list-style-type:none;"><a class="toc-link" href="#"><span class="toc-text">引自</span></a></li></ul>
-            
-	    <h2><span id="ge-da-wang-zhan-zui-xin-font-family">各大网站最新 font-family</span><a href="#ge-da-wang-zhan-zui-xin-font-family" class="header-anchor"></a></h2><p>作为前端的一个习惯，浏览各个网站的时候总是喜欢打开开发者工具时不时审查元素一下。看了一下一些比较出名的网站移动端的 <code>font-family</code>：</p>
+              
+                <ul class="toc"><li class="toc-item toc-level-2" style="list-style-type:none;"><a class="toc-link" href="#"><span class="toc-text">各大网站最新 font-family</span></a></li><li class="toc-item toc-level-2" style="list-style-type:none;"><a class="toc-link" href="#"><span class="toc-text">字体基础知识</span></a><ul class="toc-child"><li class="toc-item toc-level-3" style="list-style-type:none;"><a class="toc-link" href="#"><span class="toc-text">衬线字体与无衬线字体</span></a></li><li class="toc-item toc-level-3" style="list-style-type:none;"><a class="toc-link" href="#"><span class="toc-text">font-family 关键字</span></a></li></ul></li><li class="toc-item toc-level-2" style="list-style-type:none;"><a class="toc-link" href="#"><span class="toc-text">新增通用字体族关键字</span></a><ul class="toc-child"><li class="toc-item toc-level-3" style="list-style-type:none;"><a class="toc-link" href="#"><span class="toc-text">system-ui</span></a></li></ul></li><li class="toc-item toc-level-2" style="list-style-type:none;"><a class="toc-link" href="#"><span class="toc-text">San Francisco Fonts</span></a></li><li class="toc-item toc-level-2" style="list-style-type:none;"><a class="toc-link" href="#"><span class="toc-text">-apple-system&#x2F;BlinkMacSystemFont</span></a></li><li class="toc-item toc-level-2" style="list-style-type:none;"><a class="toc-link" href="#"><span class="toc-text">Segoe UI</span></a></li><li class="toc-item toc-level-2" style="list-style-type:none;"><a class="toc-link" href="#"><span class="toc-text">Roboto</span></a></li><li class="toc-item toc-level-2" style="list-style-type:none;"><a class="toc-link" href="#"><span class="toc-text">总结一下</span></a></li><li class="toc-item toc-level-2" style="list-style-type:none;"><a class="toc-link" href="#"><span class="toc-text">引自</span></a></li></ul>
+              
+	            <h2><span id="ge-da-wang-zhan-zui-xin-font-family">各大网站最新 font-family</span><a href="#ge-da-wang-zhan-zui-xin-font-family" class="header-anchor"></a></h2><p>作为前端的一个习惯，浏览各个网站的时候总是喜欢打开开发者工具时不时审查元素一下。看了一下一些比较出名的网站移动端的 <code>font-family</code>：</p>
 <ul>
 <li><a href="https://www.tmall.com/" target="_blank" rel="noopener">天猫</a>：<code>font-family: &quot;PingFang SC&quot;,miui,system-ui,-apple-system,BlinkMacSystemFont,Helvetica Neue,Helvetica,sans-serif;</code></li>
 <li><a href="https://github.com/" target="_blank" rel="noopener">Github</a>：<code>font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;</code></li>
@@ -378,6 +362,7 @@
     </div>
     <script type="text/javascript" src="/js/src/theme.js?v=1.1"></script>
 <script type="text/javascript" src="/js/src/bootstrap.js?v=1.1"></script>
+
 
   </body>
 </html>
