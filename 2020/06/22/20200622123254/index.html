@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,minimum-scale=1,maximum-scale=1">
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+  <meta name="description" content="绘图工具-PlantUML"/>
+
+
+
+
+  <meta name="keywords" content="工具," />
+
+
+
+
+
+  <link rel="alternate" href="/default" title="目八刀" >
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=1.1" />
+
+
+
+<link rel="canonical" href="https://mubadao.github.io/2020/06/22/20200622123254/"/>
+
+
+<meta name="description" content="在写文档的过程中，经常需要进行画图。虽然说现在有很多类似viso之类的可视化画图工具，但是还是要花费大量时间在拖拉组件上，效率十分低下。最近在网上找到了一款还算不错的绘图工具– Plantuml, 它本质上是也算一门可以快速画图的设计语言，学习起来也很方便。可以在http:&#x2F;&#x2F;plantuml.com&#x2F;网站上体验一下。 在vscode, webstorm都有相关的插件可以使用。  时序图时序图相">
+<meta property="og:type" content="article">
+<meta property="og:title" content="绘图工具-PlantUML">
+<meta property="og:url" content="https://mubadao.github.io/2020/06/22/20200622123254/index.html">
+<meta property="og:site_name" content="目八刀">
+<meta property="og:description" content="在写文档的过程中，经常需要进行画图。虽然说现在有很多类似viso之类的可视化画图工具，但是还是要花费大量时间在拖拉组件上，效率十分低下。最近在网上找到了一款还算不错的绘图工具– Plantuml, 它本质上是也算一门可以快速画图的设计语言，学习起来也很方便。可以在http:&#x2F;&#x2F;plantuml.com&#x2F;网站上体验一下。 在vscode, webstorm都有相关的插件可以使用。  时序图时序图相">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/112263-454b0519a685e7d3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/143/format/webp">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/112263-adf81a1ddfaff6d7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/365/format/webp">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/112263-5f3ded42458f4cdf.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/115/format/webp">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/112263-4d2240208bb0af66.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/157/format/webp">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/112263-235755e22a22874d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/283/format/webp">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/112263-15fb638cdecc0dd7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/280/format/webp">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/112263-bcf655490e617e8d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/263/format/webp">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/112263-8e43d01e616e0c20.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/484/format/webp">
+<meta property="article:published_time" content="2020-06-22T04:32:54.000Z">
+<meta property="article:modified_time" content="2020-07-01T07:15:06.621Z">
+<meta property="article:author" content="目八刀">
+<meta property="article:tag" content="工具">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://upload-images.jianshu.io/upload_images/112263-454b0519a685e7d3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/143/format/webp">
+
+
+<link rel="stylesheet" type="text/css" href="/css/style.css?v=1.1" />
+<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet'>
+
+
+
+
+
+<script type="text/javascript">
+  var themeConfig = {
+    fancybox: {
+      enable: false
+    },
+  };
+</script>
+
+
+
+
+  
+
+
+
+<script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+
+<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+
+    <title> 绘图工具-PlantUML - 目八刀 </title>
+    
+
+
+
+
+  
+    <script type="text/javascript" src="/lib/jquery/jquery-3.1.1.min.js"></script>
+  
+
+  
+
+  <meta name="generator" content="Hexo 7.3.0"></head>
+
+  <body>
+    <div id="page">
+      <header id="masthead"><div class="site-header-inner">
+    <h1 class="site-title">
+        <a href="/." class="logo">目八刀</a>
+    </h1>
+
+    <nav id="nav-top">
+        
+            <ul id="menu-top" class="nav-top-items">
+                
+                    <li class="menu-item">
+                        <a href="/tags">
+                            
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li class="menu-item">
+                        <a href="/about">
+                            
+                            
+                                About
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        
+  </nav>
+</div>
+
+      </header>
+      <div id="content">
+        
+    <div id="primary">
+        
+  <article class="post">
+    
+
+
+    
+            <div class="post-content">
+              
+                <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%97%B6%E5%BA%8F%E5%9B%BE"><span class="toc-text">时序图</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E7%94%A8%E6%B3%95"><span class="toc-text">基本用法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%BE%E7%BD%AE%E4%B8%8D%E5%90%8C%E7%9A%84%E8%A7%92%E8%89%B2"><span class="toc-text">设置不同的角色</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%8D%E7%94%A8%E7%9A%84%E7%AE%AD%E5%A4%B4%E6%A0%B7%E5%BC%8F"><span class="toc-text">不用的箭头样式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%86%E9%A1%B5"><span class="toc-text">分页</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%86%E6%AE%B5"><span class="toc-text">分段</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%94%9F%E5%91%BD%E7%BA%BF"><span class="toc-text">生命线</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%BE%E4%BE%8B%E6%B3%A8%E8%84%9A%E7%AD%89"><span class="toc-text">图例注脚等</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#C4%E6%9E%B6%E6%9E%84%E5%9B%BE"><span class="toc-text">C4架构图</span></a></li></ol>
+              
+	            <blockquote>
+<p>在写文档的过程中，经常需要进行画图。虽然说现在有很多类似viso之类的可视化画图工具，但是还是要花费大量时间在拖拉组件上，效率十分低下。最近在网上找到了一款还算不错的绘图工具– Plantuml, 它本质上是也算一门可以快速画图的设计语言，学习起来也很方便。可以在<a target="_blank" rel="noopener" href="http://plantuml.com/%E7%BD%91%E7%AB%99%E4%B8%8A%E4%BD%93%E9%AA%8C%E4%B8%80%E4%B8%8B%E3%80%82">http://plantuml.com/网站上体验一下。</a><br> 在vscode, webstorm都有相关的插件可以使用。</p>
+</blockquote>
+<h1 id="时序图"><a href="#时序图" class="headerlink" title="时序图"></a>时序图</h1><p>时序图相对来说是平常比较经常画的一种设计图稿，在这里记录一下plantuml中相关的语法。</p>
+<h2 id="基本用法"><a href="#基本用法" class="headerlink" title="基本用法"></a>基本用法</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">@startuml</span><br><span class="line">A -&gt; B: do something</span><br><span class="line">B -&gt; A: do something</span><br><span class="line">@enduml</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://upload-images.jianshu.io/upload_images/112263-454b0519a685e7d3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/143/format/webp" alt="img"></p>
+<p>image.png</p>
+<h2 id="设置不同的角色"><a href="#设置不同的角色" class="headerlink" title="设置不同的角色"></a>设置不同的角色</h2><p>时序图角色可以分为: actor, boundary, control, entity, database，每种角色呈现的图形也是不一样的。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">@startuml</span><br><span class="line">actor Foo1</span><br><span class="line">boundary Foo2</span><br><span class="line">control Foo3</span><br><span class="line">entity Foo4</span><br><span class="line">database Foo5</span><br><span class="line">collections Foo6</span><br><span class="line">Foo1 -&gt; Foo2 : To boundary</span><br><span class="line">Foo1 -&gt; Foo3 : To control</span><br><span class="line">Foo1 -&gt; Foo4 : To entity</span><br><span class="line">Foo1 -&gt; Foo5 : To database</span><br><span class="line">Foo1 -&gt; Foo6 : To collections</span><br><span class="line"></span><br><span class="line">@enduml</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://upload-images.jianshu.io/upload_images/112263-adf81a1ddfaff6d7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/365/format/webp" alt="img"></p>
+<p>image.png</p>
+<h2 id="不用的箭头样式"><a href="#不用的箭头样式" class="headerlink" title="不用的箭头样式"></a>不用的箭头样式</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">@startuml</span><br><span class="line">Bob -&gt;x Alice</span><br><span class="line">Bob -&gt; Alice</span><br><span class="line">Bob -&gt;&gt; Alice</span><br><span class="line">Bob -\ Alice</span><br><span class="line">Bob \\- Alice</span><br><span class="line">Bob //-- Alice</span><br><span class="line"></span><br><span class="line">Bob -&gt;o Alice</span><br><span class="line">Bob o\\-- Alice</span><br><span class="line"></span><br><span class="line">Bob &lt;-&gt; Alice</span><br><span class="line">Bob &lt;-&gt;o Alice</span><br><span class="line">Bob -[#red]&gt; Alice : hello</span><br><span class="line">Alice -[#0000FF]-&gt;Bob : ok</span><br><span class="line">@enduml</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://upload-images.jianshu.io/upload_images/112263-5f3ded42458f4cdf.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/115/format/webp" alt="img"></p>
+<p>image.png</p>
+<h2 id="分页"><a href="#分页" class="headerlink" title="分页"></a>分页</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">@startuml</span><br><span class="line"></span><br><span class="line">Alice -&gt; Bob : message 1</span><br><span class="line">Alice -&gt; Bob : message 2</span><br><span class="line"></span><br><span class="line">newpage</span><br><span class="line"></span><br><span class="line">Alice -&gt; Bob : message 3</span><br><span class="line">Alice -&gt; Bob : message 4</span><br><span class="line"></span><br><span class="line">newpage A title for the\nlast page</span><br><span class="line"></span><br><span class="line">Alice -&gt; Bob : message 5</span><br><span class="line">Alice -&gt; Bob : message 6</span><br><span class="line">@enduml</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://upload-images.jianshu.io/upload_images/112263-4d2240208bb0af66.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/157/format/webp" alt="img"></p>
+<p>image.png</p>
+<h2 id="分段"><a href="#分段" class="headerlink" title="分段"></a>分段</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">@startuml</span><br><span class="line"></span><br><span class="line">== Initialization ==</span><br><span class="line"></span><br><span class="line">Alice -&gt; Bob: Authentication Request</span><br><span class="line">Bob --&gt; Alice: Authentication Response</span><br><span class="line"></span><br><span class="line">== Repetition ==</span><br><span class="line"></span><br><span class="line">Alice -&gt; Bob: Another authentication Request</span><br><span class="line">Alice &lt;-- Bob: another authentication Response</span><br><span class="line"></span><br><span class="line">@enduml</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://upload-images.jianshu.io/upload_images/112263-235755e22a22874d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/283/format/webp" alt="img"></p>
+<p>image.png</p>
+<h2 id="生命线"><a href="#生命线" class="headerlink" title="生命线"></a>生命线</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">@startuml</span><br><span class="line">participant User</span><br><span class="line"></span><br><span class="line">User -&gt; A: DoWork</span><br><span class="line">activate A #FFBBBB</span><br><span class="line"></span><br><span class="line">A -&gt; A: Internal call</span><br><span class="line">activate A #DarkSalmon</span><br><span class="line"></span><br><span class="line">A -&gt; B: &lt;&lt; createRequest &gt;&gt;</span><br><span class="line">activate B</span><br><span class="line"></span><br><span class="line">B --&gt; A: RequestCreated</span><br><span class="line">deactivate B</span><br><span class="line">deactivate A</span><br><span class="line">A -&gt; User: Done</span><br><span class="line">deactivate A</span><br><span class="line"></span><br><span class="line">@enduml</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://upload-images.jianshu.io/upload_images/112263-15fb638cdecc0dd7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/280/format/webp" alt="img"></p>
+<p>image.png</p>
+<h2 id="图例注脚等"><a href="#图例注脚等" class="headerlink" title="图例注脚等"></a>图例注脚等</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">@startuml</span><br><span class="line"></span><br><span class="line">header Page Header</span><br><span class="line">footer Page %page% of %lastpage%</span><br><span class="line"></span><br><span class="line">title Example Title</span><br><span class="line"></span><br><span class="line">Alice -&gt; Bob : message 1</span><br><span class="line">note left: this is a first note</span><br><span class="line"></span><br><span class="line">Alice -&gt; Bob : message 2</span><br><span class="line"></span><br><span class="line">@enduml</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://upload-images.jianshu.io/upload_images/112263-bcf655490e617e8d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/263/format/webp" alt="img"></p>
+<p>image.png</p>
+<h1 id="C4架构图"><a href="#C4架构图" class="headerlink" title="C4架构图"></a>C4架构图</h1><p>C4 model是一种软件架构图的设计方法，具体介绍可以参考<a target="_blank" rel="noopener" href="https://www.infoq.cn/article/C4-architecture-model">C4 architecture model</a>。利用<a target="_blank" rel="noopener" href="https://github.com/RicardoNiepel/C4-PlantUML">C4-PlantUML</a>工具，可以画出很多很不错的架构图。<br> C4模型分为Context, Container, Component和Code 4个组成部分，我们一般在画图的时候主要用到前三个组成部分。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">@startuml C4_Elements</span><br><span class="line">!includeurl https://raw.githubusercontent.com/RicardoNiepel/C4-PlantUML/master/C4_Context.puml</span><br><span class="line">!includeurl https://raw.githubusercontent.com/RicardoNiepel/C4-PlantUML/master/C4_Container.puml</span><br><span class="line">!includeurl https://raw.githubusercontent.com/RicardoNiepel/C4-PlantUML/master/C4_Component.puml</span><br><span class="line"></span><br><span class="line">System(systemAlias, &quot;System&quot;, &quot;这可以看作系统上下文(Context)&quot;)</span><br><span class="line">Container(containerAlias, &quot;Container&quot;, &quot;这是Container&quot;)</span><br><span class="line">Person(personAlias, &quot;Person&quot;, &quot;这可以看作是组件(Component)&quot;)</span><br><span class="line"></span><br><span class="line">Rel(personAlias, containerAlias, &quot;Label&quot;, &quot;设置关联关系&quot;)</span><br><span class="line">@enduml</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://upload-images.jianshu.io/upload_images/112263-8e43d01e616e0c20.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/484/format/webp" alt="img"></p>
+
+            </div>
+          
+
+    
+      <footer class="post-footer">
+		
+		<div class="post-tags">
+		  
+			<a href="/tags/%E5%B7%A5%E5%85%B7/">工具</a>
+		  
+		</div>
+		
+
+        
+        
+  <nav class="post-nav">
+    
+      <a class="prev" href="/2020/06/22/20200622171235/">
+        <i class="iconfont icon-left"></i>
+        <span class="prev-text nav-default">DOCTYPE如何设置</span>
+        <span class="prev-text nav-mobile">Prev</span>
+      </a>
+    
+    
+      <a class="next" href="/2020/06/22/20200622103231/">
+        <span class="next-text nav-default">问题收录</span>
+        <span class="prev-text nav-mobile">Next</span>
+        <i class="iconfont icon-right"></i>
+      </a>
+    
+  </nav>
+
+        
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+      </footer>
+    
+  </article>
+
+    </div>
+
+      </div>
+
+      
+
+      <footer id="colophon"><span class="copyright-year">
+    
+        &copy;
+    
+        2014 -
+    
+    2025
+    <span class="footer-author">目八刀.</span>
+    <span class="power-by">
+        Powered by <a class="hexo-link" target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a> and <a class="theme-link" target="_blank" rel="noopener" href="https://github.com/frostfan/hexo-theme-polarbear">Polar Bear</a>
+    </span>
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span id="busuanzi_container_site_pv">总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+    <span class="post-meta-divider">|</span>
+    <span id="busuanzi_container_site_uv">131人</span>
+</span>
+
+<script>
+    function createImgEventFullScreen() {
+        var imgs = $(".post-content").find("img");
+        console.log(imgs);
+        for (var i = 0; i < imgs.length; i++) {
+            // $(imgs[i]).click(createCover(imgs[i]));
+            imgs[i].onclick = function (e) {
+                var src = e.srcElement.currentSrc;
+                var _this = $(this);
+                console.log(_this);
+                createCover(src,_this);
+            }
+        }
+        function createCover(src,_this) {
+            console.log(_this);
+            console.log(src);
+            var cover = $("<div id='outerDiv'  style='position:fixed;top:0;left:0;background:rgba(0,0,0,0.7);z-index:5;width:100%;height:100%;display:none;'><div id='innerDiv' style='position:absolute;'><img  id='bigImg' style='border:5px solid #fff;' src=''/></div></div>");
+            $("#outerDiv").remove();
+            $("body").append(cover);
+            imgShow("#outerDiv", "#innerDiv", "#bigImg", _this,src);
+
+        }
+    }
+    function imgShow(outerDiv, innerDiv, bigImg, _this,src) {
+        //var src = _this.attr("src"); //获取当前点击的common-img元素中的src属性
+        $(bigImg).attr("src", src); //设置#bigImg元素的src属性
+        /*获取当前点击图片的真实大小，并显示弹出层及大图*/
+        $("<img/>").attr("src", src).on("load", function () {
+            var windowW = $(window).width(); //获取当前窗口宽度
+            var windowH = $(window).height(); //获取当前窗口高度
+            var realWidth = this.width; //获取图片真实宽度
+            var realHeight = this.height; //获取图片真实高度
+            var imgWidth, imgHeight;
+            var scale = 0.8; //缩放尺寸，当图片真实宽度和高度大于窗口宽度和高度时进行缩放
+
+            if (realHeight > windowH * scale) { //判断图片高度
+                imgHeight = windowH * scale; //如大于窗口高度，图片高度进行缩放
+                imgWidth = imgHeight / realHeight * realWidth; //等比例缩放宽度
+                if (imgWidth > windowW * scale) { //如宽度仍大于窗口宽度
+                    imgWidth = windowW * scale; //再对宽度进行缩放
+                }
+            } else if (realWidth > windowW * scale) { //如图片高度合适，判断图片宽度
+                imgWidth = windowW * scale; //如大于窗口宽度，图片宽度进行缩放
+                imgHeight = imgWidth / realWidth * realHeight; //等比例缩放高度
+            } else { //如果图片真实高度和宽度都符合要求，高宽不变
+                imgWidth = realWidth;
+                imgHeight = realHeight;
+            }
+            $(bigImg).css("width", imgWidth); //以最终的宽度对图片缩放
+
+            var w = (windowW - imgWidth) / 2; //计算图片与窗口左边距
+            var h = (windowH - imgHeight) / 2; //计算图片与窗口上边距
+            $(innerDiv).css({ "top": h, "left": w }); //设置#innerDiv的top和left属性
+            //console.log('****')
+            $(outerDiv).fadeIn("fast"); //淡入显示#outerDiv
+        });
+
+        $(outerDiv).click(function () { //再次点击淡出消失弹出层
+            $(this).fadeOut("fast");
+        });
+    }
+    setTimeout(function () {
+        createImgEventFullScreen();
+    }, 1000)
+</script>
+
+      </footer>
+
+      <div class="back-to-top" id="back-to-top">
+        <i class="iconfont icon-up"></i>
+      </div>
+    </div>
+    <script type="text/javascript" src="/js/src/theme.js?v=1.1"></script>
+<script type="text/javascript" src="/js/src/bootstrap.js?v=1.1"></script>
+
+
+  </body>
+</html>

@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,minimum-scale=1,maximum-scale=1">
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+  <meta name="description" content="使用Hexo搭建自己的博客"/>
+
+
+
+
+  <meta name="keywords" content="Hexo,Web开发," />
+
+
+
+
+
+  <link rel="alternate" href="/default" title="目八刀" >
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=1.1" />
+
+
+
+<link rel="canonical" href="https://mubadao.github.io/2020/06/16/20200616170613/"/>
+
+
+<meta name="description" content="Hexo 是一个跟WordPress，Jekyll一样的博客框架，也许你很好奇为什么要用Hexo而不是其它框架，这个世界上好些事情没有原因，一切只是凑巧，前段时间，一直想搭一个个人的博客，而在Hexo上搜到了喜欢的主题，所有就顺便用了Hexo。如果你想快速搭建自己的博客，建议先在上面几个框架的官网里，找到自己喜欢的主题，然后再决定用什么框架。 在搭建网站的时候除了用了Hexo，还用了Swig模板">
+<meta property="og:type" content="article">
+<meta property="og:title" content="使用Hexo搭建自己的博客">
+<meta property="og:url" content="https://mubadao.github.io/2020/06/16/20200616170613/index.html">
+<meta property="og:site_name" content="目八刀">
+<meta property="og:description" content="Hexo 是一个跟WordPress，Jekyll一样的博客框架，也许你很好奇为什么要用Hexo而不是其它框架，这个世界上好些事情没有原因，一切只是凑巧，前段时间，一直想搭一个个人的博客，而在Hexo上搜到了喜欢的主题，所有就顺便用了Hexo。如果你想快速搭建自己的博客，建议先在上面几个框架的官网里，找到自己喜欢的主题，然后再决定用什么框架。 在搭建网站的时候除了用了Hexo，还用了Swig模板">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://pic.downk.cc/item/5ee9d369a240b370e3f13c88.png">
+<meta property="article:published_time" content="2020-06-16T08:29:58.000Z">
+<meta property="article:modified_time" content="2020-06-23T02:11:39.764Z">
+<meta property="article:author" content="目八刀">
+<meta property="article:tag" content="Hexo">
+<meta property="article:tag" content="Web开发">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://pic.downk.cc/item/5ee9d369a240b370e3f13c88.png">
+
+
+<link rel="stylesheet" type="text/css" href="/css/style.css?v=1.1" />
+<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet'>
+
+
+
+
+
+<script type="text/javascript">
+  var themeConfig = {
+    fancybox: {
+      enable: false
+    },
+  };
+</script>
+
+
+
+
+  
+
+
+
+<script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+
+<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+
+    <title> 使用Hexo搭建自己的博客 - 目八刀 </title>
+    
+
+
+
+
+  
+    <script type="text/javascript" src="/lib/jquery/jquery-3.1.1.min.js"></script>
+  
+
+  
+
+  <meta name="generator" content="Hexo 7.3.0"></head>
+
+  <body>
+    <div id="page">
+      <header id="masthead"><div class="site-header-inner">
+    <h1 class="site-title">
+        <a href="/." class="logo">目八刀</a>
+    </h1>
+
+    <nav id="nav-top">
+        
+            <ul id="menu-top" class="nav-top-items">
+                
+                    <li class="menu-item">
+                        <a href="/tags">
+                            
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li class="menu-item">
+                        <a href="/about">
+                            
+                            
+                                About
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        
+  </nav>
+</div>
+
+      </header>
+      <div id="content">
+        
+    <div id="primary">
+        
+  <article class="post">
+    
+
+
+    
+            <div class="post-content">
+              
+                <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E8%A3%85"><span class="toc-text">安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E7%BD%91%E7%AB%99%E9%A1%B9%E7%9B%AE"><span class="toc-text">创建网站项目</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AE%A9%E7%BD%91%E7%AB%99%E8%B7%91%E8%B5%B7%E6%9D%A5"><span class="toc-text">让网站跑起来</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A6%82%E4%BD%95%E5%86%99%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0"><span class="toc-text">如何写一篇文章</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%A8%E5%B1%80%E5%8F%98%E9%87%8F"><span class="toc-text">全局变量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9C%A8Github%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2"><span class="toc-text">在Github搭建自己的博客</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%B8%A9%E7%9A%84%E4%B8%80%E4%BA%9B%E5%9D%91"><span class="toc-text">踩的一些坑</span></a></li></ol>
+              
+	            <blockquote>
+<p>Hexo 是一个跟WordPress，Jekyll一样的博客框架，也许你很好奇为什么要用Hexo而不是其它框架，这个世界上好些事情没有原因，一切只是凑巧，前段时间，一直想搭一个个人的博客，而在Hexo上搜到了喜欢的主题，所有就顺便用了Hexo。如果你想快速搭建自己的博客，建议先在上面几个框架的官网里，找到自己喜欢的主题，然后再决定用什么框架。</p>
+<p>在搭建网站的时候除了用了Hexo，还用了Swig模板语言。Hexo上的主题基本上都是Swig语言写的，所以需要了解Swig模板怎么写。关于Swig语言的使用，我在后面会单独写一篇文章。另外小编的博客是托管在Github上面的。</p>
+</blockquote>
+<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><ul>
+<li><p>安装Git，之所以安装Git是因为博客是托管在GitHub上面，所以每次发布的文章需要提交上去，还有我们喜欢的主题也需要通过Git从GitHub上拉取</p>
+</li>
+<li><p>Mac用户，先安装Xcode，再在Xcode里面安装命令行工具，方法是启动Xcode，进入 <strong>Preferences -&gt; Download -&gt; Command Line Tools -&gt; Install</strong> 安装命令行工具</p>
+</li>
+<li><p>安装 Node.js，安装方法自己找资料</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">//全局安装</span><br><span class="line">$ npm install -g hexo-cli</span><br><span class="line">//也可以当前目录安装</span><br><span class="line">$ npm install hexo</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>安装以后，将 Hexo 所在的目录下的 <code>node_modules</code> 添加到环境变量之中即可直接使用</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">echo &#x27;PATH=&quot;$PATH:./node_modules/.bin&quot;&#x27; &gt;&gt; ~/.profile</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h3 id="创建网站项目"><a href="#创建网站项目" class="headerlink" title="创建网站项目"></a>创建网站项目</h3><ul>
+<li><p>建立网站项目</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ hexo init &lt;folder&gt;</span><br><span class="line">$ cd &lt;folder&gt;</span><br><span class="line">$ npm install</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>配置根目录下的_config.yml</p>
+</li>
+<li><p>scaffolds：放的是一些模板文件，当你使用hexo new 命令的时候，会根据这些模板创建swig文件</p>
+</li>
+<li><p>source：资源文件夹是存放用户资源的地方。除 <code>_posts</code> 文件夹之外，开头命名为 <code>_</code> (下划线)的文件 &#x2F; 文件夹和隐藏的文件将会被忽略。Markdown 和 HTML 文件会被解析并放到 <code>public</code> 文件夹，而其他文件会被拷贝过去。</p>
+</li>
+<li><p>themes：我们下载的主题就放到这个里面</p>
+</li>
+<li><p>source：我们网站中用的的多媒体资源，比如图片可以放到这个文件夹下，然后通过类似于 <code>![](/images/image.jpg)</code> 的方法访问它们。</p>
+</li>
+<li><p>source&#x2F;_data：此文件夹下放一些数据文件，比如YAML 或 JSON，这些文件会自动加载</p>
+</li>
+</ul>
+<h3 id="让网站跑起来"><a href="#让网站跑起来" class="headerlink" title="让网站跑起来"></a>让网站跑起来</h3><ul>
+<li><p>我们直接去Hexo的官网下载主题，下载完后将目录拷贝到项目的theme下面，本博客主题地址链接：<a target="_blank" rel="noopener" href="https://github.com/frostfan/hexo-theme-polarbear.git">https://github.com/frostfan/hexo-theme-polarbear.git</a></p>
+</li>
+<li><p>使用下面的命令编译我们的项目，并生成publish</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo g</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>使用下面的命令启动服务器</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo server</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>然后在浏览器里面输入<code>http://localhost:4000/</code>，理论上我们的网站就可以跑起来了，端口号可以在_config.yml中配置</p>
+</li>
+<li><p>要上传到GitHub前需要运行下面的命令进行部署</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>还有一个常用的命令，其他命令就不讲了，暂时没用到</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo clean</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h3 id="如何写一篇文章"><a href="#如何写一篇文章" class="headerlink" title="如何写一篇文章"></a>如何写一篇文章</h3><p>写文章需要用下面命令新建一个Markdown文件，会在source&#x2F;_post下面生成md文件</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new 泰国游记</span><br></pre></td></tr></table></figure>
+
+<p>创建完之后，打开md文件，发现文件的头部已经有了一些内容，头部最常用的几个字段是title（标题），date（日期），tags（标签），categories（分类），comments（是否开启评论），分类和tags可以定义多个，每起一行加前缀-</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: 泰国游记</span><br><span class="line">date: 2019-06-15 00:17:30</span><br><span class="line">tags: </span><br><span class="line">- 旅游</span><br><span class="line">- 泰国</span><br><span class="line">categories: 旅游</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+
+<p>在Hexo里写文章用的是Markdown，除了Markdown的基本语法可用外，Hexo也为我们提供了一些更为强大的标签插件，下面是几个常用的：</p>
+<ul>
+<li><p>插入引言，可包含作者、来源和标题。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;% blockquote %&#125;</span><br><span class="line">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque hendrerit lacus ut purus iaculis feugiat. Sed nec tempor elit, quis aliquam neque. Curabitur sed diam eget dolor fermentum semper at eu lorem.</span><br><span class="line">&#123;% endblockquote %&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>插入代码块，可指定语言</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;% codeblock lang:objc %&#125;</span><br><span class="line">[rectangle setX: 10 y: 10 width: 20 height: 20];</span><br><span class="line">&#123;% endcodeblock %&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>插入指定大小的图片</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% img [class names] /path/to/image [width] [height] &#x27;&quot;title text&quot; &quot;alt text&quot;&#x27; %&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>文章摘要和截断</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</span><br><span class="line">&lt;!-- more --&gt;</span><br><span class="line">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span><br></pre></td></tr></table></figure>
+
+<p>首页中将只会出现</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</span><br></pre></td></tr></table></figure>
+
+<p>正文中则会出现</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</span><br><span class="line"></span><br><span class="line">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
+</ul>
+<h3 id="全局变量"><a href="#全局变量" class="headerlink" title="全局变量"></a>全局变量</h3><p>Hexo提供了一些全局变量，以方面我们在Swig模板文件中使用，这些变量基本上可以获取博客里面所有的内容，具体可参考官方文档</p>
+<h3 id="在Github搭建自己的博客"><a href="#在Github搭建自己的博客" class="headerlink" title="在Github搭建自己的博客"></a>在Github搭建自己的博客</h3><ul>
+<li><p>在Github上创建一个仓库，一定注意下面几个地方，第一是保证Owner和Repository name的两个名字一样，第二一定选择Public，Private小编试了好像不行，大概如下图的设置基本上就可以了</p>
+<p><img src="https://pic.downk.cc/item/5ee9d369a240b370e3f13c88.png"></p>
+</li>
+<li><p>安装 <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo-deployer-git">hexo-deployer-git</a>。 </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>修改_config.yml，type写git，repo是git仓库地址，branch选择master，message是提交日志</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: https://bitbucket.org/JohnSmith/johnsmith.bitbucket.io</span><br><span class="line">  branch: master</span><br><span class="line">  message: log</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>执行下列命令，将public推送到github仓库</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">//必须先清理，不然删文件不会生效</span><br><span class="line">hexo clean</span><br><span class="line">//推送</span><br><span class="line">hexo deploy</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>执行完以上命令，大概等个20秒左右的样子，刷新主页后生效</p>
+</li>
+</ul>
+<h3 id="踩的一些坑"><a href="#踩的一些坑" class="headerlink" title="踩的一些坑"></a>踩的一些坑</h3><ul>
+<li>刚开始的时候图片存在source&#x2F;images下面，发现部署完之后，图片加载很慢，所以图片尽量存在图床上面，推荐聚合图床，图床网站一般有加速功能，可以提高页面的加载速度</li>
+</ul>
+
+            </div>
+          
+
+    
+      <footer class="post-footer">
+		
+		<div class="post-tags">
+		  
+			<a href="/tags/Hexo/">Hexo</a>
+		  
+			<a href="/tags/Web%E5%BC%80%E5%8F%91/">Web开发</a>
+		  
+		</div>
+		
+
+        
+        
+  <nav class="post-nav">
+    
+      <a class="prev" href="/2020/06/17/20200616162412/">
+        <i class="iconfont icon-left"></i>
+        <span class="prev-text nav-default">Hexo中分类和标签页面不显示解决办法</span>
+        <span class="prev-text nav-mobile">Prev</span>
+      </a>
+    
+    
+      <a class="next" href="/2020/06/16/%E8%99%9A%E6%8B%9F%E5%8C%96%E6%A6%82%E8%AE%BA/">
+        <span class="next-text nav-default">虚拟化概论</span>
+        <span class="prev-text nav-mobile">Next</span>
+        <i class="iconfont icon-right"></i>
+      </a>
+    
+  </nav>
+
+        
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+      </footer>
+    
+  </article>
+
+    </div>
+
+      </div>
+
+      
+
+      <footer id="colophon"><span class="copyright-year">
+    
+        &copy;
+    
+        2014 -
+    
+    2025
+    <span class="footer-author">目八刀.</span>
+    <span class="power-by">
+        Powered by <a class="hexo-link" target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a> and <a class="theme-link" target="_blank" rel="noopener" href="https://github.com/frostfan/hexo-theme-polarbear">Polar Bear</a>
+    </span>
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span id="busuanzi_container_site_pv">总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+    <span class="post-meta-divider">|</span>
+    <span id="busuanzi_container_site_uv">131人</span>
+</span>
+
+<script>
+    function createImgEventFullScreen() {
+        var imgs = $(".post-content").find("img");
+        console.log(imgs);
+        for (var i = 0; i < imgs.length; i++) {
+            // $(imgs[i]).click(createCover(imgs[i]));
+            imgs[i].onclick = function (e) {
+                var src = e.srcElement.currentSrc;
+                var _this = $(this);
+                console.log(_this);
+                createCover(src,_this);
+            }
+        }
+        function createCover(src,_this) {
+            console.log(_this);
+            console.log(src);
+            var cover = $("<div id='outerDiv'  style='position:fixed;top:0;left:0;background:rgba(0,0,0,0.7);z-index:5;width:100%;height:100%;display:none;'><div id='innerDiv' style='position:absolute;'><img  id='bigImg' style='border:5px solid #fff;' src=''/></div></div>");
+            $("#outerDiv").remove();
+            $("body").append(cover);
+            imgShow("#outerDiv", "#innerDiv", "#bigImg", _this,src);
+
+        }
+    }
+    function imgShow(outerDiv, innerDiv, bigImg, _this,src) {
+        //var src = _this.attr("src"); //获取当前点击的common-img元素中的src属性
+        $(bigImg).attr("src", src); //设置#bigImg元素的src属性
+        /*获取当前点击图片的真实大小，并显示弹出层及大图*/
+        $("<img/>").attr("src", src).on("load", function () {
+            var windowW = $(window).width(); //获取当前窗口宽度
+            var windowH = $(window).height(); //获取当前窗口高度
+            var realWidth = this.width; //获取图片真实宽度
+            var realHeight = this.height; //获取图片真实高度
+            var imgWidth, imgHeight;
+            var scale = 0.8; //缩放尺寸，当图片真实宽度和高度大于窗口宽度和高度时进行缩放
+
+            if (realHeight > windowH * scale) { //判断图片高度
+                imgHeight = windowH * scale; //如大于窗口高度，图片高度进行缩放
+                imgWidth = imgHeight / realHeight * realWidth; //等比例缩放宽度
+                if (imgWidth > windowW * scale) { //如宽度仍大于窗口宽度
+                    imgWidth = windowW * scale; //再对宽度进行缩放
+                }
+            } else if (realWidth > windowW * scale) { //如图片高度合适，判断图片宽度
+                imgWidth = windowW * scale; //如大于窗口宽度，图片宽度进行缩放
+                imgHeight = imgWidth / realWidth * realHeight; //等比例缩放高度
+            } else { //如果图片真实高度和宽度都符合要求，高宽不变
+                imgWidth = realWidth;
+                imgHeight = realHeight;
+            }
+            $(bigImg).css("width", imgWidth); //以最终的宽度对图片缩放
+
+            var w = (windowW - imgWidth) / 2; //计算图片与窗口左边距
+            var h = (windowH - imgHeight) / 2; //计算图片与窗口上边距
+            $(innerDiv).css({ "top": h, "left": w }); //设置#innerDiv的top和left属性
+            //console.log('****')
+            $(outerDiv).fadeIn("fast"); //淡入显示#outerDiv
+        });
+
+        $(outerDiv).click(function () { //再次点击淡出消失弹出层
+            $(this).fadeOut("fast");
+        });
+    }
+    setTimeout(function () {
+        createImgEventFullScreen();
+    }, 1000)
+</script>
+
+      </footer>
+
+      <div class="back-to-top" id="back-to-top">
+        <i class="iconfont icon-up"></i>
+      </div>
+    </div>
+    <script type="text/javascript" src="/js/src/theme.js?v=1.1"></script>
+<script type="text/javascript" src="/js/src/bootstrap.js?v=1.1"></script>
+
+
+  </body>
+</html>

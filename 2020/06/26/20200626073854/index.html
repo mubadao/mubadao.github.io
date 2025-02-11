@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,minimum-scale=1,maximum-scale=1">
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+  <meta name="description" content="JavaScript速查"/>
+
+
+
+
+  <meta name="keywords" content="Web开发,JavaScript," />
+
+
+
+
+
+  <link rel="alternate" href="/default" title="目八刀" >
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=1.1" />
+
+
+
+<link rel="canonical" href="https://mubadao.github.io/2020/06/26/20200626073854/"/>
+
+
+<meta name="description" content="时间的节点终于来到了JavaScript，既然是JavaScript速查手册，自然要用简明的毫无修饰的自然语言描述，闲话少说我们步入正题。  历史时间回到Internet刚兴起的那段时间，如果用户要注册个账户，需要在表单里面填写邮件地址，如果用户填了个非法的邮箱地址，比如填了个sb，浏览器也原封不动的发给服务器，服务器校验邮件地址不对后再告诉浏览器你地址填错了，当时的Internet可不像现在这">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JavaScript速查">
+<meta property="og:url" content="https://mubadao.github.io/2020/06/26/20200626073854/index.html">
+<meta property="og:site_name" content="目八刀">
+<meta property="og:description" content="时间的节点终于来到了JavaScript，既然是JavaScript速查手册，自然要用简明的毫无修饰的自然语言描述，闲话少说我们步入正题。  历史时间回到Internet刚兴起的那段时间，如果用户要注册个账户，需要在表单里面填写邮件地址，如果用户填了个非法的邮箱地址，比如填了个sb，浏览器也原封不动的发给服务器，服务器校验邮件地址不对后再告诉浏览器你地址填错了，当时的Internet可不像现在这">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-06-25T23:38:56.000Z">
+<meta property="article:modified_time" content="2020-06-29T01:55:57.884Z">
+<meta property="article:author" content="目八刀">
+<meta property="article:tag" content="Web开发">
+<meta property="article:tag" content="JavaScript">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="stylesheet" type="text/css" href="/css/style.css?v=1.1" />
+<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet'>
+
+
+
+
+
+<script type="text/javascript">
+  var themeConfig = {
+    fancybox: {
+      enable: false
+    },
+  };
+</script>
+
+
+
+
+  
+
+
+
+<script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+
+<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+
+    <title> JavaScript速查 - 目八刀 </title>
+    
+
+
+
+
+  
+    <script type="text/javascript" src="/lib/jquery/jquery-3.1.1.min.js"></script>
+  
+
+  
+
+  <meta name="generator" content="Hexo 7.3.0"></head>
+
+  <body>
+    <div id="page">
+      <header id="masthead"><div class="site-header-inner">
+    <h1 class="site-title">
+        <a href="/." class="logo">目八刀</a>
+    </h1>
+
+    <nav id="nav-top">
+        
+            <ul id="menu-top" class="nav-top-items">
+                
+                    <li class="menu-item">
+                        <a href="/tags">
+                            
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li class="menu-item">
+                        <a href="/about">
+                            
+                            
+                                About
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        
+  </nav>
+</div>
+
+      </header>
+      <div id="content">
+        
+    <div id="primary">
+        
+  <article class="post">
+    
+
+
+    
+            <div class="post-content">
+              
+                <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8E%86%E5%8F%B2"><span class="toc-text">历史</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%89%A7%E8%A1%8C%E7%8E%AF%E5%A2%83"><span class="toc-text">执行环境</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B3%A8%E9%87%8A"><span class="toc-text">注释</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%89%A7%E8%A1%8C%E9%A1%BA%E5%BA%8F"><span class="toc-text">执行顺序</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%91%BD%E5%90%8D%E8%A7%84%E5%88%99"><span class="toc-text">命名规则</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%B3%E9%94%AE%E5%AD%97"><span class="toc-text">关键字</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%98%E9%87%8F%E5%A3%B0%E6%98%8E"><span class="toc-text">变量声明</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-text">数据类型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%90%AF%E7%94%A8%E4%B8%A5%E6%A0%BC%E6%A8%A1%E5%BC%8F"><span class="toc-text">启用严格模式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2"><span class="toc-text">数据类型转换</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-text">运算符</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8E%A7%E5%88%B6%E8%AF%AD%E5%8F%A5"><span class="toc-text">控制语句</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BC%82%E5%B8%B8"><span class="toc-text">异常</span></a></li></ol>
+              
+	            <blockquote>
+<p>时间的节点终于来到了JavaScript，既然是JavaScript速查手册，自然要用简明的毫无修饰的自然语言描述，闲话少说我们步入正题。</p>
+</blockquote>
+<h2 id="历史"><a href="#历史" class="headerlink" title="历史"></a>历史</h2><p>时间回到Internet刚兴起的那段时间，如果用户要注册个账户，需要在表单里面填写邮件地址，如果用户填了个非法的邮箱地址，比如填了个sb，浏览器也原封不动的发给服务器，服务器校验邮件地址不对后再告诉浏览器你地址填错了，当时的Internet可不像现在这么快，简直是龟速，这么一来一往，花时间不说，对没耐心的用户来讲是一种考验。话说网景公司当时有个浏览器叫Netscape，每天也经受着这样的摧残，为了解决这个问题，在1995年的时候，Netscape公司的程序员布兰登·艾奇，花了十天的时间开发了LiveScript语言，这么短的时间开发一门语言，确实了不起。后来Netscape为了蹭Java的热度，把LiveScript改名为JavaScript，JavaScript和Java基本上没有什么关系。当时的JavaScript有三个版本，IE的JScript、网景的JavaScript和ScriptEase中的CEnvi。为了统一标准，1997年三家公司将统一化需求提交给欧洲计算机制造商协会（ECMA），该协会指定39号技术委员会负责将其进行标准化，代号为TC39，经过委员会数月的努力，一种名为ECMAScript的新脚本语言的标准诞生，JavaScript也由此变得标准化。近两年随着Node.js的风靡，JavaScript的执行也渐渐脱离了浏览器，变成了一门全栈语言，不仅前端在使用，后端也在使用。</p>
+<p>研究一门语言我一般会从以下几个方面进行探讨：</p>
+<p>运行环境，注释，数据类型，关键字，变量，命名规则，数据类型转换，作用域，函数，控制语句，面向对象，继承，接口，反射，异步，异常，IO操作，网络，常用库</p>
+<h2 id="执行环境"><a href="#执行环境" class="headerlink" title="执行环境"></a>执行环境</h2><p>JavaScript可以在两种环境下执行，一种是在客户端执行的浏览器环境，在浏览器中执行，一种是将代码嵌入到&lt;script&gt;标签中，另一种是直接写到js文件中</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">//嵌入到标签中的写法</span><br><span class="line">&lt;script&gt;console.log(&quot;Hello World!&quot;);&lt;/script&gt;</span><br><span class="line">//在文件中的写法，如果采用这种方法，&lt;script&gt;标签内不应该再写代码，会被忽略</span><br><span class="line">&lt;script&gt; type=&quot;text/javascript&quot; src=&quot;test.js&quot;&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+<p>另一种是在服务器端执行的Node.js环境，不需要嵌套在任何标签内，直接写代码即可：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">console.log(&quot;Hello World!&quot;);</span><br></pre></td></tr></table></figure>
+
+<h2 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h2><ul>
+<li>单行注释：&#x2F;&#x2F;单行注释信息。</li>
+<li>多行注释：&#x2F;*多行注释信息*&#x2F;。</li>
+</ul>
+<h2 id="执行顺序"><a href="#执行顺序" class="headerlink" title="执行顺序"></a>执行顺序</h2><p>当代码嵌套到&lt;script&gt;中时，脚本是按先后顺序执行，当然我们可以通过添加defer属性延迟执行脚本</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;meta charset=&quot;UTF-8&quot;&gt;</span><br><span class="line">    &lt;script type=&quot;text/javascript&quot; defer src=&quot;test.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;h1&gt;网页标题&lt;/h1&gt;</span><br><span class="line">    &lt;p&gt;正文内容&lt;/p&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+
+<p>defer属性虽然会将脚本执行延迟，但是会同步加载文件，造成阻塞，有另一种方法可以异步加载文件，那就是async属性，即在加载 JavaScript 文件时，浏览器不会暂停，而是继续解析。这样能节省时间，提升响应速度。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;meta charset=&quot;UTF-8&quot;&gt;</span><br><span class="line">    &lt;script type=&quot;text/javascript&quot; async src=&quot;test.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;h1&gt;网页标题&lt;/h1&gt;</span><br><span class="line">    &lt;p&gt;正文内容&lt;/p&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+
+<h2 id="命名规则"><a href="#命名规则" class="headerlink" title="命名规则"></a>命名规则</h2><ul>
+<li>第一个字符必须是字母、下划线（_）或美元符号（$）。</li>
+<li>除了第一个字符外，其他位置可以使用 Unicode 字符。一般建议仅使用 ASCII 编码的字母，不建议使用双字节的字符。</li>
+<li>不能与 JavaScript 关键字、保留字重名。</li>
+<li>可以使用 Unicode 转义序列。例如，字符 a 可以使用“\u0061”表示。</li>
+</ul>
+<h2 id="关键字"><a href="#关键字" class="headerlink" title="关键字"></a>关键字</h2><table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>break</td>
+<td>delete</td>
+<td>if</td>
+<td>this</td>
+<td>while</td>
+</tr>
+<tr>
+<td>case</td>
+<td>do</td>
+<td>in</td>
+<td>throw</td>
+<td>with</td>
+</tr>
+<tr>
+<td>catch</td>
+<td>else</td>
+<td>instanceof</td>
+<td>try</td>
+<td></td>
+</tr>
+<tr>
+<td>continue</td>
+<td>finally</td>
+<td>new</td>
+<td>typeof</td>
+<td></td>
+</tr>
+<tr>
+<td>debugger（ECMAScript 5 新增）</td>
+<td>for</td>
+<td>return</td>
+<td>var</td>
+<td></td>
+</tr>
+<tr>
+<td>default</td>
+<td>function</td>
+<td>switch</td>
+<td>void</td>
+<td></td>
+</tr>
+<tr>
+<td>abstract</td>
+<td>double</td>
+<td>goto</td>
+<td>native</td>
+<td>static</td>
+</tr>
+<tr>
+<td>boolean</td>
+<td>enum</td>
+<td>implements</td>
+<td>package</td>
+<td>super</td>
+</tr>
+<tr>
+<td>byte</td>
+<td>export</td>
+<td>import</td>
+<td>private</td>
+<td>synchronized</td>
+</tr>
+<tr>
+<td>char</td>
+<td>extends</td>
+<td>int</td>
+<td>protected</td>
+<td>throws</td>
+</tr>
+<tr>
+<td>class</td>
+<td>final</td>
+<td>interface</td>
+<td>public</td>
+<td>transient</td>
+</tr>
+<tr>
+<td>const</td>
+<td>float</td>
+<td>long</td>
+<td>short</td>
+<td>volatile</td>
+</tr>
+</tbody></table>
+<h2 id="变量声明"><a href="#变量声明" class="headerlink" title="变量声明"></a>变量声明</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var a;  //声明一个变量</span><br><span class="line">var a=1,b=2,3;  //声明多个变量并赋值</span><br><span class="line">var b = 1; //声明并赋值</span><br><span class="line">c = 2; //声明一个全局变量</span><br></pre></td></tr></table></figure>
+
+<h2 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h2><p> JavaScript 定义了 6 种基本数据类型，如表所示。</p>
+<table>
+<thead>
+<tr>
+<th>数据类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>null</td>
+<td>空值，表示非对象</td>
+</tr>
+<tr>
+<td>undefined</td>
+<td>未定义的值，表示未赋值的初始化值</td>
+</tr>
+<tr>
+<td>number</td>
+<td>数字，数学运算的值</td>
+</tr>
+<tr>
+<td>string</td>
+<td>字符串，表示信息流</td>
+</tr>
+<tr>
+<td>boolean</td>
+<td>布尔值，逻辑运算的值</td>
+</tr>
+<tr>
+<td>object</td>
+<td>对象，表示复合结构的数据集</td>
+</tr>
+</tbody></table>
+<p>使用typeof可以返回数据类型的字符串形式：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">//如果是 null 值，则先返回字符串 &quot;null&quot; 否则返回（typeof o）的值</span><br><span class="line">function typeOf(o)&#123;</span><br><span class="line">    return (o === null) ? &quot;null&quot; : (typeof o);</span><br><span class="line">&#125;</span><br><span class="line">console.log(typeOf(1));  //返回字符串&quot;number&quot;</span><br><span class="line">console.log(typeOf(&quot;1&quot;));  //返回字符串&quot;string&quot;</span><br><span class="line">console.log(typeOf(true));  //返回字符串 &quot;boolean&quot;</span><br><span class="line">console.log(typeOf(&#123;&#125;));  //返回字符串&quot;object&quot;</span><br><span class="line">console.log(typeOf(null));  //返回字符串&quot;null&quot;</span><br><span class="line">console.log(typeOf(undefined));  //返回字符串&quot;undefined&quot;</span><br></pre></td></tr></table></figure>
+
+<h2 id="启用严格模式"><a href="#启用严格模式" class="headerlink" title="启用严格模式"></a>启用严格模式</h2><p>在代码首部添加以下一行字符串,即可启用严格模式。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&quot;use strict&quot;</span><br></pre></td></tr></table></figure>
+
+<h2 id="数据类型转换"><a href="#数据类型转换" class="headerlink" title="数据类型转换"></a>数据类型转换</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line">//把数字转换为字符串</span><br><span class="line">var n = 123;</span><br><span class="line">n = n + &quot;&quot;;</span><br><span class="line">console.log(typeof n); //返回类型为 string</span><br><span class="line">var a = 1.000;</span><br><span class="line">var b = 0.0001;</span><br><span class="line">var c = 1e-1;</span><br><span class="line">console.log(a.toString());  //返回字符串“1”</span><br><span class="line">console.log(b.toString());  //返回字符串“0.0001”</span><br><span class="line">console.log(c.toString());  //返回字符串“0.0001”</span><br><span class="line"></span><br><span class="line">//把布尔值转换为字符串，返回字符串 &quot;true&quot; 或 &quot;false&quot;。</span><br><span class="line">var b = true;</span><br><span class="line">b = b + &quot;&quot;;</span><br><span class="line">console.log(b); //返回字符串&quot;true&quot;</span><br><span class="line"></span><br><span class="line">//把数组转换为字符串，返回数组元素列表，以逗号分隔。如果是空数组，则返回空字符串。</span><br><span class="line">var a = [1,2,3];</span><br><span class="line">a = a + &quot;&quot;;</span><br><span class="line">console.log(a); //返回字符串 &quot;1,2,3&quot;</span><br><span class="line"></span><br><span class="line">//把函数转换为字符串，返回函数的具体代码字符串。</span><br><span class="line">var f = function()&#123;return 1;&#125;;</span><br><span class="line">f = f + &quot;&quot;;</span><br><span class="line">console.log(f);  //返回字符串 &quot;function ()&#123;return 1;&#125;&quot;</span><br><span class="line"></span><br><span class="line">//能够把数值转换为字符串，并显示小数点后的指定位数：</span><br><span class="line">var a = 10;</span><br><span class="line">console.log(a.toFixed(2));  //返回字符串“10.00”</span><br><span class="line">console.log(a.toFixed(4));  //返回字符串“10.0000”</span><br><span class="line"></span><br><span class="line">//将值转换为整数：</span><br><span class="line">console.log(parseInt(&quot;123abc&quot;));  //返回数字123</span><br><span class="line">console.log(parseInt(&quot;1.73&quot;));   //返回数字1</span><br><span class="line">console.log(parseInt(&quot;.123&quot;));   //返回值NaN</span><br><span class="line"></span><br><span class="line">//把值转换为浮点数：</span><br><span class="line">console.log(parseFloat(&quot;1.234.5&quot;));  //返回数值 1.234</span><br></pre></td></tr></table></figure>
+
+<h2 id="运算符"><a href="#运算符" class="headerlink" title="运算符"></a>运算符</h2><table>
+<thead>
+<tr>
+<th>+</th>
+<th align="left">加法</th>
+<th>!&#x3D;&#x3D;</th>
+<th>不等值或不等型</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>-</td>
+<td align="left">减法</td>
+<td>&gt;</td>
+<td>大于</td>
+</tr>
+<tr>
+<td>*</td>
+<td align="left">乘法</td>
+<td>&lt;</td>
+<td>小于</td>
+</tr>
+<tr>
+<td>&#x2F;</td>
+<td align="left">除法</td>
+<td>&gt;&#x3D;</td>
+<td>大于或等于</td>
+</tr>
+<tr>
+<td>%</td>
+<td align="left">系数</td>
+<td>&lt;&#x3D;</td>
+<td>小于或等于</td>
+</tr>
+<tr>
+<td>++</td>
+<td align="left">递加</td>
+<td>?</td>
+<td>三元运算符</td>
+</tr>
+<tr>
+<td>–</td>
+<td align="left">递减</td>
+<td>&amp;&amp;</td>
+<td>逻辑与</td>
+</tr>
+<tr>
+<td>&#x3D;</td>
+<td align="left">x &#x3D; y</td>
+<td>||</td>
+<td>逻辑或</td>
+</tr>
+<tr>
+<td>+&#x3D;</td>
+<td align="left">x +&#x3D; y</td>
+<td>!</td>
+<td>逻辑非</td>
+</tr>
+<tr>
+<td>-&#x3D;</td>
+<td align="left">x -&#x3D; y</td>
+<td>&amp;</td>
+<td>与</td>
+</tr>
+<tr>
+<td>*&#x3D;</td>
+<td align="left">x *&#x3D; y</td>
+<td>|</td>
+<td>或</td>
+</tr>
+<tr>
+<td>&#x2F;&#x3D;</td>
+<td align="left">x &#x2F;&#x3D; y</td>
+<td>~</td>
+<td>非</td>
+</tr>
+<tr>
+<td>%&#x3D;</td>
+<td align="left">x %&#x3D; y</td>
+<td>^</td>
+<td>异或</td>
+</tr>
+<tr>
+<td>&#x3D;&#x3D;</td>
+<td align="left">等于</td>
+<td>&lt;&lt;</td>
+<td>零填充左位移</td>
+</tr>
+<tr>
+<td>&#x3D;&#x3D;&#x3D;</td>
+<td align="left">等值等型</td>
+<td>&gt;&gt;</td>
+<td>有符号右位移</td>
+</tr>
+<tr>
+<td>!&#x3D;</td>
+<td align="left">不相等</td>
+<td>&gt;&gt;&gt;</td>
+<td>零填充右位移</td>
+</tr>
+<tr>
+<td>typeof</td>
+<td align="left">返回变量的类型。</td>
+<td>b ? x : y</td>
+<td>条件运算符</td>
+</tr>
+<tr>
+<td>instanceof</td>
+<td align="left">返回 true，如果对象是对象类型的实例。</td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h2 id="控制语句"><a href="#控制语句" class="headerlink" title="控制语句"></a>控制语句</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line">var num = parseInt(Math.random() * 99 + 1);</span><br><span class="line">if (num &lt; 60) &#123;console.log(&quot;不及格&quot;); &#125;</span><br><span class="line">else if (num &lt; 70) &#123;console.log(&quot;及格&quot;); &#125;</span><br><span class="line">else if (num &lt; 85) &#123;console.log(&quot;&quot;良好&quot;); &#125;</span><br><span class="line">else &#123;console.log(&quot;优秀&quot;); &#125;</span><br><span class="line"></span><br><span class="line">var id = 1;</span><br><span class="line">switch (id) &#123;</span><br><span class="line">    case 1 :</span><br><span class="line">    case 2 :</span><br><span class="line">        console.log(&quot;VIP会员&quot;);</span><br><span class="line">        break;</span><br><span class="line">    case 3 :</span><br><span class="line">        console.log(&quot;管理员&quot;);</span><br><span class="line">        break;</span><br><span class="line">    default : </span><br><span class="line">        console.log(&quot;游客&quot;);</span><br><span class="line">        </span><br><span class="line">var n = 1;  //声明并初始化循环变量</span><br><span class="line">while (n++ &lt;= 100)&#123;  //循环条件</span><br><span class="line">    if (n % 2 == 0) document.write(n + &quot;&quot;);   //执行循环操作</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">var n = 1;  //声明并初始化循环变量</span><br><span class="line">do &#123;  //循环条件</span><br><span class="line">    n++;  //递增循环变量</span><br><span class="line">    if (n % 2 == 0) document.write(n + &quot;&quot;);  //执行循环操作</span><br><span class="line">&#125; while (n &lt;= 100);</span><br><span class="line"></span><br><span class="line">for (var n = 1;n &lt;=100;n++)&#123;</span><br><span class="line">    if (n % 2 == 0) document.write(n + &quot;&quot;);  //执行循环操作</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">var a = [1,true,&quot;0&quot;,[false],&#123;&#125;];  //声明并初始化数组变量 </span><br><span class="line">for (var n in a) &#123;  //遍历数组</span><br><span class="line">    document.write(&quot;a[&quot;+n+&quot;] = &quot; + a[n] + &quot;&lt;br&gt;&quot;);  //显示每个元素及其值</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="异常"><a href="#异常" class="headerlink" title="异常"></a>异常</h2><p>ECMA-262 规范了 7 种错误类型，具体说明如下。其中 Error 是基类，其他 6 种错误类型是子类，都继承 Error 基类。Error 类型的主要用途是自定义错误对象。</p>
+<ul>
+<li>Error：普通异常。与 throw 语句和 try&#x2F;catch 语句一起使用，属性 name 可以读写异常类型，message 属性可以读写详细错误信息。</li>
+<li>EvalError：不正确的使用 eval() 方法时抛出。</li>
+<li>SyntaxError：出现语法错误时抛出。</li>
+<li>RangeError：数字超出合法范围时抛出、</li>
+<li>ReferenceError：读取不存在的变量时抛出。</li>
+<li>TypeError：值得类型发生错误时抛出。</li>
+<li>URIError：URI 编码和解码错误时抛出。</li>
+</ul>
+<p>try&#x2F;catch&#x2F;finally 是 <a target="_blank" rel="noopener" href="http://c.biancheng.net/js/">JavaScript</a> 异常处理语句。语法格式如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">try&#123;</span><br><span class="line">    //调试代码块</span><br><span class="line">&#125;</span><br><span class="line">catch(e) &#123;</span><br><span class="line">    //捕获异常，并进行异常处理的代码块</span><br><span class="line">&#125;</span><br><span class="line">finally&#123;</span><br><span class="line">    //后期清理代码块</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>throw 语句能够主动抛出异常，语法格式如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">throw expression;</span><br></pre></td></tr></table></figure>
+
+<p>未完待续。。。</p>
+
+            </div>
+          
+
+    
+      <footer class="post-footer">
+		
+		<div class="post-tags">
+		  
+			<a href="/tags/Web%E5%BC%80%E5%8F%91/">Web开发</a>
+		  
+			<a href="/tags/JavaScript/">JavaScript</a>
+		  
+		</div>
+		
+
+        
+        
+  <nav class="post-nav">
+    
+      <a class="prev" href="/2020/06/26/20200626175929/">
+        <i class="iconfont icon-left"></i>
+        <span class="prev-text nav-default">换gitalk评论</span>
+        <span class="prev-text nav-mobile">Prev</span>
+      </a>
+    
+    
+      <a class="next" href="/2020/06/26/20200626024438/">
+        <span class="next-text nav-default">人的情绪像个钟摆，忽左忽右，忽冷忽热，忽响忽静，忽动忽停，飘忽不定的情绪给予这颗心脏无尽的动力，如果情绪停止了抖动，生命的延续，人与人的关系，也该走到了尽头。对于情绪的控制没有灵丹妙药，别以为用压制的方式就能缓解，压制始终存在，而释放才能烟消云散。老年人用了一辈子的时间才换回来的心如止水，也只不过是从翻江倒海变的绵绵流长。就像电视剧里讲的，古今中外能有几个人能把自己酿的淡而又淡的名贵！这不是为之而可为的事。</span>
+        <span class="prev-text nav-mobile">Next</span>
+        <i class="iconfont icon-right"></i>
+      </a>
+    
+  </nav>
+
+        
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+      </footer>
+    
+  </article>
+
+    </div>
+
+      </div>
+
+      
+
+      <footer id="colophon"><span class="copyright-year">
+    
+        &copy;
+    
+        2014 -
+    
+    2025
+    <span class="footer-author">目八刀.</span>
+    <span class="power-by">
+        Powered by <a class="hexo-link" target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a> and <a class="theme-link" target="_blank" rel="noopener" href="https://github.com/frostfan/hexo-theme-polarbear">Polar Bear</a>
+    </span>
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span id="busuanzi_container_site_pv">总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+    <span class="post-meta-divider">|</span>
+    <span id="busuanzi_container_site_uv">131人</span>
+</span>
+
+<script>
+    function createImgEventFullScreen() {
+        var imgs = $(".post-content").find("img");
+        console.log(imgs);
+        for (var i = 0; i < imgs.length; i++) {
+            // $(imgs[i]).click(createCover(imgs[i]));
+            imgs[i].onclick = function (e) {
+                var src = e.srcElement.currentSrc;
+                var _this = $(this);
+                console.log(_this);
+                createCover(src,_this);
+            }
+        }
+        function createCover(src,_this) {
+            console.log(_this);
+            console.log(src);
+            var cover = $("<div id='outerDiv'  style='position:fixed;top:0;left:0;background:rgba(0,0,0,0.7);z-index:5;width:100%;height:100%;display:none;'><div id='innerDiv' style='position:absolute;'><img  id='bigImg' style='border:5px solid #fff;' src=''/></div></div>");
+            $("#outerDiv").remove();
+            $("body").append(cover);
+            imgShow("#outerDiv", "#innerDiv", "#bigImg", _this,src);
+
+        }
+    }
+    function imgShow(outerDiv, innerDiv, bigImg, _this,src) {
+        //var src = _this.attr("src"); //获取当前点击的common-img元素中的src属性
+        $(bigImg).attr("src", src); //设置#bigImg元素的src属性
+        /*获取当前点击图片的真实大小，并显示弹出层及大图*/
+        $("<img/>").attr("src", src).on("load", function () {
+            var windowW = $(window).width(); //获取当前窗口宽度
+            var windowH = $(window).height(); //获取当前窗口高度
+            var realWidth = this.width; //获取图片真实宽度
+            var realHeight = this.height; //获取图片真实高度
+            var imgWidth, imgHeight;
+            var scale = 0.8; //缩放尺寸，当图片真实宽度和高度大于窗口宽度和高度时进行缩放
+
+            if (realHeight > windowH * scale) { //判断图片高度
+                imgHeight = windowH * scale; //如大于窗口高度，图片高度进行缩放
+                imgWidth = imgHeight / realHeight * realWidth; //等比例缩放宽度
+                if (imgWidth > windowW * scale) { //如宽度仍大于窗口宽度
+                    imgWidth = windowW * scale; //再对宽度进行缩放
+                }
+            } else if (realWidth > windowW * scale) { //如图片高度合适，判断图片宽度
+                imgWidth = windowW * scale; //如大于窗口宽度，图片宽度进行缩放
+                imgHeight = imgWidth / realWidth * realHeight; //等比例缩放高度
+            } else { //如果图片真实高度和宽度都符合要求，高宽不变
+                imgWidth = realWidth;
+                imgHeight = realHeight;
+            }
+            $(bigImg).css("width", imgWidth); //以最终的宽度对图片缩放
+
+            var w = (windowW - imgWidth) / 2; //计算图片与窗口左边距
+            var h = (windowH - imgHeight) / 2; //计算图片与窗口上边距
+            $(innerDiv).css({ "top": h, "left": w }); //设置#innerDiv的top和left属性
+            //console.log('****')
+            $(outerDiv).fadeIn("fast"); //淡入显示#outerDiv
+        });
+
+        $(outerDiv).click(function () { //再次点击淡出消失弹出层
+            $(this).fadeOut("fast");
+        });
+    }
+    setTimeout(function () {
+        createImgEventFullScreen();
+    }, 1000)
+</script>
+
+      </footer>
+
+      <div class="back-to-top" id="back-to-top">
+        <i class="iconfont icon-up"></i>
+      </div>
+    </div>
+    <script type="text/javascript" src="/js/src/theme.js?v=1.1"></script>
+<script type="text/javascript" src="/js/src/bootstrap.js?v=1.1"></script>
+
+
+  </body>
+</html>
