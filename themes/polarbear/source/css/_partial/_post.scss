@@ -1,0 +1,28 @@
+// ==============================
+// Post
+// ==============================
+@use '../variables' as *;
+@use '_post/footer' as *;
+@use '_post/header' as *;
+@use '_post/content' as *;
+.posts {
+  margin-bottom: $post-list-margin-bottom;
+  border-bottom: $post-border;
+}
+
+.post {
+  padding: $post-padding;
+
+  & + .post {
+    border-top: $post-border;
+  }
+
+  .post-excerpt {
+      img {
+          padding-top: .5em;
+      }
+  }
+
+  
+  
+}

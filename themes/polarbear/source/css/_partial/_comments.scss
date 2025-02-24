@@ -1,0 +1,9 @@
+// ==============================
+// Archive
+// =============================
+@use '../variables' as *;
+#vcomments {
+  margin: $global-content-margin;
+    width: 90%;
+  max-width: $global-body-width;
+}

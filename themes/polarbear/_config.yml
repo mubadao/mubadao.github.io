@@ -1,0 +1,88 @@
+# ===========================================
+# Site Information Settings
+# ===========================================
+
+# Site creation time
+since: 2014
+
+# Custom your favicon.ico in `site/source`
+favicon: /favicon.ico
+
+# Set feed link (false | default | your feed link)
+# false: disable
+# default: use `atom.xml`, generator for `hexo-generator-feed`
+rss: default
+
+# ===========================================
+# Menu Settings
+# ===========================================
+menu:
+  # Categories: /categories
+  # Archives: /archives
+  Tags: /tags
+  About: /about
+
+# ===========================================
+# Widget Settings
+# ===========================================
+# widget function
+# false: disable
+# widget_custom: custom your widget
+#   title: your widget title
+#   content: Add your html code in here. Example: <p>testing...</p>
+widget:
+  Tags: false
+  Categories: false
+  Custom: false
+
+widget_custom:
+    title: Test
+    content: <p>testing...</p>
+
+# ===========================================
+# Theme Settings
+# ===========================================
+# theme styling
+# color: Default | Mint Green | Cobalt Blue | Hot Pink | Dark Violet
+theme:
+  color: Dark Violet
+  fancybox: false
+
+# ===========================================
+# Third Party Services Settings
+# ===========================================
+
+# Baidu Analytics
+baidu_analytics:
+# Google Analytics
+google_analytics:
+
+# Duoshuo
+duoshuo_shortname:
+# Disqus
+disqus_shortname:
+# Valine
+v_appId: kdm34f1wYGiv7fpBxunGFmHd-gzGzoHsz
+v_appKey: 8tgITTuqvhCeAqpLbsh6tcBc
+
+
+# ===========================================
+# Version
+# ===========================================
+version: 1.1
+
+aplayer:
+  meting: true
+
+# visitors count
+counter: true
+
+gitalk:
+  githubID: mubadao    # 填你的 github 用户名
+  repo:  mygitalk.github.io     # 承载评论的仓库，一般使用 Github Page 仓库
+  ClientID: 1c127fd5b3f138049645  # 第1步获得 Client ID
+  ClientSecret: 4f0e458a8bf54e1f13606502d24f22267517bf9c  # 第1步获得 Client Secret
+  adminUser: mubadao    # Github 用户名
+  distractionFreeMode: true
+  language: zh-CN
+  perPage: 10
